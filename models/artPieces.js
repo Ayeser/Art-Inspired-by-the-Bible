@@ -3,14 +3,14 @@ module.exports = function(sequelize, DataTypes) {
       title: {
         type: DataTypes.STRING,
         validate: {
-          notNull: true,
+          allowNull: false,
           len: [1, 140]
         }
       },
       picture: {
         type: DataTypes.STRING,
         validate: {
-          notNull: true,
+          allowNull: false,
           isUrl: true
         }
       },
@@ -25,13 +25,13 @@ module.exports = function(sequelize, DataTypes) {
           validate: {
               min: 1,
               max: 50,
-              notNull: true,
+              allowNull: false,
           }
       },
       verse: {
         type: DataTypes.INTEGER,
         validate: {
-            notNull: true,
+            allowNull: false,
         }
     },
       matureContent: {
