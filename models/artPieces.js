@@ -2,15 +2,15 @@ module.exports = function(sequelize, DataTypes) {
     const genesisArt = sequelize.define("genesisArt", {
       title: {
         type: DataTypes.STRING,
+        allowNull: false,
         validate: {
-          allowNull: false,
           len: [1, 140]
         }
       },
       picture: {
         type: DataTypes.STRING,
+        allowNull: false,
         validate: {
-          allowNull: false,
           isUrl: true
         }
       },
@@ -22,17 +22,15 @@ module.exports = function(sequelize, DataTypes) {
       },
       chapter: {
           type: DataTypes.INTEGER,
+          allowNull: false,
           validate: {
               min: 1,
               max: 50,
-              allowNull: false,
           }
       },
       verse: {
         type: DataTypes.INTEGER,
-        validate: {
-            allowNull: false,
-        }
+        allowNull: false,
     },
       matureContent: {
         type: DataTypes.BOOLEAN,
