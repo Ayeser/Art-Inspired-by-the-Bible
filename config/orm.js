@@ -1,92 +1,42 @@
 const connection = require("../config/connection.js");
 
-function printQuestionMarks(num) {
-    const arr = [];
-  
-    for (let i = 0; i < num; i++) {
-      arr.push("?");
-    }
-  
-    return arr.toString();
-  }
-
-  function objToSql(ob) {
-    const arr = [];
-
-    for (let key in ob) {
-        const value = ob[key];
-        if (Object.hasOwnProperty.call(ob, key)) {
-            if (typeof value === 'string' && value.indexOf(" ") >= 0) {
-                value = "'" + value + "'";
-            }
-            arr.push(key + "=" + value);
-        }
-    }
-    return arr.toString();
-}
-
 const orm = {
-    all: function(tableInput, cb) {
-      const queryString = "SELECT * FROM " + tableInput + ";";
-      connection.query(queryString, function(err, result) {
-        if (err) {
-          throw err;
-        }
-        cb(result);
-      });
-    },
-    create: function(table, cols, vals, cb) {
-      let queryString = "INSERT INTO " + table;
-  
-      queryString += " (";
-      queryString += cols.toString();
-      queryString += ") ";
-      queryString += "VALUES (";
-      queryString += printQuestionMarks(vals.length);
-      queryString += ") ";
-  
-      console.log(queryString);
-  
-      connection.query(queryString, vals, function(err, result) {
-        if (err) {
-          throw err;
-        }
-  
-        cb(result);
-      });
-    },
-    // An example of objColVals would be {name: panther, sleepy: true}
-    update: function(table, objColVals, condition, cb) {
-      let queryString = "UPDATE " + table;
-  
-      queryString += " SET ";
-      queryString += objToSql(objColVals);
-      queryString += " WHERE ";
-      queryString += condition;
-  
-      console.log(queryString);
-      connection.query(queryString, function(err, result) {
-        if (err) {
-          throw err;
-        }
-  
-        cb(result);
-      });
-    },
-    delete: function(table, condition, cb) {
-      let queryString = "DELETE FROM " + table;
-      queryString += " WHERE ";
-      queryString += condition;
-  
-      connection.query(queryString, function(err, result) {
-        if (err) {
-          throw err;
-        }
-  
-        cb(result);
-      });
-    }
-  };
 
+  // Here our ORM is creating a simple method for performing a query of the entire table.
+  // We make use of the callback to ensure that data is returned only once the query is done.
+  getGenesisPieces: function(callback) {
+    const s = "SELECT * FROM genesisArt";
+
+    connection.query(s, function(err, result) {
+
+      callback(result);
+
+    });
+  },
+
+  // Here our ORM is creating a simple method for performing a query of a single character in the table.
+  // Again, we make use of the callback to grab a specific character from the database.
+
+  deleteGenesisPiece: function(id, callback) {
+
+    const s = "DELETE FROM genesisArt WHERE id=?";
+
+    connection.query(s, [id], function(err, result) {
+
+      callback(result);
+    });
+
+  },
+
+  addGenesisPiece: function(piece, callback) {
+    const s = "INSERT INTO genesisArt (title, picture, artist, chapter, verse, matureContent) VALUES (?,?,?,?,?,?)";
+    connection.query(s, [
+      piece.title, piece.picture, piece.artist, piece.chapter, piece.verse, piece.matureContent
+    ], function(err, result) {
+      callback(result);
+    });
+  },
+
+};
 
 module.exports = orm;
