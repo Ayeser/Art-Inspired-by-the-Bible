@@ -19,7 +19,7 @@ app.set("view engine", "handlebars");
 
 // Import routes and give the server access to them.
 const routes = require("./controllers/bible_controller.js")(app);
-const db = require("./models")(app);
+const db = require("./models");
 
 app.use(routes);
 
