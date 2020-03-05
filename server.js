@@ -18,10 +18,13 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // Import routes and give the server access to them.
-const routes = require("./controllers/bible_controller.js")(app);
+// const routes = require("./controllers/bible_controller.js");
 const db = require("./models");
 
-app.use(routes);
+// app.use(routes);
+
+require("./controllers/bible_controller.js")(app);
+
 
 // Start our server so that it can begin listening to client requests.
 db.sequelize.sync({force: true}).then(function() {
