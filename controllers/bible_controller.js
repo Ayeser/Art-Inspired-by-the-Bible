@@ -23,11 +23,11 @@ module.exports = function(app) {
     });
   });
 
-// route joining Artwork table and Scriptures(?) table
+// route finding ALL images from Artwork table joined with Scriptures(?) table
   app.get("/api/Artwork/:book", function(req, res) {
-    db.Artwork.findBook({
+    db.Artwork.findAll({
       where: {
-        id: req.params.book
+        book: req.params.book
       },
       // include: []
     }).then(function(dbArtwork) {
