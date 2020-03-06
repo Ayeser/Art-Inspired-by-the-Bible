@@ -1,13 +1,9 @@
 module.exports = function(sequelize, DataTypes) {
-    const genesisArt = sequelize.define("genesisArt", {
+    const Artwork = sequelize.define("Artwork", {
       title: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
-<<<<<<< HEAD
-          allowNull: false,
-=======
->>>>>>> 52a2154427c3d97332a0d1388f93fc2db59d4e89
           len: [1, 140]
         }
       },
@@ -15,10 +11,6 @@ module.exports = function(sequelize, DataTypes) {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
-<<<<<<< HEAD
-          allowNull: false,
-=======
->>>>>>> 52a2154427c3d97332a0d1388f93fc2db59d4e89
           isUrl: true
         }
       },
@@ -34,21 +26,11 @@ module.exports = function(sequelize, DataTypes) {
           validate: {
               min: 1,
               max: 50,
-<<<<<<< HEAD
-              allowNull: false,
-=======
->>>>>>> 52a2154427c3d97332a0d1388f93fc2db59d4e89
           }
       },
       verse: {
         type: DataTypes.INTEGER,
-<<<<<<< HEAD
-        validate: {
-            allowNull: false,
-        }
-=======
         allowNull: false,
->>>>>>> 52a2154427c3d97332a0d1388f93fc2db59d4e89
     },
       matureContent: {
         type: DataTypes.BOOLEAN,
@@ -59,5 +41,5 @@ module.exports = function(sequelize, DataTypes) {
         default: 0
     }
 });
-    return genesisArt;
+    return Artwork;
   };
