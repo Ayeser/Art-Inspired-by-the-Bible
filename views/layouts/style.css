@@ -1,0 +1,24 @@
+
+    .clearfix{ margin-top: 25px;
+           margin: auto;
+
+}
+    #book { float:left;
+        background-color: #1D88E5;
+        width: 100px;
+        height: 50rem;
+        padding: 10px;
+        border: 1px solid white;
+      }
+
+    
+    #art { 
+        float:left;
+        background-color: #1D88E5;
+        width: 100px;
+        height: 50rem;
+        padding: 10px;
+        border: 1px solid white;
+      }
+      
+      
