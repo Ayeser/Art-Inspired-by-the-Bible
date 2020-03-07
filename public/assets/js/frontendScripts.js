@@ -1,8 +1,14 @@
-$("#searchForm").submit(function(event) {
-    event.preventDefault();
-    console.log("searchArtwork function starts");
+$(document).ready(function() {
+    $("#searchButton").click(function(){
+        console.log("searchArtwork function starts");
     var searchTerm = $("#searchArtwork").val().toLowerCase();
     console.log(searchTerm);
+    })
+
+});
+
+// $("#searchForm").submit(function(event) {
+//     event.preventDefault();
     // var firstWord = codeLine.substr(0, codeLine.indexOf(" "));
     // console.log(firstWord);
     // $.ajax({
@@ -12,4 +18,4 @@ $("#searchForm").submit(function(event) {
     //     $("#resultsHere").empty();
     //     $("#resultsHere").append(JSON.stringify(response));
     // })
-});
+// });
