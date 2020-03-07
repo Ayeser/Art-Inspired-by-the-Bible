@@ -29,7 +29,7 @@ module.exports = function(app) {
       where: {
         book: req.params.book
       },
-      // include: []
+      include: [scriptures.Post]
     }).then(function(dbArtwork) {
       res.json(dbArtwork);
     });
