@@ -46,6 +46,16 @@ module.exports = function(sequelize, DataTypes) {
     upvotes: {
         type: DataTypes.INTEGER,
         default: 0
+    },
+    createdAt: {
+      allowNull: false,
+      type: sequelize.DATE,
+      default: now()
+    },
+    updatedAt: {
+      allowNull: false,
+      type: sequelize.DATE,
+      default: now()
     }
 });
     return Artwork;
