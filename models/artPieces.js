@@ -10,9 +10,6 @@ module.exports = function(sequelize, DataTypes) {
       picture: {
         type: DataTypes.STRING,
         allowNull: false,
-        validate: {
-          isUrl: true
-        }
       },
       artist: {
         type: DataTypes.STRING,
