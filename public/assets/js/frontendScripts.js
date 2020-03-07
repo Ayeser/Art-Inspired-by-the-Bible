@@ -3,7 +3,7 @@ $(document).ready(function () {
         event.preventDefault();
         console.log("searchArtwork function starts");
         var searchTerm = $("#searchArtwork").val().toLowerCase();
-        var firstWord = codeLine.substr(0, codeLine.indexOf(" "));
+        var firstWord = searchTerm.substr(0, searchTerm.indexOf(" "));
         console.log("The first word of search is " + firstWord);
         $.ajax({
             url: "https://https://glacial-falls-40496.herokuapp.com/api/Artwork/:" + searchTerm,
