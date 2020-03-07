@@ -1,22 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-    const Artwork = sequelize.define("Artwork", {
-      title: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          len: [1, 150]
-        }
-      },
-      picture: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      artist: {
-        type: DataTypes.STRING,
-        validate: {
-          len: [1, 140]
-        }
-      },
+    const Scripture = sequelize.define("Scripture", {
       book: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -32,17 +15,9 @@ module.exports = function(sequelize, DataTypes) {
               max: 50,
           }
       },
-      verse: {
-        type: DataTypes.INTEGER,
+      passage: {
+        type: DataTypes.TEXT,
         allowNull: false,
-    },
-      matureContent: {
-        type: DataTypes.BOOLEAN,
-        default: false
-    },
-    upvotes: {
-        type: DataTypes.INTEGER,
-        default: 0
     },
     createdAt: {
       type:DataTypes.DATE(3),
@@ -53,6 +28,6 @@ module.exports = function(sequelize, DataTypes) {
       defaultValue: sequelize.literal('CURRENT_TIMESTAMP(3) ON UPDATE CURRENT_TIMESTAMP(3)')
     }
 });
-    return Artwork;
+    return Scripture;
   };
 
