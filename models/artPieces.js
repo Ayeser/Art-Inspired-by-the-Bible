@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-    const genesisArt = sequelize.define("genesisArt", {
+    const Artwork = sequelize.define("Artwork", {
       title: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -41,5 +41,5 @@ module.exports = function(sequelize, DataTypes) {
         default: 0
     }
 });
-    return genesisArt;
+    return Artwork;
   };
