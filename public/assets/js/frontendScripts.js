@@ -6,7 +6,7 @@ $(document).ready(function () {
         var firstWord = searchTerm.substr(0, searchTerm.indexOf(" "));
         console.log("The first word of search is " + firstWord);
         $.ajax({
-            url: "https://https://glacial-falls-40496.herokuapp.com/api/Artwork/:" + searchTerm,
+            url: "/api/Artwork/" + searchTerm,
             method: "GET"
         }).then(function (response) {
             $("#resultsHere").empty();
