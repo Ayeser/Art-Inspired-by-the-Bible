@@ -47,16 +47,8 @@ module.exports = function(sequelize, DataTypes) {
         type: DataTypes.INTEGER,
         default: 0
     },
-    createdAt: {
-      allowNull: false,
-      type: sequelize.DATE,
-      default: DataTypes.NOW
-    },
-    updatedAt: {
-      allowNull: false,
-      type: sequelize.DATE,
-      default: DataTypes.NOW
-    }
+    createdAt: false,
+    updatedAt: false
 });
     return Artwork;
   };
