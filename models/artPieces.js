@@ -53,8 +53,6 @@ module.exports = function(sequelize, DataTypes) {
       defaultValue: sequelize.literal('CURRENT_TIMESTAMP(3) ON UPDATE CURRENT_TIMESTAMP(3)')
     }
 });
-    return Artwork;
-  };
 
   INSERT INTO Artworks (title,picture,artist,book,chapter,verse) VALUES ("The Creation of the Animals","https://i2.wp.com/matthewwester.com/wp-content/uploads/BibleArtProject/Betram%20of%20Minden%20The%20Creation%20of%20the%20Animals%20Genesis%201%2020.jpg",
   "betram of minden","genesis",1,20);
@@ -271,5 +269,8 @@ module.exports = function(sequelize, DataTypes) {
   INSERT INTO Artworks (title,picture,artist,book,chapter,verse) VALUES ("Blessing the Children of Joseph", "https://i2.wp.com/matthewwester.com/wp-content/uploads/BibleArtProject/Rembrandt%20Jacob%20Blessing%20the%20Children%20of%20Joseph%20Genesis%2048%2014.jpg", "rembrandt", "genesis", 48, 14);
   
   INSERT INTO Artworks (title,picture,artist,book,chapter,verse) VALUES ("Cain Flees", "https://i2.wp.com/matthewwester.com/wp-content/uploads/BibleArtProject/William%20Blake%20Cain%20Flees.jpg", "william blake", "genesis", 4, 1);
+
+  return Artwork;
+};
   
   INSERT INTO Artworks (title,picture,artist,book,chapter,verse) VALUES ("Joseph's  Brothers Find the Silver Goblet in Benjamin's Sack", "https://i2.wp.com/matthewwester.com/wp-content/uploads/BibleArtProject%20Alexander%20Ivanov%20Joseph's%20Brothers%20Find%20the%20Silver%20Goblet%20in%20Benjamin's%20Sack%20Genesis%2044%2012.jpg", "alexander ivanov", "genesis", 44, 12);
