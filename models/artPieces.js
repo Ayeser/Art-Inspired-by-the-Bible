@@ -47,8 +47,14 @@ module.exports = function(sequelize, DataTypes) {
         type: DataTypes.INTEGER,
         default: 0
     },
-    createdAt: false,
-    updatedAt: false
+    createdAt: {
+      type:DataTypes.DATE(3),
+      defaultValue: sequelize.literal('CURRENT_TIMESTAMP(3)')
+    },
+    updatedAt: {
+      type:DataTypes.DATE(3),
+      defaultValue: sequelize.literal('CURRENT_TIMESTAMP(3) ON UPDATE CURRENT_TIMESTAMP(3)')
+    }
 });
     return Artwork;
   };
