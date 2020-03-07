@@ -50,12 +50,12 @@ module.exports = function(sequelize, DataTypes) {
     createdAt: {
       allowNull: false,
       type: sequelize.DATE,
-      default: now()
+      default: sequelize.NOW
     },
     updatedAt: {
       allowNull: false,
       type: sequelize.DATE,
-      default: now()
+      default: sequelize.NOW
     }
 });
     return Artwork;
