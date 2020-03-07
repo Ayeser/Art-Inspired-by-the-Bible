@@ -1,4 +1,5 @@
-$("#searchButton").click(function() {
+$("#searchForm").submit(function(event) {
+    event.preventDefault();
     console.log("searchArtwork function starts");
     var searchTerm = $("#searchArtwork").val().toLowerCase();
     var firstWord = codeLine.substr(0, codeLine.indexOf(" "));
