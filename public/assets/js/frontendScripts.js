@@ -1,10 +1,11 @@
 $(document).ready(function () {
     $(document).on("submit", "#artworkForm", handleArtworkFormSubmit);
-    var searchInput = $("#searchArtwork").val().trim();
+    var searchInput = $("#searchArtwork").val();
+    var searchURL = "api/Artwork/" + searchInput;
     var resultContainer = $("#resultsHere");
     function handleArtworkFormSubmit(event) {
         event.preventDefault();
-        $.get("api/Artwork/" + searchInput, function(data) {
+        $.get(searchURL, function(data) {
             console.log("Artwork: " + data);
             resultContainer.empty();
             const artToAdd = [];
