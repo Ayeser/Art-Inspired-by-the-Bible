@@ -5,6 +5,7 @@ $(document).ready(function () {
     var resultContainer = $("#resultsHere");
     function handleArtworkFormSubmit(event) {
         event.preventDefault();
+        console.log("before get call :" + searchInput)
         $.get(searchURL, function(data) {
             console.log("Artwork: " + data);
             resultContainer.empty();
