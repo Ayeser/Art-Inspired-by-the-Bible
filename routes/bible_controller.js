@@ -13,7 +13,7 @@ module.exports = (app, db) => {
   app.get("/api/Artwork", function(req, res) {
     console.log("Finding all art from selected book...");
     db.Artworks.findAll({}).then(Artwork => {
-      res.json(Artwork);
+      return res.json(Artwork);
     });
   });
 
@@ -23,7 +23,7 @@ module.exports = (app, db) => {
     db.Artworks.findAll({
         book: req.params.book
       },).then(response => {
-        res.json(response);
+        return res.json(response);
       })
     })
   };
