@@ -30,7 +30,7 @@ module.exports = (app, db) => {
     Artwork.findAll({
         book: book
       },
-    }).then(book => {
-      res.json(book);
+    }).then(function(dbArtwork) {
+      return res.json(dbArtwork);
     });
-};
+  });
