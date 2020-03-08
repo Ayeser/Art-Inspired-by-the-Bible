@@ -3,8 +3,8 @@ $(document).ready(function () {
     var resultContainer = $("#resultsHere");
     function handleArtworkFormSubmit(event) {
         event.preventDefault();
-        console.log("before get call: " + $("#searchArtwork").val())
-        $.get("api/Artwork/" + $("#searchArtwork").val(), function(data) {
+        console.log("before get call: " + $("#searchArtwork").val().toLowerCase())
+        $.get("api/Artwork/" + $("#searchArtwork").val().toLowerCase(), function(data) {
             console.log("Artwork: " + data);
             resultContainer.empty();
             const artToAdd = [];
