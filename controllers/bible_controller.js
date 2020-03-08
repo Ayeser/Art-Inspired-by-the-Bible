@@ -20,7 +20,7 @@ module.exports = function(app) {
 // route for all images in Artwork table
   app.get("/api/Artwork", function(req, res) {
     Artwork.findAll({}).then(function(results) {
-      res.json(results);
+      return res.json(results);
     });
   });
 
@@ -31,7 +31,7 @@ module.exports = function(app) {
         book: req.params.book
       },
     }).then(function(dbArtwork) {
-      res.json(dbArtwork);
+      return res.json(dbArtwork);
     });
   });
 };
