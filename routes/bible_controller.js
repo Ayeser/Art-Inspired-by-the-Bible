@@ -29,8 +29,8 @@ module.exports = (app, db) => {
     const book = req.params.book;
     Artwork.findAll({
         book: book
-      },
-    }).then(function(dbArtwork) {
-      return res.json(dbArtwork);
-    });
-  });
+      },).then(book => {
+        res.json(book);
+      })
+    })
+  };
