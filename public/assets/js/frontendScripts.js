@@ -4,7 +4,7 @@ $(document).ready(function () {
     var resultContainer = $("#resultsHere");
     function handleArtworkFormSubmit(event) {
         event.preventDefault();
-        $.get("api/Artwork" + searchInput, function(data) {
+        $.get("api/Artwork/" + String(searchInput), function(data) {
             console.log("Artwork: " + data);
             resultContainer.empty();
             const artToAdd = [];
