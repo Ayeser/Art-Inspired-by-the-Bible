@@ -16,7 +16,7 @@
     "operatorsAliases": false
   },
   "production": {
-    "use_env_variable": "JAWSDB_URL='mysql://nv96ip1vnejy4ynw:twftlzgbwwvbonay@hostvalue.amazonaws.com:3306/vsewinrq1xm16k58",
+    "use_env_variable": "JAWSDB_URL",
     "dialect": "mysql"
   }
 }
