@@ -10,20 +10,55 @@ module.exports = (app, db) => {
   });
 
 // route for all images in Artwork table
-  app.get("/api/Artwork", function(req, res) {
+  app.get("/api/artPieces", function(req, res) {
     console.log("Finding all art from selected book...");
-    db.Artworks.findAll({}).then(Artwork => {
-      return res.json(Artwork);
-    });
+    db.Artwork.findAll({}).then(function(dbArtPieces) {
+      res.json(dbArtPieces)
+    })
   });
 
 // route finding ALL images from Artwork table joined with Scriptures(?) table
-  app.get("/api/Artwork/:book", function(req, res) {
+  app.get("/api/artPieces/:book", function(req, res) {
     console.log("Searching for pieces of art from selected book...");
-    db.Artworks.findAll({
+    db.Artwork.findAll({
+      where: {
         book: req.params.book
-      },).then(response => {
-        return res.json(response);
+      }
+      },).then(dbArtPieces => {
+        res.json(dbArtPieces);
       })
+    });
+
+  app.post("/api/artPieces", function(req, res) {
+    db.Artwork.create(req.body).then(function(dbArtPieces) {
+      res.json(dbArtPieces);
     })
+  });
+
+  app.get("/api/scriptures", function(req, res) {
+    console.log("Finding all scriptures from selected book...");
+    db.Scripture.findAll({}).then(function(dbScriptures) {
+      res.json(dbScriptures)
+    })
+  });
+
+  app.post("/api/scriptures", function(req, res) {
+    db.Scripture.create(req.body).then(function(dbScriptures) {
+      res.json(dbScriptures);
+    })
+  });
+
+  app.get("/api/videos", function(req, res) {
+    console.log("Finding all scriptures from selected book...");
+    db.Video.findAll({}).then(function(dbVideos) {
+      res.json(dbVideos)
+    })
+  });
+
+  app.post("/api/videos", function(req, res) {
+    db.Video.create(req.body).then(function(dbVideos) {
+      res.json(dbVideos);
+    })
+  });
+
   };
