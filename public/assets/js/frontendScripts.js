@@ -5,7 +5,7 @@ $(document).ready(function () {
         event.preventDefault();
         console.log("before get call: " + $("#searchArtwork").val())
         $.get("api/Artwork/" + $("#searchArtwork").val(), function(data) {
-            console.log("Artwork: " + data);
+            console.log("Artwork: " , data);
             resultContainer.empty();
             const artToAdd = [];
             for (let i = 0; i< data.length;i++) {
@@ -15,7 +15,7 @@ $(document).ready(function () {
         })
 
         function createNewPiece(piece) {
-            return ("<div>" + piece + "</div>");
+            return ("<div>" + piece.title +"<img src='"+piece.picture+"'>" + "</div>");
         }
     }
 });
