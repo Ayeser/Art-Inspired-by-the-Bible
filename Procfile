@@ -1,1 +1,1 @@
-web: node models/index.js
+web: node ./models/index.js
