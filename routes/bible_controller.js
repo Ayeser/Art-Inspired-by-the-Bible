@@ -11,14 +11,14 @@ module.exports = (app, db) => {
 
 // route for all images in Artwork table
   app.get("/api/Artwork", function(req, res) {
-    db.Artwork.findAll({}).then(Artwork => {
+    db.Artworks.findAll({}).then(Artwork => {
       res.json(Artwork);
     });
   });
 
 // route finding ALL images from Artwork table joined with Scriptures(?) table
   app.get("/api/Artwork/:book", function(req, res) {
-    db.Artwork.findAll({
+    db.Artworks.findAll({
         book: req.params.book
       },).then(response => {
         res.json(response);
