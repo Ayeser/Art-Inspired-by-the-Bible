@@ -5,7 +5,7 @@
 
 
 // The following section is just to check the artpiece database
-const db = require("../models/artPieces.js");
+const db = require("../models/");
 const path = require("path");
 
 module.exports = function(app) {
