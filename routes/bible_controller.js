@@ -27,7 +27,7 @@ module.exports = (app, db) => {
 // route finding ALL images from Artwork table joined with Scriptures(?) table
   app.get("/api/Artwork/:book", function(req, res) {
     const book = req.params.book;
-    Artwork.findAll({
+    db.Artwork.findAll({
         book: book
       },).then(book => {
         res.json(book);
