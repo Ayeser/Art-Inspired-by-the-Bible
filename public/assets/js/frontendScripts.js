@@ -1,15 +1,15 @@
 $(document).ready(function () {
-    $("#searchButton").click(function () {
+    $(document).on("submit", "#artworkForm", handleArtworkFormSubmit);
+
+    function handleArtworkFormSubmit(event) {
         event.preventDefault();
-        var searchTerm = $("#searchArtwork").val().toLowerCase();
-        console.log(searchTerm + " is the search term");
-        $.ajax({
-            url: "/api/Artwork/" + searchTerm,
-            method: "GET"
-        }).then(function (response) {
+        if (!searchInput.val().trim().trim()) {
+            return;
+        }
+        $.get("api/Artwork", function(data) {
             console.log(response);
             $("#resultsHere").empty();
             $("#resultsHere").append(JSON.stringify(response));
         })
-    })
+    }
 });
