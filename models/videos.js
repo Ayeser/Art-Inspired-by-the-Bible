@@ -7,8 +7,8 @@ module.exports = function(sequelize, DataTypes) {
           len: [1, 150]
         }
       },
-      videoLink: {
-        type: DataTypes.STRING,
+      videoEmbed: {
+        type: DataTypes.TEXT,
         allowNull: false,
       },
       sourceCreator: {
@@ -55,4 +55,3 @@ module.exports = function(sequelize, DataTypes) {
 });
     return Video;
   };
-
