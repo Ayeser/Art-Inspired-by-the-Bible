@@ -6,10 +6,11 @@ $(document).ready(function () {
         if (!searchInput.val().trim().trim()) {
             return;
         }
-        $.get("api/Artwork/" + searchInput, function(response) {
-            console.log(response);
             $("#resultsHere").empty();
-            $("#resultsHere").append(JSON.stringify(response));
-        })
-    }
-});
+            $("#resultsHere").append(Artwork.findAll({
+                where: {
+                    book: searchInput
+                }
+            }));
+        }
+    })
