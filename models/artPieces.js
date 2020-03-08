@@ -56,3 +56,5 @@ module.exports = function(sequelize, DataTypes) {
     return Artwork;
   };
 
+  Artwork.sync();
+
