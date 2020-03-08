@@ -10,7 +10,7 @@ const Scriptures = require("../models/scriptures.js");
 const Videos = require("../models/videos.js");
 const path = require("path");
 
-module.exports = function(app) {
+module.exports = (app, db) => {
 
 // route for landing page
   app.get("/", function(req, res) {
@@ -19,19 +19,18 @@ module.exports = function(app) {
 
 // route for all images in Artwork table
   app.get("/api/Artwork", function(req, res) {
-    Artwork.findAll({}).then(function(results) {
-      return res.json(results);
+    db.Artwork.findAll({}).then(Artwork => {
+      res.json(Artwork);
     });
   });
 
 // route finding ALL images from Artwork table joined with Scriptures(?) table
   app.get("/api/Artwork/:book", function(req, res) {
+    const book = req.params.book;
     Artwork.findAll({
-      where: {
-        book: req.params.book
+        book: book
       },
-    }).then(function(dbArtwork) {
-      return res.json(dbArtwork);
+    }).then(book => {
+      res.json(book);
     });
-  });
 };

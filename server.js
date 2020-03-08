@@ -23,7 +23,7 @@ const db = require("./models");
 
 // app.use(routes);
 
-require("./controllers/bible_controller.js")(app);
+require("./routes/bible_controller.js")(app);
 
 
 // Start our server so that it can begin listening to client requests.
