@@ -25,6 +25,13 @@ const db = require("./models/");
 
 require("./routes/bible_controller.js")(app);
 
+app.use(timeout(15000));
+app.use(haltOnTimedout);
+
+function haltOnTimedout (req, res, next) {
+  if (!req.timedout) next();
+}
+
 
 // Start our server so that it can begin listening to client requests.
 db.sequelize.sync().then(function() {
