@@ -9,11 +9,11 @@ $(document).ready(function () {
         $("#resultsHere").empty();
 
         //if search term recognized as Bible book...
-        if (searchTerm1 == "genesis" || searchTerm1 == "exodus" || searchTerm1 == "leviticus" || searchTerm1 == "numbers" || searchTerm1 == "deuteronomy" || searchTerm1 == "joshua" || searchTerm1 == "judges" || searchTerm1 == "ruth" || searchTerm1 == "1" || searchTerm1 == "2" || searchTerm1 == "ezra" || searchTerm1 == "nehemiah" || searchTerm1 == "esther" || searchTerm1 == "job" || searchTerm1 == "psalms" || searchTerm1 == "proverbs" || searchTerm1 == "ecclesiastes" || searchTerm1 == "song" || searchTerm1 == "isaiah" || searchTerm1 == "jeremiah" || searchTerm1 == "lamentations" || searchTerm1 == "ezekiel" || searchTerm1 == "daniel" || searchTerm1 == "hosea" || searchTerm1 == "joel" || searchTerm1 == "amos" || searchTerm1 == "obadiah" || searchTerm1 == "jonah" || searchTerm1 == "micah" || searchTerm1 == "nahum" || searchTerm1 == "habakkuk" || searchTerm1 == "zephaniah" || searchTerm1 == "haggai" || searchTerm1 == "zechariah" || searchTerm1 == "malachi" || searchTerm1 == "matthew" || searchTerm1 == "mark" || searchTerm1 == "luke" || searchTerm1 == "john" || searchTerm1 == "acts" || searchTerm1 == "romans" || searchTerm1 == "galatians" || searchTerm1 == "ephesians" || searchTerm1 == "philippians" || searchTerm1 == "colossians" || searchTerm1 == "titus" || searchTerm1 == "philemon" || searchTerm1 == "hebrews" || searchTerm1 == "james" || searchTerm1 == "jude" || searchTerm1 == "revelation") {
-            $.get("api/scriptures/" + searchTerm1 + "/" + searchTerm2, function(data) {
+        if (searchTerms[0] == "genesis" || searchTerms[0] == "exodus" || searchTerms[0] == "leviticus" || searchTerms[0] == "numbers" || searchTerms[0] == "deuteronomy" || searchTerms[0] == "joshua" || searchTerms[0] == "judges" || searchTerms[0] == "ruth" || searchTerms[0] == "1" || searchTerms[0] == "2" || searchTerms[0] == "ezra" || searchTerms[0] == "nehemiah" || searchTerms[0] == "esther" || searchTerms[0] == "job" || searchTerms[0] == "psalms" || searchTerms[0] == "proverbs" || searchTerms[0] == "ecclesiastes" || searchTerms[0] == "song" || searchTerms[0] == "isaiah" || searchTerms[0] == "jeremiah" || searchTerms[0] == "lamentations" || searchTerms[0] == "ezekiel" || searchTerms[0] == "daniel" || searchTerms[0] == "hosea" || searchTerms[0] == "joel" || searchTerms[0] == "amos" || searchTerms[0] == "obadiah" || searchTerms[0] == "jonah" || searchTerms[0] == "micah" || searchTerms[0] == "nahum" || searchTerms[0] == "habakkuk" || searchTerms[0] == "zephaniah" || searchTerms[0] == "haggai" || searchTerms[0] == "zechariah" || searchTerms[0] == "malachi" || searchTerms[0] == "matthew" || searchTerms[0] == "mark" || searchTerms[0] == "luke" || searchTerms[0] == "john" || searchTerms[0] == "acts" || searchTerms[0] == "romans" || searchTerms[0] == "galatians" || searchTerms[0] == "ephesians" || searchTerms[0] == "philippians" || searchTerms[0] == "colossians" || searchTerms[0] == "titus" || searchTerms[0] == "philemon" || searchTerms[0] == "hebrews" || searchTerms[0] == "james" || searchTerms[0] == "jude" || searchTerms[0] == "revelation") {
+            $.get("api/scriptures/" + searchTerms[0] + "/" + searchTerms[1], function(data) {
                 $("#scriptureHere").append(JSON.parse(data));
             })
-            $.get("api/artPieces/" + searchTerm1 + "/" + searchTerm2, function(data) {
+            $.get("api/artPieces/" + searchTerms[0] + "/" + searchTerms[1], function(data) {
                 const artToAdd = [];
                 for (let i = 0; i< data.length;i++) {
                     artToAdd.push(createNewPiece(data[i]));
@@ -26,7 +26,7 @@ $(document).ready(function () {
                 return ("<div><p>Title: " + piece.title + ", Artist: " + piece.artist + ", verse: " + piece.verse + "<br /><img src='" + piece.picture + "'></div>");
             }
     
-            $.get("api/videos/" + searchTerm1 + "/" + searchTerm2, function(data) {
+            $.get("api/videos/" + searchTerms[0] + "/" + searchTerms[1], function(data) {
                 const videosToAdd = [];
                 for (let i = 0; i< data.length;i++) {
                     videosToAdd.push(createNewVideo(data[i]));
@@ -40,7 +40,7 @@ $(document).ready(function () {
             }
         } else {
             // This next chunk is if the first search word was not a Bible book
-            $.get("api/artistArtwork/" + searchTerm1, function(data) {
+            $.get("api/artistArtwork/" + searchTerms[0], function(data) {
                 const artToAdd = [];
                 for (let i = 0; i< data.length;i++) {
                     artToAdd.push(createNewPiece(data[i]));
@@ -53,7 +53,7 @@ $(document).ready(function () {
                 return ("<div><p>Title: " + piece.title + ", Artist: " + piece.artist + ", book: " + piece.book + ", verse: " + piece.verse + "<br /><img src='" + piece.picture + "'></div>");
             }
     
-            $.get("api/artistVideos/" + searchTerm1, function(data) {
+            $.get("api/artistVideos/" + searchTerms[0], function(data) {
                 const videosToAdd = [];
                 for (let i = 0; i< data.length;i++) {
                     videosToAdd.push(createNewVideo(data[i]));
