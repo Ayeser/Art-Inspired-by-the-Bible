@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-    const Artwork = sequelize.define("Artwork", {
+    const Video = sequelize.define("Video", {
       title: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -7,11 +7,11 @@ module.exports = function(sequelize, DataTypes) {
           len: [1, 150]
         }
       },
-      picture: {
-        type: DataTypes.STRING,
+      videoEmbed: {
+        type: DataTypes.TEXT,
         allowNull: false,
       },
-      artist: {
+      sourceCreator: {
         type: DataTypes.STRING,
         validate: {
           len: [1, 140]
@@ -53,5 +53,5 @@ module.exports = function(sequelize, DataTypes) {
       defaultValue: sequelize.literal('CURRENT_TIMESTAMP(3) ON UPDATE CURRENT_TIMESTAMP(3)')
     }
 });
-    return Artwork;
+    return Video;
   };
