@@ -9,15 +9,6 @@ const db = require("../models/artPieces.js");
 const path = require("path");
 
 module.exports = function(app) {
-<<<<<<< HEAD
-  
-app.get("/", function(req, res) {
-  res.sendFile(path.join(__dirname, "../views/"));
-})
-
-  };
-  
-=======
 
 // route for landing page
   app.get("/", function(req, res) {
@@ -44,4 +35,3 @@ app.get("/", function(req, res) {
     });
   });
 };
->>>>>>> c9d4d60a38063148d80c6aac09e5e038086ab74d
