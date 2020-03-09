@@ -1,7 +1,7 @@
 
 
 const path = require("path");
-const db = require("../models");
+db = require("../models");
 
 module.exports = (app, db) => {
 
