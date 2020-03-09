@@ -5,7 +5,7 @@
     "database": "vsewinrq1xm16k58",
     "host": "q3vtafztappqbpzn.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql",
-    "operatorsAliases": false
+    "operatorsAliases": "0"
   },
   "test": {
     "username": "root",
@@ -13,7 +13,7 @@
     "database": "database_test",
     "host": "127.0.0.1",
     "dialect": "mysql",
-    "operatorsAliases": false
+    "operatorsAliases": "0"
   },
   "production": {
     "username": "nv96ip1vnejy4ynw",
@@ -21,6 +21,6 @@
     "database": "vsewinrq1xm16k58",
     "host": "q3vtafztappqbpzn.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql",
-    "operatorsAliases": false
+    "operatorsAliases": "0"
   }
 }
