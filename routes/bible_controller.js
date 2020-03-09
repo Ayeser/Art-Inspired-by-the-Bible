@@ -22,8 +22,10 @@ module.exports = function(app) {
     console.log("Searching for pieces of art from selected book...");
     db.Artwork.findAll({
       where: {
-        book: req.params.book,
-        chapter: req.params.chapter
+        [Op.and]: [
+          { book: req.params.book },
+          { chapter: req.params.chapter}
+        ]
       }
       },).then(dbArtPieces => {
         res.json(dbArtPieces);
@@ -46,8 +48,10 @@ module.exports = function(app) {
   app.get("/api/scriptures/:book/:chapter", function(req, res) {
     console.log("Finding all scriptures from Scriptures table...");
     db.Scripture.findOne({ where: {
-      book = req.params.book,
-      chapter = req.params.chapter
+      [Op.and]: [
+        { book: req.params.book },
+        { chapter: req.params.chapter}
+      ]
     }}).then(function(dbScriptures) {
       res.json(dbScriptures)
     })
@@ -62,8 +66,10 @@ module.exports = function(app) {
   app.get("/api/videos/:book/:chapter", function(req, res) {
     console.log("Finding all scriptures from selected book...");
     db.Video.findAll({ where: {
-      book: req.params.book,
-      chapter: req.params.chapter
+      [Op.and]: [
+        { book: req.params.book },
+        { chapter: req.params.chapter}
+      ]
     }}).then(function(dbVideos) {
       res.json(dbVideos)
     })
