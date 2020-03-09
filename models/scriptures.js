@@ -2,7 +2,7 @@ module.exports = function(sequelize, DataTypes) {
     const Scripture = sequelize.define("Scripture", {
       book: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: "false",
         validate: {
           len: [1, 140]
         }
