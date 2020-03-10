@@ -15,10 +15,8 @@ app.get("/api/artPieces", function(req, res) {
     console.log("Searching for pieces of art from selected book...");
     db.Artwork.findAll({
       where: {
-        [Op.and]: [
-          { book: req.params.book },
-          { chapter: req.params.chapter}
-        ]
+          book: req.params.book,
+          chapter: req.params.chapter
       }
       },).then(dbArtPieces => {
         res.json(dbArtPieces);
@@ -41,10 +39,8 @@ app.get("/api/artPieces", function(req, res) {
   app.get("/api/scriptures/:book/:chapter", function(req, res) {
     console.log("Finding all scriptures from Scriptures table...");
     db.Scripture.findOne({ where: {
-      [Op.and]: [
-        { book: req.params.book },
-        { chapter: req.params.chapter}
-      ]
+      book: req.params.book,
+      chapter: req.params.chapter
     }}).then(function(dbScriptures) {
       res.json(dbScriptures)
     })
@@ -59,10 +55,8 @@ app.get("/api/artPieces", function(req, res) {
   app.get("/api/videos/:book/:chapter", function(req, res) {
     console.log("Finding all scriptures from selected book...");
     db.Video.findAll({ where: {
-      [Op.and]: [
-        { book: req.params.book },
-        { chapter: req.params.chapter}
-      ]
+        book: req.params.book,
+        chapter: req.params.chapter
     }}).then(function(dbVideos) {
       res.json(dbVideos)
     })
