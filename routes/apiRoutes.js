@@ -14,16 +14,16 @@ app.get("/api/artPieces", function(req, res) {
   app.get("/api/artPieces/:book/:chapter", function(req, res) {
     console.log("Searching for pieces of art from selected book...");
     db.Artwork.findAll({
-      include: [{
+      include: {
         model: Artwork,
         where: {book: req.params.book,
         chapter: req.params.chapter}
-      }],
+      },
       include: [{
         model: Videos,
         where: {book: req.params.book,
         chapter: req.params.chapter}
-      }],
+      }]
       },).then(dbArtPieces => {
         res.json(dbArtPieces);
       })
