@@ -13,18 +13,11 @@ app.get("/api/artPieces", function(req, res) {
 // route finding ALL images from Artwork table
   app.get("/api/artPieces/:book/:chapter", function(req, res) {
     console.log("Searching for pieces of art from selected book...");
-    db.findAll({
-      include: {
-        model: Artwork,
+    db.Artwork.findAll({
         where: {book: req.params.book,
         chapter: req.params.chapter}
-      },
-      include: [{
-        model: Videos,
-        where: {book: req.params.book,
-        chapter: req.params.chapter}
-      }]
-      },).then(dbArtPieces => {
+      }
+      ).then(dbArtPieces => {
         res.json(dbArtPieces);
       })
     });
