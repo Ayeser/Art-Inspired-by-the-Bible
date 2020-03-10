@@ -17,24 +17,20 @@ $(document).ready(function () {
             $.get("api/artPieces/" + searchTerms[0] + "/" + searchTerms[1], function(data) {
                 const artToAdd = [];
                 for (let i = 0; i< data.length;i++) {
+                    console.log(data[i].videoEmbed + " is the videoEmbed of this data piece");
+                    if(data[i].videoEmbed != undefined) {
+                        artToAdd.push(createNewVideo(data[i]));
+                    } else {
                     artToAdd.push(createNewPiece(data[i]));
+                    }
                 }
-                $("#resultsHere").append("<h1>Pictures for this chapter include: </h1><br /><br />");
+                $("#resultsHere").append("<h1>Art pieces for this chapter include: </h1><br /><br />");
                 $("#resultsHere").append(artToAdd);
             })
     
             function createNewPiece(piece) {
                 return ("<div><p>Title: " + piece.title + ", Artist: " + piece.artist + ", verse: " + piece.verse + "<br /><img src='" + piece.picture + "'></div>");
             }
-    
-            $.get("api/videos/" + searchTerms[0] + "/" + searchTerms[1], function(data) {
-                const videosToAdd = [];
-                for (let i = 0; i< data.length;i++) {
-                    videosToAdd.push(createNewVideo(data[i]));
-                }
-                $("#resultsHere").append("<h1>Videos for this chapter include: </h1><br /><br />");
-                $("#resultsHere").append(artToAdd);
-            })
     
             function createNewVideo(piece) {
                 return ("<div><p>Title: " + piece.title + ", Artist: " + piece.artist + ", verse: " + piece.verse + "<br /><img src='" + piece.picture + "'></div>");
@@ -44,9 +40,13 @@ $(document).ready(function () {
             $.get("api/artistArtwork/" + searchTerms[0], function(data) {
                 const artToAdd = [];
                 for (let i = 0; i< data.length;i++) {
+                    if(data[i].videoEmbed != undefined) {
+                        artToAdd.push(createNewVideo(data[i]));
+                    } else {
                     artToAdd.push(createNewPiece(data[i]));
+                    }
                 }
-                $("#resultsHere").append("<h1>Pictures for this artist include: </h1><br /><br />");
+                $("#resultsHere").append("<h1>Art pieces for this artist include: </h1><br /><br />");
                 $("#resultsHere").append(artToAdd);
             })
     
@@ -54,14 +54,14 @@ $(document).ready(function () {
                 return ("<div><p>Title: " + piece.title + ", Artist: " + piece.artist + ", book: " + piece.book + ", verse: " + piece.verse + "<br /><img src='" + piece.picture + "'></div>");
             }
     
-            $.get("api/artistVideos/" + searchTerms[0], function(data) {
-                const videosToAdd = [];
-                for (let i = 0; i< data.length;i++) {
-                    videosToAdd.push(createNewVideo(data[i]));
-                }
-                $("#resultsHere").append("<h1>Videos for this artist include: </h1><br /><br />");
-                $("#resultsHere").append(artToAdd);
-            })
+            // $.get("api/artistVideos/" + searchTerms[0], function(data) {
+            //     const videosToAdd = [];
+            //     for (let i = 0; i< data.length;i++) {
+            //         videosToAdd.push(createNewVideo(data[i]));
+            //     }
+            //     $("#resultsHere").append("<h1>Videos for this artist include: </h1><br /><br />");
+            //     $("#resultsHere").append(videosToAdd);
+            // })
     
             function createNewVideo(piece) {
                 return ("<div><p>Title: " + piece.title + ", Artist: " + piece.artist + ", book: " + piece.book + ", verse: " + piece.verse + "<br /><img src='" + piece.picture + "'></div>");
@@ -76,26 +76,26 @@ $(document).ready(function () {
         $("#nav2").empty();
         $("#nav3").empty();
         $("#nav4").empty();
-        $("#nav2").html('<nav class="navbar navbar-primary bg-primary justify-content-between" id="booksButtons"><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="PentateuchNav">Pentateuch</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="HistoricalBooksNav">Historical Books</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="WisdomNav">Wisdom</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="MajorProphetsNav">Major Prophets</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="MinorProphetsNav">Minor Prophets</button></nav>');
+        $("#nav2").append('<nav class="navbar navbar-primary bg-primary justify-content-between" id="booksButtons"><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="PentateuchNav">Pentateuch</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="HistoricalBooksNav">Historical Books</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="WisdomNav">Wisdom</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="MajorProphetsNav">Major Prophets</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="MinorProphetsNav">Minor Prophets</button></nav>');
     };
     $(document).on("click", "#NT", makeNewTestamentNav);
     function makeNewTestamentNav() {
         $("#nav2").empty();
         $("#nav3").empty();
         $("#nav4").empty();
-        $("#nav2").html('<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="GospelsNav">Gospels/Acts</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="PaulineNav">Pauline Epistles</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="EpistlesNav">General Epistles</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="RevelationNav">Revelation</button></nav>');
+        $("#nav2").append('<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="GospelsNav">Gospels/Acts</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="PaulineNav">Pauline Epistles</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="EpistlesNav">General Epistles</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="RevelationNav">Revelation</button></nav>');
     };
     $("#PentateuchNav").on("click", "#PentateuchNav", chosePenteteuch);
         function chosePenteteuch() {
             $("#nav3").empty();
             $("#nav4").empty();
-            $("#nav3").html('<nav class="navbar navbar-primary bg-primary justify-content-between" id="booksButtons"><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Genesis">Genesis</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Exodus">Exodus</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Leviticus">Leviticus</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Numbers">Numbers</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Deuteronomy">Deuteronomy</button></nav>');
+            $("#nav3").append('<nav class="navbar navbar-primary bg-primary justify-content-between" id="booksButtons"><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Genesis">Genesis</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Exodus">Exodus</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Leviticus">Leviticus</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Numbers">Numbers</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Deuteronomy">Deuteronomy</button></nav>');
         };    
             $("#HistoricalBooksNav").on("click", "#HistoricalBooksNav", choseHistoricalBooks);
             function choseHistoricalBooks() {
                 $("#nav3").empty();
                 $("#nav4").empty();
-                $("#nav3").html('here would go buttons for Joshua, Judges, Ruth, 1 Samuel, 2 Samuel, 1 Kings, 2 Kings, 1 Chronicles, 2 Chronicles, Ezra, Nehemiah, Esther');
+                $("#nav3").append('here would go buttons for Joshua, Judges, Ruth, 1 Samuel, 2 Samuel, 1 Kings, 2 Kings, 1 Chronicles, 2 Chronicles, Ezra, Nehemiah, Esther');
             };
         }
     });
