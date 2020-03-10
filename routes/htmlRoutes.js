@@ -6,4 +6,8 @@ module.exports = function(app) {
         res.sendFile(path.join(__dirname, "../public/practicePage.html"));
       });
 
+      app.get("/contest", function(req, res) {
+        res.sendFile(path.join(__dirname, "../public/contest.html"));
+      });
+
 }

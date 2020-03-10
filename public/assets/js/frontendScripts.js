@@ -129,5 +129,5 @@ $(document).ready(function () {
             console.log("Picture uploaded: " + data);
         });
     });
-
+    
 });
