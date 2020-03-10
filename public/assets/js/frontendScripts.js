@@ -40,7 +40,7 @@ $(document).ready(function () {
             }
     
             function createNewVideo(piece) {
-                return ("<div><p>Title: " + piece.title + ", Artist: " + piece.artist + ", verse: " + piece.verse + "<br /><img src='" + piece.picture + "'></div>");
+                return ("<div><p>Title: " + piece.title + ", Artist: " + piece.artist + ", verse: " + piece.verse + "<br /><img src='" + piece.videoEmbed + "'></div>");
             }
         } else {
             // This next chunk is if the first search word was not a Bible book
