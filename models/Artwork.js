@@ -55,8 +55,6 @@ module.exports = function (sequelize, DataTypes) {
   });
 
   Artwork.associate = function(models) {
-    // Associating Author with Posts
-    // When an Author is deleted, also delete any associated Posts
     Artwork.hasMany(models.Scripture, {
       onDelete: "cascade"
     });

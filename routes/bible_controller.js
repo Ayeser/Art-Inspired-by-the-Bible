@@ -1,5 +1,3 @@
-
-
 const path = require("path");
 
 module.exports = (app, db) => {
@@ -21,12 +19,8 @@ module.exports = (app, db) => {
   app.get("/api/Artwork/:book", function (req, res) {
     console.log("Searching for pieces of art from selected book...");
     db.Artwork.findAll({
-      where:
-      {
-        book: req.params.book
-
-      }
-      , include: [db.Scripture]
+      where: {book: req.params.book}, 
+      include: [db.Scripture]
     }).then(function (dbArtwork) {
       res.json(dbArtwork);
     });

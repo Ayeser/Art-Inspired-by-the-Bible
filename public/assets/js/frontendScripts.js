@@ -4,18 +4,18 @@ $(document).ready(function () {
     function handleArtworkFormSubmit(event) {
         event.preventDefault();
         console.log("before get call: " + $("#searchArtwork").val())
-        $.get("api/Artwork/" + $("#searchArtwork").val(), function(data) {
-            console.log("Artwork: " , data);
+        $.get("api/Artwork/" + $("#searchArtwork").val(), function (data) {
+            console.log("Artwork: ", data);
             resultContainer.empty();
             const artToAdd = [];
-            for (let i = 0; i< data.length;i++) {
+            for (let i = 0; i < data.length; i++) {
                 artToAdd.push(createNewPiece(data[i]));
             }
             resultContainer.append(artToAdd)
         })
 
         function createNewPiece(piece) {
-            return ("<div>" + piece.title +"<img src='"+piece.picture+"'>" + "</div>");
+            return ("<div>" + piece.title + "<img src='" + piece.picture + "'>" + "</div>");
         }
     }
 });
