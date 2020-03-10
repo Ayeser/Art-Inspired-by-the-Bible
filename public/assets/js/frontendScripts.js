@@ -76,6 +76,7 @@ $(document).ready(function () {
     //Menu bar handling
     $("#OT").on("click", makeOldTestamentNav);
     function makeOldTestamentNav() {
+        event.preventDefault();
         $("#nav2").empty().hide(1000);
         $("#nav3").empty().hide(1000);
         $("#nav4").empty().hide(1000);
@@ -83,6 +84,7 @@ $(document).ready(function () {
     };
     $(document).on("click", "#NT", makeNewTestamentNav);
     function makeNewTestamentNav() {
+        event.preventDefault();
         $("#nav2").empty().hide(1000);
         $("#nav3").empty().hide(1000);
         $("#nav4").empty().hide(1000);
@@ -90,15 +92,42 @@ $(document).ready(function () {
     };
     $("#PentateuchNav").on("click", "#PentateuchNav", chosePenteteuch);
         function chosePenteteuch() {
+            event.preventDefault();
             $("#nav3").empty().hide(1000);
             $("#nav4").empty().hide(1000);
             $("#nav3").show(1000).append('<nav class="navbar navbar-primary bg-primary justify-content-between" id="booksButtons"><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Genesis">Genesis</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Exodus">Exodus</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Leviticus">Leviticus</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Numbers">Numbers</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Deuteronomy">Deuteronomy</button></nav>');
         };    
             $("#HistoricalBooksNav").on("click", "#HistoricalBooksNav", choseHistoricalBooks);
             function choseHistoricalBooks() {
+                event.preventDefault();
                 $("#nav3").empty().hide(1000);
                 $("#nav4").empty().hide(1000);
                 $("#nav3").show(1000).append('here would go buttons for Joshua, Judges, Ruth, 1 Samuel, 2 Samuel, 1 Kings, 2 Kings, 1 Chronicles, 2 Chronicles, Ezra, Nehemiah, Esther');
             };
         }
+
+
+    //below chunk is for the image uploader on the contest page
+    var upload = new FileUploadWithPreview('myUniqueUploadId', {
+        showDeleteButtonOnImages: true,
+        text: {
+            chooseFile: 'Custom Placeholder Copy',
+            browse: 'Custom Button Copy',
+            selectedCount: 'Custom Files Selected Copy',
+        },
+        images: {
+            baseImage: importedBaseImage,
+        },
+        presetFiles: [
+            '../public/logo-promosis.png',
+            'https://images.unsplash.com/photo-1557090495-fc9312e77b28?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80',
+        ],
     });
+    $("#contestButton").on("click", function() {
+        $.post("api/contestPiece/", {title: "Exodus", chapter: "1", picture: upload.cachedFileArray[0]})
+        .done(function(data) {
+            console.log("Picture uploaded: " + data);
+        });
+    });
+
+});

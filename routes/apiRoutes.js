@@ -1,5 +1,6 @@
 const db = require("../models");
 path = require("path");
+const FileUploadWithPreview = require('file-upload-with-preview');
 
 module.exports = function(app) {
 // route for all images in Artwork table
@@ -85,6 +86,11 @@ app.get("/api/artPieces", function(req, res) {
     })
   });
 
+  app.post("api/contestPieces/", function(req, res) {
+    db.Contest.create(req.body).then(function(dbContest) {
+      res.json(dbContest)
+    });
+  });
 
-
-  };
+  
+};
