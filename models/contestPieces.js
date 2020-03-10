@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-    const Artwork = sequelize.define("Contest", {
+    const Contest = sequelize.define("Contest", {
       title: {
         type: DataTypes.STRING,
         allowNull: false,
