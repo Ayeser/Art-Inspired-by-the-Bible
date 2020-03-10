@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-    const Video = sequelize.define("Video", {
+    const Contest = sequelize.define("Contest", {
       title: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -7,11 +7,18 @@ module.exports = function(sequelize, DataTypes) {
           len: [1, 150]
         }
       },
-      videoEmbed: {
-        type: DataTypes.TEXT,
+      deleteCode: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+          len: [1, 150]
+        }
+      },
+      picture: {
+        type: DataTypes.STRING,
         allowNull: false,
       },
-      sourceCreator: {
+      artist: {
         type: DataTypes.STRING,
         validate: {
           len: [1, 140]
@@ -37,17 +44,17 @@ module.exports = function(sequelize, DataTypes) {
         default: false
     },
     upvotes: {
-      type: DataTypes.INTEGER,
-      default: 0
+        type: DataTypes.INTEGER,
+        default: 0
     },
     createdAt: {
-      type: DataTypes.DATE(3),
+      type:DataTypes.DATE(3),
       defaultValue: sequelize.literal('CURRENT_TIMESTAMP(3)')
     },
     updatedAt: {
-      type: DataTypes.DATE(3),
+      type:DataTypes.DATE(3),
       defaultValue: sequelize.literal('CURRENT_TIMESTAMP(3) ON UPDATE CURRENT_TIMESTAMP(3)')
     }
-  });
-  return Video;
-};
+});
+    return Contest;
+  };

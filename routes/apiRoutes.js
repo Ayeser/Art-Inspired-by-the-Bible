@@ -1,52 +1,23 @@
-
-const path = require("path");
 const db = require("../models");
+path = require("path");
 
 module.exports = function(app) {
-
-  // route for landing page
-  app.get("/", function (req, res) {
-    res.sendFile(path.join(__dirname, "../public/practicePage.html"));
-  });
-
-  // route for all images in Artwork table
-  app.get("/api/Artwork", function (req, res) {
-    console.log("Finding all art from selected book...");
-    db.Artworks.findAll({}).then(Artwork => {
-      return res.json(Artwork);
-    });
-  });
-
-  // route finding ALL images from Artwork table joined with Scriptures(?) table
-  app.get("/api/Artwork/:book", function (req, res) {
-    console.log("Searching for pieces of art from selected book...");
-    db.Artwork.findAll({
-      where: {book: req.params.book}, 
-      include: [db.Scripture]
-    }).then(function (dbArtwork) {
-      res.json(dbArtwork);
-    });
-  });
-};
 // route for all images in Artwork table
-  app.get("/api/artPieces", function(req, res) {
+app.get("/api/artPieces", function(req, res) {
     console.log("Finding all art from Artwork table...");
     db.Artwork.findAll({}).then(function(dbArtPieces) {
       res.json(dbArtPieces)
     })
   });
 
-// route finding ALL images from Artwork table joined with Scriptures(?) table
+// route finding ALL images from Artwork table
   app.get("/api/artPieces/:book/:chapter", function(req, res) {
     console.log("Searching for pieces of art from selected book...");
     db.Artwork.findAll({
-      where: {
-        [Op.and]: [
-          { book: req.params.book },
-          { chapter: req.params.chapter}
-        ]
+        where: {book: req.params.book,
+        chapter: req.params.chapter}
       }
-      },).then(dbArtPieces => {
+      ).then(dbArtPieces => {
         res.json(dbArtPieces);
       })
     });
@@ -67,10 +38,8 @@ module.exports = function(app) {
   app.get("/api/scriptures/:book/:chapter", function(req, res) {
     console.log("Finding all scriptures from Scriptures table...");
     db.Scripture.findOne({ where: {
-      [Op.and]: [
-        { book: req.params.book },
-        { chapter: req.params.chapter}
-      ]
+      book: req.params.book,
+      chapter: req.params.chapter
     }}).then(function(dbScriptures) {
       res.json(dbScriptures)
     })
@@ -85,10 +54,8 @@ module.exports = function(app) {
   app.get("/api/videos/:book/:chapter", function(req, res) {
     console.log("Finding all scriptures from selected book...");
     db.Video.findAll({ where: {
-      [Op.and]: [
-        { book: req.params.book },
-        { chapter: req.params.chapter}
-      ]
+        book: req.params.book,
+        chapter: req.params.chapter
     }}).then(function(dbVideos) {
       res.json(dbVideos)
     })
@@ -117,3 +84,12 @@ module.exports = function(app) {
       res.json(dbVideos)
     })
   });
+
+  app.post("api/contestPieces/", function(req, res) {
+    db.Contest.create(req.body).then(function(dbContest) {
+      res.json(dbContest)
+    });
+  });
+
+  
+};
