@@ -17,7 +17,7 @@ app.get("/api/artPieces", function(req, res) {
       where: {
         [Op.and]: [
           { book: req.params.book },
-          { chapter: parse.Int(req.params.chapter)}
+          { chapter: req.params.chapter}
         ]
       }
       },).then(dbArtPieces => {
@@ -43,7 +43,7 @@ app.get("/api/artPieces", function(req, res) {
     db.Scripture.findOne({ where: {
       [Op.and]: [
         { book: req.params.book },
-        { chapter: parseInt(req.params.chapter)}
+        { chapter: req.params.chapter}
       ]
     }}).then(function(dbScriptures) {
       res.json(dbScriptures)
@@ -61,7 +61,7 @@ app.get("/api/artPieces", function(req, res) {
     db.Video.findAll({ where: {
       [Op.and]: [
         { book: req.params.book },
-        { chapter: parseInt(req.params.chapter)}
+        { chapter: req.params.chapter}
       ]
     }}).then(function(dbVideos) {
       res.json(dbVideos)
