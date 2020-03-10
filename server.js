@@ -16,7 +16,9 @@ const db = require("./models/");
 
 // app.use(routes);
 
-require("./routes/bible_controller.js")(app);
+// require("./routes/bible_controller.js")(app);
+require("./routes/apiRoutes.js")(app);
+require("./routes/htmlRoutes.js")(app);
 
 // Start our server so that it can begin listening to client requests.
 db.sequelize.sync().then(function() {

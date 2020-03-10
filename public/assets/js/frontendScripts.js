@@ -1,9 +1,10 @@
 $(document).ready(function () {
 
     $(document).on("submit", "#artworkForm", handleArtworkFormSubmit);
+    var searchTerms;
     function handleArtworkFormSubmit(event) {
         event.preventDefault();
-        var searchTerms = $("#searchArtwork").val().toLowerCase().split(" ");
+        searchTerms = $("#searchArtwork").val().toLowerCase().split(" ");
         console.log("searchTerm 1 is: " + searchTerms[0]);
         console.log("searchTerm 2 is: " + searchTerms[1]);
         $("#resultsHere").empty();
