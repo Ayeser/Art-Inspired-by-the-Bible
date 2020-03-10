@@ -1,6 +1,5 @@
 const db = require("../models");
 path = require("path");
-const FileUploadWithPreview = require('file-upload-with-preview');
 
 module.exports = function(app) {
 // route for all images in Artwork table
