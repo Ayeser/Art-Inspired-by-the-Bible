@@ -4,11 +4,12 @@ const db = require("../models");
 
 module.exports = function(app) {
 
-// route for landing page
-  app.get("/", function(req, res) {
+  // route for landing page
+  app.get("/", function (req, res) {
     res.sendFile(path.join(__dirname, "../public/practicePage.html"));
   });
 
+<<<<<<< HEAD
 // route for all images in Artwork table
   app.get("/api/artPieces", function(req, res) {
     console.log("Finding all art from Artwork table...");
@@ -102,3 +103,28 @@ module.exports = function(app) {
 
 
   };
+=======
+  // route for all images in Artwork table
+  app.get("/api/Artwork", function (req, res) {
+    console.log("Finding all art from selected book...");
+    db.Artworks.findAll({}).then(Artwork => {
+      return res.json(Artwork);
+    });
+  });
+
+  // route finding ALL images from Artwork table joined with Scriptures(?) table
+  app.get("/api/Artwork/:book", function (req, res) {
+    console.log("Searching for pieces of art from selected book...");
+    db.Artwork.findAll({
+      where:
+      {
+        book: req.params.book
+
+      }
+      , include: [db.Scripture]
+    }).then(function (dbArtwork) {
+      res.json(dbArtwork);
+    });
+  });
+};
+>>>>>>> 8c34d80695be0209487a04ecba03e2fda8d8d525
