@@ -49,7 +49,7 @@ module.exports = function(sequelize, DataTypes) {
         type: DataTypes.BOOLEAN,
         default: false
     },
-    firstSamuel, Achievement: {
+    firstSamuelAchievement: {
         type: DataTypes.BOOLEAN,
         default: false
     },
