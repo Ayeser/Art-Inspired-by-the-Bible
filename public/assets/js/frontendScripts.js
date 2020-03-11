@@ -130,11 +130,11 @@ $(document).ready(function () {
             });
 
             function createNewPiece(piece) {
-                return ("<div><p>Title: " + piece.title + ", Artist: " + piece.artist + ", verse: " + piece.verse + "<br /><img src='" + piece.picture + "'></div>");
+                return('<div class="card" style="width: 18rem;"><img class="card-img-top" src="' + piece.picture + '" alt="Card image cap"><div class="card-body"><h5 class="card-title">' + piece.title + '</h5></div><ul class="list-group list-group-flush"><li class="list-group-item">Artist: ' + piece.artist + '</li><li class="list-group-item">Verse: ' + piece.verse + '</li></ul>');
             }
 
             function createNewVideo(piece) {
-                return ("<div><p>Title: " + piece.title + ", Artist: " + piece.artist + ", verse: " + piece.verse + "<br /><img src='" + piece.videoEmbed + "'></div>");
+                return('<div class="card" style="width: 18rem;">' + piece.videoEmbed + '<div class="card-body"><h5 class="card-title">' + piece.title + '</h5></div><ul class="list-group list-group-flush"><li class="list-group-item">Artist: ' + piece.artist + '</li><li class="list-group-item">Verse: ' + piece.verse + '</li></ul>');
             }
         } else {
             // This next chunk is if the first search word was not a Bible book
@@ -148,7 +148,7 @@ $(document).ready(function () {
             })
 
             function createNewPiece(piece) {
-                return ("<div><p>Title: " + piece.title + ", Artist: " + piece.artist + ", book: " + piece.book + ", verse: " + piece.verse + "<br /><img src='" + piece.picture + "'></div>");
+                return('<div class="card" style="width: 18rem;"><img class="card-img-top" src="' + piece.picture + '" alt="Card image cap"><div class="card-body"><h5 class="card-title">' + piece.title + '</h5></div><ul class="list-group list-group-flush"><li class="list-group-item">Artist: ' + piece.artist + '</li><li class="list-group-item">Verse: ' + piece.verse + '</li></ul>');
             }
 
             $.get("api/artistVideos/" + searchTerms[0], function (data) {
@@ -161,7 +161,7 @@ $(document).ready(function () {
             })
 
             function createNewVideo(piece) {
-                return ("<div><p>Title: " + piece.title + ", Artist: " + piece.artist + ", book: " + piece.book + ", verse: " + piece.verse + "<br /><img src='" + piece.picture + "'></div>");
+                return('<div class="card" style="width: 18rem;">' + piece.videoEmbed + '<div class="card-body"><h5 class="card-title">' + piece.title + '</h5></div><ul class="list-group list-group-flush"><li class="list-group-item">Artist: ' + piece.artist + '</li><li class="list-group-item">Verse: ' + piece.verse + '</li></ul>');
             }
         };
 
