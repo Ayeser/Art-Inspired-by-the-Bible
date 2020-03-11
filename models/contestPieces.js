@@ -1,6 +1,13 @@
 module.exports = function(sequelize, DataTypes) {
-    const Artwork = sequelize.define("Artwork", {
+    const Contest = sequelize.define("Contest", {
       title: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+          len: [1, 150]
+        }
+      },
+      deleteCode: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
@@ -49,5 +56,5 @@ module.exports = function(sequelize, DataTypes) {
       defaultValue: sequelize.literal('CURRENT_TIMESTAMP(3) ON UPDATE CURRENT_TIMESTAMP(3)')
     }
 });
-    return Artwork;
+    return Contest;
   };

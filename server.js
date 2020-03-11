@@ -1,4 +1,8 @@
+
 const express = require("express");
+const session = require("express-session");
+// Requiring passport as we've configured it
+const passport = require("./config/passport");
 
 const PORT = process.env.PORT || 8080;
 
@@ -11,6 +15,9 @@ app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
+app.use(passport.initialize());
+app.use(passport.session());
 // Import routes and give the server access to them.
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26,7 +33,9 @@ const db = require("./models/");
 
 // app.use(routes);
 
-require("./routes/bible_controller.js")(app);
+// require("./routes/bible_controller.js")(app);
+require("./routes/apiRoutes.js")(app);
+require("./routes/htmlRoutes.js")(app);
 
 // Start our server so that it can begin listening to client requests.
 <<<<<<< HEAD

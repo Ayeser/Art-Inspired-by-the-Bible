@@ -11,35 +11,26 @@
 		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
 		crossorigin="anonymous"></script>
  <script src="/assets/js/frontendScripts.js"></script>
+ <link rel="stylesheet" type="text/css" href="https://unpkg.com/file-upload-with-preview@4.0.2/dist/file-upload-with-preview.min.css">
 	</head>
 	<body>
 		<nav class="navbar navbar-light bg-light justify-content-between">
-			<a class="navbar-brand">Art Inspired by the Bible</a>
-			<div>
-			<p>Lookup:</p>
-			<button class="btn btn-default dropdown-toggle" type="button" id="OT">OT</button>
-			<button class="btn btn-default dropdown-toggle" type="button" id="NT">NT</button>
-		</div>
-		<div>
-			<a href="./contest.html">Monthly Contest</a>
-		</div>
-
-			<form class="form-inline" id="artworkForm">
-			  <input class="form-control mr-sm-2" id="searchArtwork" type="search" placeholder="Search" aria-label="Search">
-			  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-			</form>
-		  </nav>
-		  <nav class="navbar navbar-light bg-light justify-content-between" id="nav2"></nav>
-		  <nav class="navbar navbar-light bg-light justify-content-between" id="nav3"></nav>
-		  <nav class="navbar navbar-light bg-light justify-content-between" id="nav4"></nav>
-
-<div class="row">
-	<div class="clearfix">
-		<div class="card" id="scriptureHere" style="width: 50rem;">
-		</div>
-<div class="card" id="resultsHere" style="width: 50rem;"></div>
-	</div>
-</div>
+			<a class="navbar-brand">Contest of the Month, Theme: Exodus</a>
+		<div><a href="https://glacial-falls-40496.herokuapp.com/">Back to main page</a></div>
+		</nav>
+            
+	
+            <div class="custom-file-container" data-upload-id="myUniqueUploadId">
+                <label>Upload File <a href="javascript:void(0)" class="custom-file-container__image-clear" title="Clear Image">&times;</a></label>
+     
+                <label class="custom-file-container__custom-file" >
+                    <input type="file" class="custom-file-container__custom-file__custom-file-input" accept="*" multiple aria-label="Choose File">
+                    <input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
+                    <span class="custom-file-container__custom-file__custom-file-control"></span>
+                </label>
+				<div class="custom-file-container__image-preview"></div>
+				<button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="contestButton">Submit to Contest</button>
+            </div>
 
 
 		 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
