@@ -15,7 +15,11 @@ module.exports = function(app) {
       });
 
       app.get("/profile", function(req, res) {
-        res.sendFile(path.join(__dirname, "../public/profile.html"));
+        if (req.user) {
+          res.sendFile(path.join(__dirname, "../public/profile.html"));
+        } else {
+          res.sendFile(path.join(__dirname, "../public/login.html"));
+        }
       });
 
       app.get("/signup", function(req, res) {
