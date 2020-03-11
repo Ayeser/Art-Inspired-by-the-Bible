@@ -20,8 +20,6 @@ app.use(passport.initialize());
 app.use(passport.session());
 // Import routes and give the server access to them.
 
-const db = require("./models/artpieces.js");
-
 const db = require("./models");
 
 
