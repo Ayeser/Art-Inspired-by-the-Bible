@@ -94,9 +94,6 @@ $(document).ready(function () {
             });
     });
 
-    var upload = new FileUploadWithPreview('myUniqueUploadId');
-
-
     $(document).on("submit", "#artworkForm", handleArtworkFormSubmit);
     var searchTerms;
     function handleArtworkFormSubmit(event) {
