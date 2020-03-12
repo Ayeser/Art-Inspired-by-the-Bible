@@ -8,6 +8,11 @@ $(document).ready(function () {
         $("#nav3").empty().hide(500);
         $("#nav4").empty().hide(500);
         $("#nav2").show(1000).append('<nav class="navbar navbar-primary bg-primary justify-content-between" id="booksButtons"><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="PentateuchNav">Pentateuch</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="HistoricalBooksNav">Historical Books</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="WisdomNav">Wisdom</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="MajorProphetsNav">Major Prophets</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="MinorProphetsNav">Minor Prophets</button></nav>');
+        $("#PentateuchNav").on("click", "#PentateuchNav", chosePenteteuch);
+        $("#HistoricalBooksNav").on("click", "#HistoricalBooksNav", choseHistoricalBooks);
+        $("#WisdomBooksNav").on("click", "#WisdomBooksNav", choseWisdomBooks);
+        $("#MajorProphetsNav").on("click", "#MajorProphetsNav", choseMajorProphetsBooks);
+        $("#MinorProphetsnav").on("click", "#MinorProphetsNav", choseMinorProphetsBooks);
     };
     $(document).on("click", "#NT", makeNewTestamentNav);
     function makeNewTestamentNav() {
@@ -16,71 +21,76 @@ $(document).ready(function () {
         $("#nav3").empty().hide(500);
         $("#nav4").empty().hide(500);
         $("#nav2").show(500).append('<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="GospelsNav">Gospels/Acts</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="PaulineNav">Pauline Epistles</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="EpistlesNav">General Epistles</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="RevelationNav">Revelation</button></nav>');
+        $("#GospelsNav").on("click", "#GospelsNav", choseGospelsBooks);
+        $("#PaulineEpistlesNav").on("click", "#PaulineEpistlesNav", chosePaulineBooks);
+        $("#GeneralEpistlesNav").on("click", "#GeneralEpistlesNav", choseGeneralBooks);
+        $("#RevelationNav").on("click", "#RevelationNav", choseRevelationBook);
     };
-    $(document).on("click", "#PentateuchNav", chosePenteteuch);
+   
     function chosePenteteuch() {
         event.preventDefault();
         $("#nav3").empty().hide(500);
         $("#nav4").empty().hide(500);
         $("#nav3").show(500).append('<nav class="navbar navbar-primary bg-primary justify-content-between" id="pentateuchButtons"><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Genesis">Genesis</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Exodus">Exodus</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Leviticus">Leviticus</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Numbers">Numbers</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Deuteronomy">Deuteronomy</button></nav>');
+        $("#Genesis").on("click", "#Genesis", choseGenesis);
     };
-    $(document).on("click", "#HistoricalBooksNav", choseHistoricalBooks);
+
     function choseHistoricalBooks() {
         event.preventDefault();
         $("#nav3").empty().hide(500);
         $("#nav4").empty().hide(500);
         $("#nav3").show(500).append('<nav class="navbar navbar-primary bg-primary justify-content-between" id="booksButtons"><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Joshua">Joshua</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Judges">Judges</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Ruth">Ruth</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="FirstSamuel">1 Samuel</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="SecondSamuel">2 Samuel</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="FirstKings">1 Kings</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="SecondKings">2 Kings</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="FirstChronicles">1 Chronicles</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="SecondChronicles">2 Chronicles</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Ezra">Ezra</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Nehemiah">Nehemiah</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Esther">Esther</button></nav>');
     };
-    $(document).on("click", "#WisdomBooksNav", choseWisdomBooks);
+    
     function choseWisdomBooks() {
         event.preventDefault();
         $("#nav3").empty().hide(500);
         $("#nav4").empty().hide(500);
         $("#nav3").show(500).append('<nav class="navbar navbar-primary bg-primary justify-content-between" id="wisdomButtons"><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Job">Job</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Psalms">Psalms</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Proverbs">Proverbs</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Ecclesiastes">Ecclesiastes</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="SongOfSolomon">Song of Solomon</button></nav>');
     }
-    $(document).on("click", "#MajorProphetsNav", choseMajorProphetsBooks);
+ 
     function choseMajorProphetsBooks() {
         event.preventDefault();
         $("#nav3").empty().hide(500);
         $("#nav4").empty().hide(500);
         $("#nav3").show(500).append('<nav class="navbar navbar-primary bg-primary justify-content-between" id="majorProphetsButtons"><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Isaiah">Isaiah</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Jeremiah">Jeremiah</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Lamentations">Lamentations</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Ezekiel">Ezekiel</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Daniel">Daniel</button></nav>');
     };
-    $(document).on("click", "#MinorProphetsNav", choseMinorProphetsBooks);
+
     function choseMinorProphetsBooks() {
         event.preventDefault();
         $("#nav3").empty().hide(500);
         $("#nav4").empty().hide(500);
         $("#nav3").show(500).append('<nav class="navbar navbar-primary bg-primary justify-content-between" id="minorProphetsButtons"><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Hosea">Hosea</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Joel">Joel</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Amos">Amos</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Obadiah">Obadiah</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Jonah">Jonah</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Micah">Micah</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Nahum">Nahum</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Habakkuk">Habakkuk</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Zephaniah">Zephaniah</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Haggai">Haggai</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Zechariah">Zechariah</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Malachi">Malachi</button></nav>');
     };
-    $(document).on("click", "#GospelsNav", choseGospelsBooks);
+    
     function choseGospelsBooks() {
         event.preventDefault();
         $("#nav3").empty().hide(500);
         $("#nav4").empty().hide(500);
         $("#nav3").show(500).append('<nav class="navbar navbar-primary bg-primary justify-content-between" id="GospelsButtons"><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Matthew">Matthew</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Mark">Mark</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Luke">Luke</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="John">John</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Acts">Acts</button></nav>');
     };
-    $(document).on("click", "#PaulineEpistlesNav", chosePaulineBooks);
+  
     function chosePaulineBooks() {
         event.preventDefault();
         $("#nav3").empty().hide(500);
         $("#nav4").empty().hide(500);
         $("#nav3").show(500).append('<nav class="navbar navbar-primary bg-primary justify-content-between" id="PaulineButtons"><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Romans">Romans</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="FirstCorinthians">1 Corinthians</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="SecondCorinthians">2 Corinthians</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Galatians">Galatians</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Ephesians">Ephesians</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Philippians">Philippians</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Colossians">Colossians</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="FirstThessalonians">1 Thessalonians</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="SecondThessalonians">2 Thessalonians</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="FirstTimothy">1 Timothy</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="SecondTimothy">2 Timothy</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Titus">Titus</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Philemon">Philemon</button></nav>');
     };
-    $(document).on("click", "#GeneralEpistlesNav", choseGeneralBooks);
+
     function choseGeneralBooks() {
         event.preventDefault();
         $("#nav3").empty().hide(500);
         $("#nav4").empty().hide(500);
         $("#nav3").show(500).append('<nav class="navbar navbar-primary bg-primary justify-content-between" id="GeneralEpistlesButtons"><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Hebrews">Hebrews</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="James">James</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="FirstPeter">1 Peter</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="SecondPeter">2 Peter</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="FirstJohn">1 John</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="SecondJohn">2 John</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="ThirdJohn">3 John</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Jude">Jude</button></nav>');
     };
-    $(document).on("click", "#RevelationNav", choseRevelationBook);
+   
     function choseRevelationBook() {
         event.preventDefault();
         $("#nav3").empty().hide(500);
         $("#nav4").empty().hide(500);
         $("#nav3").show(500).append('<nav class="navbar navbar-primary bg-primary justify-content-between"><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Revelation">Revelation</button></nav>');
     };
-    $(document).on("click", "#Genesis", choseGenesis);
+   
     function choseGenesis() {
         event.preventDefault();
         $("#nav4").empty().hide(500);
@@ -130,11 +140,11 @@ $(document).ready(function () {
             });
 
             function createNewPiece(piece) {
-                return('<div class="card" style="width: 18rem;"><img class="card-img-top" src="' + piece.picture + '" alt="Card image cap"><div class="card-body"><h5 class="card-title">' + piece.title + '</h5></div><ul class="list-group list-group-flush"><li class="list-group-item">Artist: ' + piece.artist + '</li><li class="list-group-item">Verse: ' + piece.verse + '</li></ul>');
+                return('<div class="card" style="width: 18rem;"><img class="card-img-top" src="' + piece.picture + '" alt="Card image cap"><div class="card-body"><h5 class="card-title">' + piece.title + '</h5></div><div>Artist: ' + piece.artist + '</div><div>Verse: ' + piece.verse + '</div></div>');
             }
 
             function createNewVideo(piece) {
-                return('<div class="card" style="width: 18rem;">' + piece.videoEmbed + '<div class="card-body"><h5 class="card-title">' + piece.title + '</h5></div><ul class="list-group list-group-flush"><li class="list-group-item">Artist: ' + piece.artist + '</li><li class="list-group-item">Verse: ' + piece.verse + '</li></ul>');
+                return('<div class="card" style="width: 18rem;"><div class="card-body">' + piece.videoEmbed + '</div><div><h5 class="card-title">' + piece.title + '</h5></div><div>Artist: ' + piece.artist + '</div><div>Verse: ' + piece.verse + '</div></div>');
             }
         } else {
             // This next chunk is if the first search word was not a Bible book
@@ -148,7 +158,7 @@ $(document).ready(function () {
             })
 
             function createNewPiece(piece) {
-                return('<div class="card" style="width: 18rem;"><img class="card-img-top" src="' + piece.picture + '" alt="Card image cap"><div class="card-body"><h5 class="card-title">' + piece.title + '</h5></div><ul class="list-group list-group-flush"><li class="list-group-item">Artist: ' + piece.artist + '</li><li class="list-group-item">Verse: ' + piece.verse + '</li></ul>');
+                return('<div class="card" style="width: 18rem;"><img class="card-img-top" src="' + piece.picture + '" alt="Card image cap"><div class="card-body"><h5 class="card-title">' + piece.title + '</h5></div><div>Artist: ' + piece.artist + '</div><div>Verse: ' + piece.verse + '</div></div>');
             }
 
             $.get("api/artistVideos/" + searchTerms[0], function (data) {
@@ -161,7 +171,7 @@ $(document).ready(function () {
             })
 
             function createNewVideo(piece) {
-                return('<div class="card" style="width: 18rem;">' + piece.videoEmbed + '<div class="card-body"><h5 class="card-title">' + piece.title + '</h5></div><ul class="list-group list-group-flush"><li class="list-group-item">Artist: ' + piece.artist + '</li><li class="list-group-item">Verse: ' + piece.verse + '</li></ul>');
+                return('<div class="card" style="width: 18rem;"><div class="card-body">' + piece.videoEmbed + '</div><div><h5 class="card-title">' + piece.title + '</h5></div><div>Artist: ' + piece.artist + '</div><div>Verse: ' + piece.verse + '</div></div>');
             }
         };
 
