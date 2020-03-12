@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "root",
-    "password": "",
-    "database": "bible_db",
-    "host": "127.0.0.1",
+    "username": "nv96ip1vnejy4ynw",
+    "password": "f57ta9mtdsipp3q4",
+    "database": "vsewinrq1xm16k58",
+    "host": "q3vtafztappqbpzn.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql",
     "operatorsAliases": false
   },
