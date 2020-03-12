@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-    const MemberOneLikes = sequelize.define("MemberOneLikes", {
+    const MemberLikes = sequelize.define("MemberLikes", {
       book: {
         type: DataTypes.STRING,
         allowNull: "false",
@@ -24,15 +24,15 @@ module.exports = function(sequelize, DataTypes) {
       defaultValue: sequelize.literal('CURRENT_TIMESTAMP(3) ON UPDATE CURRENT_TIMESTAMP(3)')
     }
 });
-MemberOneLikes.associate = function(models) {
+MemberLikes.associate = function(models) {
   // We're saying that a Post should belong to an Author
   // A Post can't be created without an Author due to the foreign key constraint
-  MemberOneLikes.belongsTo(models.User, {
+  MemberLikes.belongsTo(models.User, {
     foreignKey: {
       name: 'email',
       allowNull: false
     }
   });
 };
-    return MemberOneLikes;
+    return MemberLikes;
   };
