@@ -4,7 +4,6 @@ $(document).ready(function () {
     var searchTerms;
     function handleArtworkFormSubmit(event) {
         event.preventDefault();
-<<<<<<< HEAD
         searchTerms = $("#searchArtwork").val().toLowerCase().split(" ");
         console.log("searchTerm 1 is: " + searchTerms[0]);
         console.log("searchTerm 2 is: " + searchTerms[1]);
@@ -56,15 +55,6 @@ $(document).ready(function () {
     
             function createNewPiece(piece) {
                 return ("<div><p>Title: " + piece.title + ", Artist: " + piece.artist + ", book: " + piece.book + ", verse: " + piece.verse + "<br /><img src='" + piece.picture + "'></div>");
-=======
-        console.log("before get call: " + $("#searchArtwork").val())
-        $.get("api/Artwork/" + $("#searchArtwork").val(), function(data) {
-            console.log("Artwork: " , data);
-            resultContainer.empty();
-            const artToAdd = [];
-            for (let i = 0; i< data.length;i++) {
-                artToAdd.push(createNewPiece(data[i]));
->>>>>>> 8c34d80695be0209487a04ecba03e2fda8d8d525
             }
     
             $.get("api/artistVideos/" + searchTerms[0], function(data) {
@@ -83,7 +73,6 @@ $(document).ready(function () {
         
     
 
-<<<<<<< HEAD
     //Menu bar handling
     $("#OT").on("click", makeOldTestamentNav);
     function makeOldTestamentNav() {
@@ -115,10 +104,6 @@ $(document).ready(function () {
                 $("#nav4").empty().hide(1000);
                 $("#nav3").show(1000).append('here would go buttons for Joshua, Judges, Ruth, 1 Samuel, 2 Samuel, 1 Kings, 2 Kings, 1 Chronicles, 2 Chronicles, Ezra, Nehemiah, Esther');
             };
-=======
-        function createNewPiece(piece) {
-            return ("<div>" + piece.title +"<img src='"+piece.picture+"'>" + "</div>");
->>>>>>> 8c34d80695be0209487a04ecba03e2fda8d8d525
         }
 
 
