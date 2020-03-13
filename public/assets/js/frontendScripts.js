@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
-    $("#scriptureDiv").hide();
-    $("#artDiv").hide();
+    $("#scriptureHere").hide();
+    $("#resultsHere").hide();
     $("#nav2").hide();
     $("#nav3").hide();
     $("#nav4").hide();
@@ -235,8 +235,6 @@ const loginForm = $("form.login");
           console.log(err);
         });
     }
-  });
-  
 
     $("#pictureSubmit").on("click", function () {
         $.post("api/contestPiece/", { title: "Exodus", chapter: "1", picture: upload.cachedFileArray[0] })
@@ -244,4 +242,5 @@ const loginForm = $("form.login");
                 console.log("Picture uploaded: " + data);
             });
     });
-});
+
+  });
