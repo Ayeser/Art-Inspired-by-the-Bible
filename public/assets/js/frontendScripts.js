@@ -8,8 +8,8 @@ $(document).ready(function () {
         $("#nav3").empty().hide(500);
         $("#nav4").empty().hide(500);
         $("#nav2").show(1000).append('<div id="booksButtons"><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="PentateuchNav">Pentateuch</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="HistoricalBooksNav">Historical Books</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="WisdomNav">Wisdom</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="MajorProphetsNav">Major Prophets</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="MinorProphetsNav">Minor Prophets</button></div>');
-        $("#PentateuchNav").on("click", "#PentateuchNav", chosePenteteuch);
-        $("#HistoricalBooksNav").on("click", "#HistoricalBooksNav", choseHistoricalBooks);
+        $(document).on("click", "#PentateuchNav", chosePenteteuch);
+        $(document).on("click", "#HistoricalBooksNav", choseHistoricalBooks);
         $("#WisdomBooksNav").on("click", "#WisdomBooksNav", choseWisdomBooks);
         $("#MajorProphetsNav").on("click", "#MajorProphetsNav", choseMajorProphetsBooks);
         $("#MinorProphetsnav").on("click", "#MinorProphetsNav", choseMinorProphetsBooks);
