@@ -140,11 +140,11 @@ $(document).ready(function () {
             });
 
             function createNewPiece(piece) {
-                return('<div class="card shadow p-2" id="resultsHere" style="width: 45vw;"><h3>'  + piece.title + '</h3><img src="' + piece.picture + '" class="card-img-top"><h6>' + piece.artist + '</h6><h6>Verse: ' + piece.verse + '</div></div>');
+                return('<div class="jumbotron jumbotron-fluid shadow p-2" id="resultsHere" style="width: 45vw;"><h3>'  + piece.title + '</h3><img src="' + piece.picture + '" class="card-img-top"><h6>' + piece.artist + '</h6><h6>Verse: ' + piece.verse + '</div></div>');
             }
 
             function createNewVideo(piece) {
-                return('<div class="card" style="width: 18rem;"><div class="card-body">' + piece.videoEmbed + '</div><div><h5 class="card-title">' + piece.title + '</h5></div><div>Artist: ' + piece.artist + '</div><div>Verse: ' + piece.verse + '</div></div>');
+                return('<div class="jumbotron jumbotron-fluid" style="width: 18rem;"><div class="card-body">' + piece.videoEmbed + '</div><div><h5 class="card-title">' + piece.title + '</h5></div><div>Artist: ' + piece.artist + '</div><div>Verse: ' + piece.verse + '</div></div>');
             }
         } else {
             // This next chunk is if the first search word was not a Bible book
@@ -158,7 +158,7 @@ $(document).ready(function () {
             })
 
             function createNewPiece(piece) {
-                return('<div class="card shadow p-2" id="resultsHere" style="width: 45vw;"><h3>'  + piece.title + '</h3><img src="' + piece.picture + '" class="card-img-top"><h6>' + piece.artist + '</h6><h6>Verse: ' + piece.verse + '</div></div>');
+                return('<div class="jumbotron jumbotron-fluid shadow p-2" id="resultsHere" style="width: 45vw;"><h3>'  + piece.title + '</h3><img src="' + piece.picture + '" class="card-img-top"><h6>' + piece.artist + '</h6><h6>Verse: ' + piece.verse + '</div></div>');
             }
 
             $.get("api/artistVideos/" + searchTerms[0], function (data) {
@@ -171,7 +171,7 @@ $(document).ready(function () {
             })
 
             function createNewVideo(piece) {
-                return('<div class="card" style="width: 18rem;"><div class="card-body">' + piece.videoEmbed + '</div><div><h5 class="card-title">' + piece.title + '</h5></div><div>Artist: ' + piece.artist + '</div><div>Verse: ' + piece.verse + '</div></div>');
+                return('<div class="jumbotron jumbotron-fluid" style="width: 18rem;"><div class="card-body">' + piece.videoEmbed + '</div><div><h5 class="card-title">' + piece.title + '</h5></div><div>Artist: ' + piece.artist + '</div><div>Verse: ' + piece.verse + '</div></div>');
             }
         };
 
