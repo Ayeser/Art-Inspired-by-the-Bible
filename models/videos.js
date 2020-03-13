@@ -25,8 +25,12 @@ module.exports = function(sequelize, DataTypes) {
         }
       },
       chapter: {
-          type: DataTypes.STRING,
+          type: DataTypes.INTEGER,
           allowNull: false,
+          validate: {
+              min: 1,
+              max: 50,
+          }
       },
       verse: {
         type: DataTypes.INTEGER,

@@ -1,8 +1,4 @@
-
 const express = require("express");
-const session = require("express-session");
-// Requiring passport as we've configured it
-const passport = require("./config/passport");
 
 const PORT = process.env.PORT || 8080;
 
@@ -15,10 +11,14 @@ app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
-app.use(passport.initialize());
-app.use(passport.session());
+// Set Handlebars.
+const exphbs = require("express-handlebars");
+
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
+
 // Import routes and give the server access to them.
+<<<<<<< HEAD
 
 require("./routes/apiRoutes.js")(app);
 require("./routes/htmlRoutes.js")(app);
@@ -33,9 +33,22 @@ const db = require("./models");
 //   if (!req.timedout) next();
 // }
 
+=======
+const db = require("./models/");
+
+// app.use(routes);
+
+require("./routes/apiRoutes.js")(app);
+require("./routes/htmlRoutes.js")(app);
+
+>>>>>>> dd97d8b7c75b136b56da1526c8ece221f69244ca
 // Start our server so that it can begin listening to client requests.
 db.sequelize.sync().then(function() {
   app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
+<<<<<<< HEAD
   })
+=======
+  });
+>>>>>>> dd97d8b7c75b136b56da1526c8ece221f69244ca
 });

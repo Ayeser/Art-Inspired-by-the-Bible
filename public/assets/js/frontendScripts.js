@@ -105,7 +105,7 @@ $(document).ready(function () {
     });
 
     $(document).on("submit", "#artworkForm", handleArtworkFormSubmit);
-    var searchTerms;
+    var resultContainer = $("#resultsHere");
     function handleArtworkFormSubmit(event) {
         event.preventDefault();
         searchTerms = $("#searchArtwork").val().toLowerCase().split(" ");
@@ -187,6 +187,7 @@ $(document).ready(function () {
         function createNewPiece(piece) {
             return ("<div>" + piece.title +"<img src='"+piece.picture+"'>" + "</div>");
         }
+    }
 
     }
 });
