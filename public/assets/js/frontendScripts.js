@@ -105,12 +105,10 @@ $(document).ready(function () {
     });
 
     $(document).on("submit", "#artworkForm", handleArtworkFormSubmit);
-    var searchTerms;
+    var resultContainer = $("#resultsHere");
     function handleArtworkFormSubmit(event) {
         event.preventDefault();
         searchTerms = $("#searchArtwork").val().toLowerCase().split(" ");
-        console.log("searchTerm 1 is: " + searchTerms[0]);
-        console.log("searchTerm 2 is: " + searchTerms[1]);
         $("#resultsHere").empty();
 
         //if search term recognized as Bible book...
@@ -158,8 +156,16 @@ $(document).ready(function () {
             })
 
             function createNewPiece(piece) {
+        $.get("api/Artwork/" + $("#searchArtwork").val(), function(data) {
+            console.log("Artwork: " , data);
+            resultContainer.empty();
+            const artToAdd = [];
+            for (let i = 0; i< data.length;i++) {
+                artToAdd.push(createNewPiece(data[i]));
+
                 return('<div class="card" style="width: 18rem;"><img class="card-img-top" src="' + piece.picture + '" alt="Card image cap"><div class="card-body"><h5 class="card-title">' + piece.title + '</h5></div><div>Artist: ' + piece.artist + '</div><div>Verse: ' + piece.verse + '</div></div>');
             }
+        };
 
             $.get("api/artistVideos/" + searchTerms[0], function (data) {
                 const videosToAdd = [];
@@ -174,6 +180,14 @@ $(document).ready(function () {
                 return('<div class="card" style="width: 18rem;"><div class="card-body">' + piece.videoEmbed + '</div><div><h5 class="card-title">' + piece.title + '</h5></div><div>Artist: ' + piece.artist + '</div><div>Verse: ' + piece.verse + '</div></div>');
             }
         };
+
+        
+    
+
+        function createNewPiece(piece) {
+            return ("<div>" + piece.title +"<img src='"+piece.picture+"'>" + "</div>");
+        }
+    }
 
     }
 });
