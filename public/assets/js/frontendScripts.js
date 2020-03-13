@@ -158,7 +158,7 @@ $(document).ready(function () {
             })
 
             function createNewPiece(piece) {
-                return('<div class="card" style="width: 18rem;"><img class="card-img-top" src="' + piece.picture + '" alt="Card image cap"><div class="card-body"><h5 class="card-title">' + piece.title + '</h5></div><div>Artist: ' + piece.artist + '</div><div>Verse: ' + piece.verse + '</div></div>');
+                return('<div class="card shadow p-2" id="resultsHere" style="width: 45vw;"><h3>'  + piece.title + '</h3><img src="' + piece.picture + '" class="card-img-top"><h6>' + piece.artist + '</h6><h6>Verse: ' + piece.verse + '</div></div>');
             }
 
             $.get("api/artistVideos/" + searchTerms[0], function (data) {
