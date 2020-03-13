@@ -1,9 +1,6 @@
 {
   "development": {
-    "username": "nv96ip1vnejy4ynw",
-    "password": "f57ta9mtdsipp3q4",
-    "database": "vsewinrq1xm16k58",
-    "host": "q3vtafztappqbpzn.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "use_env_variable" : "JAWSDB_URL",
     "dialect": "mysql",
     "operatorsAliases": false
   },
@@ -16,10 +13,7 @@
     "operatorsAliases": false
   },
   "production": {
-    "username": "nv96ip1vnejy4ynw",
-    "password": "f57ta9mtdsipp3q4",
-    "database": "vsewinrq1xm16k58",
-    "host": "q3vtafztappqbpzn.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "use_env_variable" : "JAWSDB_URL",
     "dialect": "mysql",
     "operatorsAliases": false
   }

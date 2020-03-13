@@ -19,9 +19,9 @@ app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true 
 app.use(passport.initialize());
 app.use(passport.session());
 // Import routes and give the server access to them.
-const db = require("./models/");
 
-// app.use(routes);
+const db = require("./models");
+
 
 require("./routes/apiRoutes.js")(app);
 require("./routes/htmlRoutes.js")(app);
@@ -30,5 +30,5 @@ require("./routes/htmlRoutes.js")(app);
 db.sequelize.sync().then(function() {
   app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
-  });
+  })
 });
