@@ -1,32 +1,19 @@
 {
   "development": {
-<<<<<<< HEAD
-    "username": "nv96ip1vnejy4ynw",
-    "password": "f57ta9mtdsipp3q4",
-    "database": "vsewinrq1xm16k58",
-    "host": "q3vtafztappqbpzn.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-=======
-    "username": "root",
-    "password": "",
-    "database": "bible_db",
-    "host": "127.0.0.1",
->>>>>>> 8c34d80695be0209487a04ecba03e2fda8d8d525
+    "use_env_variable" : "JAWSDB_URL",
     "dialect": "mysql",
     "operatorsAliases": false
   },
   "test": {
     "username": "root",
-    "password": null,
+    "password": "",
     "database": "database_test",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "operatorsAliases": false
   },
   "production": {
-    "username": "nv96ip1vnejy4ynw",
-    "password": "f57ta9mtdsipp3q4",
-    "database": "vsewinrq1xm16k58",
-    "host": "q3vtafztappqbpzn.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "use_env_variable" : "JAWSDB_URL",
     "dialect": "mysql",
     "operatorsAliases": false
   }

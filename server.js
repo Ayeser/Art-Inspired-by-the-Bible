@@ -19,21 +19,12 @@ app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true 
 app.use(passport.initialize());
 app.use(passport.session());
 // Import routes and give the server access to them.
-<<<<<<< HEAD
-const db = require("./models/");
 
-// app.use(routes);
-
-// require("./routes/bible_controller.js")(app);
 require("./routes/apiRoutes.js")(app);
 require("./routes/htmlRoutes.js")(app);
-=======
+
 // const routes = require("./controllers/bible_controller.js");
 const db = require("./models");
-
-// app.use(routes);
-
-require("./routes/bible_controller.js")(app, db);
 
 // app.use(timeout(15000));
 // app.use(haltOnTimedout);
@@ -42,11 +33,9 @@ require("./routes/bible_controller.js")(app, db);
 //   if (!req.timedout) next();
 // }
 
->>>>>>> 8c34d80695be0209487a04ecba03e2fda8d8d525
-
 // Start our server so that it can begin listening to client requests.
 db.sequelize.sync().then(function() {
   app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
-  });
+  })
 });
