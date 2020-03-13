@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+    $("#scriptureHere").hide();
+    $("#resultsHere").hide();
     //Menu bar handling
     $(document).on("click", "#OT", makeOldTestamentNav);
     function makeOldTestamentNav() {
@@ -10,9 +12,9 @@ $(document).ready(function () {
         $("#nav2").show(1000).append('<div id="booksButtons"><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="PentateuchNav">Pentateuch</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="HistoricalBooksNav">Historical Books</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="WisdomNav">Wisdom</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="MajorProphetsNav">Major Prophets</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="MinorProphetsNav">Minor Prophets</button></div>');
         $(document).on("click", "#PentateuchNav", chosePenteteuch);
         $(document).on("click", "#HistoricalBooksNav", choseHistoricalBooks);
-        $("#WisdomBooksNav").on("click", "#WisdomBooksNav", choseWisdomBooks);
-        $("#MajorProphetsNav").on("click", "#MajorProphetsNav", choseMajorProphetsBooks);
-        $("#MinorProphetsnav").on("click", "#MinorProphetsNav", choseMinorProphetsBooks);
+        $(document).on("click", "#WisdomBooksNav", choseWisdomBooks);
+        $(document).on("click", "#MajorProphetsNav", choseMajorProphetsBooks);
+        $(document).on("click", "#MinorProphetsNav", choseMinorProphetsBooks);
     };
     $(document).on("click", "#NT", makeNewTestamentNav);
     function makeNewTestamentNav() {
@@ -21,10 +23,10 @@ $(document).ready(function () {
         $("#nav3").empty().hide(100);
         $("#nav4").empty().hide(100);
         $("#nav2").show(500).append('<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="GospelsNav">Gospels/Acts</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="PaulineNav">Pauline Epistles</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="EpistlesNav">General Epistles</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="RevelationNav">Revelation</button></nav>');
-        $("#GospelsNav").on("click", "#GospelsNav", choseGospelsBooks);
-        $("#PaulineEpistlesNav").on("click", "#PaulineEpistlesNav", chosePaulineBooks);
-        $("#GeneralEpistlesNav").on("click", "#GeneralEpistlesNav", choseGeneralBooks);
-        $("#RevelationNav").on("click", "#RevelationNav", choseRevelationBook);
+        $(document).on("click", "#GospelsNav", choseGospelsBooks);
+        $(document).on("click", "#PaulineEpistlesNav", chosePaulineBooks);
+        $(document).on("click", "#GeneralEpistlesNav", choseGeneralBooks);
+        $(document).on("click", "#RevelationNav", choseRevelationBook);
     };
    
     function chosePenteteuch() {
@@ -32,7 +34,7 @@ $(document).ready(function () {
         $("#nav3").empty().hide(100);
         $("#nav4").empty().hide(100);
         $("#nav3").show(500).append('<div id="pentateuchButtons"><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Genesis">Genesis</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Exodus">Exodus</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Leviticus">Leviticus</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Numbers">Numbers</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Deuteronomy">Deuteronomy</button></div>');
-        $("#Genesis").on("click", "#Genesis", choseGenesis);
+        $(document).on("click", "#Genesis", choseGenesis);
     };
 
     function choseHistoricalBooks() {
@@ -108,9 +110,8 @@ $(document).ready(function () {
     var searchTerms;
     function handleArtworkFormSubmit(event) {
         event.preventDefault();
+        $("#welcomeDiv").hide();
         searchTerms = $("#searchArtwork").val().toLowerCase().split(" ");
-        console.log("searchTerm 1 is: " + searchTerms[0]);
-        console.log("searchTerm 2 is: " + searchTerms[1]);
         $("#resultsHere").empty();
 
         //if search term recognized as Bible book...
@@ -139,13 +140,13 @@ $(document).ready(function () {
                 }
             });
 
-            function createNewPiece(piece) {
-                return('<div class="jumbotron jumbotron-fluid shadow p-2" id="resultsHere" style="width: 45vw;"><h3>'  + piece.title + '</h3><img src="' + piece.picture + '" class="card-img-top"><h6>' + piece.artist + '</h6><h6>Verse: ' + piece.verse + '</div></div>');
-            }
+            // function createNewPiece(piece) {
+            //     return('<div class="jumbotron jumbotron-fluid shadow p-2" id="resultsHere" style="width: 45vw;"><h3>'  + piece.title + '</h3><img src="' + piece.picture + '" class="card-img-top"><h6>' + piece.artist + '</h6><h6>Verse: ' + piece.verse + '</div></div>');
+            // }
 
-            function createNewVideo(piece) {
-                return('<div class="jumbotron jumbotron-fluid" style="width: 18rem;"><div class="card-body">' + piece.videoEmbed + '</div><div><h5 class="card-title">' + piece.title + '</h5></div><div>Artist: ' + piece.artist + '</div><div>Verse: ' + piece.verse + '</div></div>');
-            }
+            // function createNewVideo(piece) {
+            //     return('<div class="jumbotron jumbotron-fluid" style="width: 18rem;"><div class="card-body">' + piece.videoEmbed + '</div><div><h5 class="card-title">' + piece.title + '</h5></div><div>Artist: ' + piece.artist + '</div><div>Verse: ' + piece.verse + '</div></div>');
+            // }
         } else {
             // This next chunk is if the first search word was not a Bible book
             $.get("api/artistArtwork/" + searchTerms[0], function (data) {
@@ -157,9 +158,9 @@ $(document).ready(function () {
                 $("#resultsHere").append(artToAdd);
             })
 
-            function createNewPiece(piece) {
-                return('<div class="jumbotron jumbotron-fluid shadow p-2" id="resultsHere" style="width: 45vw;"><h3>'  + piece.title + '</h3><img src="' + piece.picture + '" class="card-img-top"><h6>' + piece.artist + '</h6><h6>Verse: ' + piece.verse + '</div></div>');
-            }
+            // function createNewPiece(piece) {
+            //     return('<div class="jumbotron jumbotron-fluid shadow p-2" id="resultsHere" style="width: 45vw;"><h3>'  + piece.title + '</h3><img src="' + piece.picture + '" class="card-img-top"><h6>' + piece.artist + '</h6><h6>Verse: ' + piece.verse + '</div></div>');
+            // }
 
             $.get("api/artistVideos/" + searchTerms[0], function (data) {
                 const videosToAdd = [];
@@ -170,10 +171,17 @@ $(document).ready(function () {
                 $("#resultsHere").append(videosToAdd);
             })
 
-            function createNewVideo(piece) {
-                return('<div class="jumbotron jumbotron-fluid" style="width: 18rem;"><div class="card-body">' + piece.videoEmbed + '</div><div><h5 class="card-title">' + piece.title + '</h5></div><div>Artist: ' + piece.artist + '</div><div>Verse: ' + piece.verse + '</div></div>');
-            }
+            // function createNewVideo(piece) {
+            //     return('<div class="jumbotron jumbotron-fluid" style="width: 18rem;"><div class="card-body">' + piece.videoEmbed + '</div><div><h5 class="card-title">' + piece.title + '</h5></div><div>Artist: ' + piece.artist + '</div><div>Verse: ' + piece.verse + '</div></div>');
+            // }
         };
+        function createNewPiece(piece) {
+            return('<div class="jumbotron jumbotron-fluid shadow p-2" id="resultsHere" style="width: 45vw;"><h3>'  + piece.title + '</h3><img src="' + piece.picture + '" class="card-img-top"><h6>' + piece.artist + '</h6><h6>Verse: ' + piece.verse + '</div></div>');
+        }
+
+        function createNewVideo(piece) {
+            return('<div class="jumbotron jumbotron-fluid" style="width: 18rem;"><div class="card-body">' + piece.videoEmbed + '</div><div><h5 class="card-title">' + piece.title + '</h5></div><div>Artist: ' + piece.artist + '</div><div>Verse: ' + piece.verse + '</div></div>');
+        }
 
     }
 });
