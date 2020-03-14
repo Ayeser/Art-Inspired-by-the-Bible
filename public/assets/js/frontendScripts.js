@@ -431,7 +431,7 @@ $(document).ready(function () {
         console.log(ArtID);
         let upVotes = $(this.upvotes).val();
         upVotes = parseInt(upVotes) + 1;
-        upVotes = upVotes.stringify();
+        upVotes = upVotes.toString();
         console.log(upVotes);
         $.ajax({
             type: 'PUT',
