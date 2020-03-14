@@ -112,14 +112,14 @@ document.cookie = "cross-site-cookie=bar; SameSite=None; Secure";
 
     $(document).on("click", "#Gen1", function() {
         console.log(searchTerms);
-        searchTerms = ["Genesis", "1"];
+        searchTerms = ["genesis", "1"];
         console.log(searchTerms);
         handleArtworkFormSubmit(event);
     });
 
     $(document).on("click", "#Gen2", function() {
         console.log(searchTerms);
-        searchTerms = ["Genesis", "2"];
+        searchTerms = ["genesis", "2"];
         console.log(searchTerms);
         handleArtworkFormSubmit(event);
     });
