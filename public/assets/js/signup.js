@@ -28,14 +28,11 @@ $(document).ready(function() {
       $.post("/api/signup", {
         email: email,
          password: password
-      })
-        .then(function(data) {
-          console.log(data);
-         alert("Profile successfully created");
-          // If there's an error, handle it by throwing up a bootstrap alert
-        })
+      }), function(data, status) {
+        console.log("Data: " + data + "\nStatus: " + status);
+      }
         .catch(handleLoginErr);
-    }
+    };
   
     function handleLoginErr(err) {
       $("#alert .msg").text(err.responseJSON);

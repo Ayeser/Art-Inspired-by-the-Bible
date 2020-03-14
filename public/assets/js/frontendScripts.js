@@ -365,11 +365,13 @@ document.cookie = "cross-site-cookie=bar; SameSite=None; Secure";
             })
         };
         function createNewPiece(piece) {
+            event.preventDefault();
             return('<div class="jumbotron jumbotron-fluid shadow p-2" id="resultsHere" style="width: 45vw;"><h3>'  + piece.title + '</h3><img src="' + piece.picture + '" class="card-img-top img-fluid"><h6>' + piece.artist + '</h6><h6>Verse: ' + piece.verse + '</div></div>');
         }
 
         function createNewVideo(piece) {
-            return('<div class="jumbotron"><h5 class="card-title">' + piece.title + '</h5><div>Artist: ' + piece.artist + '</div><div>Verse: ' + piece.verse + '</div></div><div>' + piece.videoEmbed + '</div>');
+            event.preventDefault();
+            return('<div class="jumbotron"><h5 class="card-title">' + piece.title + '</h5><div>Artist: ' + piece.artist + '</div><div>Verse: ' + piece.verse + '</div><div>' + piece.videoEmbed + '</div></div>');
         }
     };
 

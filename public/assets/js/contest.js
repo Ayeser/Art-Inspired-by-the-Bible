@@ -6,7 +6,7 @@ var upload = new FileUploadWithPreview('forContest', {
       selectedCount: 'Select Count',
   },
   images: {
-      baseImage: this.cachedFileArray[0]
+      baseImage: ""
   },
   presetFiles: [
       '../public/logo-promosis.png',
