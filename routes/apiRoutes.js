@@ -89,7 +89,7 @@ app.get("/api/artPieces", function(req, res) {
     db.Contest.create({
       email: req.body.email,
       deleteCode: req.body.password,
-picture: upload.cachedFileArray[0]
+picture: req.body.upload.cachedFileArray[0]
     }).then(function(dbContest) {
       res.json(dbContest)
     });
@@ -105,12 +105,14 @@ picture: upload.cachedFileArray[0]
     });
   });
 
-  app.post("api/login/", function(req, res) {
-    db.User.retrieve(req.body).then(function(dbSignup) {
-      res.json(dbSignup);
-      console.log("Signed in!");
-    });
-  });
-
-  
+  app.get("api/login/", function(req, res) {
+    if (!req.password) {
+      res.json({});
+    } else {
+      res.json({
+        email: req.user.email,
+        id: req.user.id
+      })
+    }
+})
 };
