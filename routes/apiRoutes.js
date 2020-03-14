@@ -73,7 +73,7 @@ app.get("/api/artPieces", function(req, res) {
     })
   });
 
-  app.post("api/contestPieces", function(req, res) {
+  app.post("/api/contestPieces", function(req, res) {
     db.Contest.create({}).then(function(dbContest) {
       res.json(dbContest);
       alert("Contest piece saved");
