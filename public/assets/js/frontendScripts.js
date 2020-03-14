@@ -217,7 +217,49 @@ $(document).ready(function () {
         searchTerms = ["genesis", "22"];
         handleArtworkFormSubmit(event);
     });
+    $(document).on("click", "#Gen23", function() {
+        searchTerms = ["genesis", "23"];
+        handleArtworkFormSubmit(event);
+    });
+    $(document).on("click", "#Gen24", function() {
+        searchTerms = ["genesis", "24"];
+        handleArtworkFormSubmit(event);
+    });
 
+    $(document).on("click", "#Gen25", function() {
+        searchTerms = ["genesis", "25"];
+        handleArtworkFormSubmit(event);
+    });
+
+    $(document).on("click", "#Gen26", function() {
+        searchTerms = ["genesis", "26"];
+        handleArtworkFormSubmit(event);
+    });
+
+    $(document).on("click", "#Gen27", function() {
+        searchTerms = ["genesis", "27"];
+        handleArtworkFormSubmit(event);
+    });
+    $(document).on("click", "#Gen28", function() {
+        searchTerms = ["genesis", "28"];
+        handleArtworkFormSubmit(event);
+    });
+    $(document).on("click", "#Gen29", function() {
+        searchTerms = ["genesis", "29"];
+        handleArtworkFormSubmit(event);
+    });
+    $(document).on("click", "#Gen30", function() {
+        searchTerms = ["genesis", "30"];
+        handleArtworkFormSubmit(event);
+    });
+    $(document).on("click", "#Gen31", function() {
+        searchTerms = ["genesis", "26"];
+        handleArtworkFormSubmit(event);
+    });
+    $(document).on("click", "#Gen32", function() {
+        searchTerms = ["genesis", "26"];
+        handleArtworkFormSubmit(event);
+    });
     $(document).on("click", "#Gen33", function() {
         searchTerms = ["genesis", "33"];
         handleArtworkFormSubmit(event);
