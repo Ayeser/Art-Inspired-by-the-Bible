@@ -40,6 +40,7 @@ const loginForm = $("form.login");
     }
 
     $("#pictureSubmit").on("click", function () {
+          console.log("For example artist is: " + $("input#artist-input"));
         $.post("api/contestPiece/", { tite: $("input#title-input"), artist: $("input#artist-input"), deleteCode: $("input#password-input") })
             .then(function(data) {
                 console.log("Picture submitted!" + data);
