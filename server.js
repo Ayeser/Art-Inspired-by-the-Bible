@@ -3,7 +3,6 @@ const express = require("express");
 const session = require("express-session");
 // Requiring passport as we've configured it
 const passport = require("./config/passport");
-const FileUploadWithPreview = require('file-upload-with-preview');
 
 const PORT = process.env.PORT || 8080;
 
