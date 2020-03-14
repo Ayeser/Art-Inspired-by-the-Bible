@@ -428,14 +428,14 @@ $(document).ready(function () {
 
     $(document).on("click", ".likeButton", function() {
         let ArtID = $(this).val();
-        console.log(ArtID);
+        console.log("The ArtID is..." + ArtID);
         let upVotes = $(this.upvotes).val();
         upVotes = parseInt(upVotes) + 1;
         upVotes = upVotes.toString();
         console.log(upVotes);
         $.ajax({
             type: 'PUT',
-            url: '/api/artVotes/' + ArtID + "/" + upVotes,
+            url: '/api/artVotes/' + this.ArtID + "/" + this.upVotes,
             contentType: 'application/json',
             data: {id: this.id, upvotes: upVotes}
         }).done(function () {
