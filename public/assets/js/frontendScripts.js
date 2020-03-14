@@ -440,6 +440,6 @@ $(document).ready(function () {
             data: JSON.stringify({id: ArtID, upvotes: upVotes})
         }).done(function () {
             console.log('SUCCESS');
-        }),
+        });
     });
   });
