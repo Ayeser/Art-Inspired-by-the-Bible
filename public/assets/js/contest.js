@@ -1,18 +1,18 @@
-var myUpload = new FileUploadWithPreview('myUploader', {
-  showDeleteButtonOnImages: true,
-  text: {
-    chooseFile: 'Choose file...',
-    browse: 'Browse',
-    selectedCount: 'files selected'
-  },
-  maxFileCount: 0,
-  images: {
-    baseImage: '',
-    backgroundImage: '',
-    successFileAltImage: '',
-    successPdfImage: ''
-  }
-});
+// var myUpload = new FileUploadWithPreview('myUploader', {
+//   showDeleteButtonOnImages: true,
+//   text: {
+//     chooseFile: 'Choose file...',
+//     browse: 'Browse',
+//     selectedCount: 'files selected'
+//   },
+//   maxFileCount: 0,
+//   images: {
+//     baseImage: '',
+//     backgroundImage: '',
+//     successFileAltImage: '',
+//     successPdfImage: ''
+//   }
+// });
 
 $(document).ready(function() {
 
@@ -58,10 +58,10 @@ const loginForm = $("form.login");
 
     var myUploadInfoButton = document.querySelector("#pictureSubmit");
     myUploadInfoButton.addEventListener('click', function() {
-      console.log('Upload:', myUpload, myUpload.cachedFile);
-      myUpload.processFile();
-      myUpload.refreshPreviewPanel();
-      console.log("For example picture is: " + JSON.stringify(myUpload.cachedFileArray[0]));
+      // console.log('Upload:', myUpload, myUpload.cachedFile);
+      // myUpload.processFile();
+      // myUpload.refreshPreviewPanel();
+      // console.log("For example picture is: " + JSON.stringify(myUpload.cachedFileArray[0]));
       $.post("api/contestPieces/", { tite: $("input#title-input").val(), artist: $("input#artist-input").val(), book: "exodus", chapter: "1", deleteCode: $("input#password-input").val(), picture: $("input#picture-input").val() })
           .then(function(data) {
               console.log("Picture submitted!" + data);
