@@ -118,6 +118,14 @@ document.cookie = "cross-site-cookie=bar; SameSite=None; Secure";
         $("#scripturesHere").empty().show();
         $("#resultsHere").empty().show();
 
+
+        $(document).on("click", "#Gen1", genSubmit("1"));
+        function genSubmit(chapter) {
+            searchTerms = ["Genesis", chapter];
+            handleArtworkFormSubmit(event);
+        };
+        
+
         //if search term recognized as Bible book...
         if (searchTerms[0] == "genesis" || searchTerms[0] == "exodus" || searchTerms[0] == "leviticus" || searchTerms[0] == "numbers" || searchTerms[0] == "deuteronomy" || searchTerms[0] == "joshua" || searchTerms[0] == "judges" || searchTerms[0] == "ruth" || searchTerms[0] == "1" || searchTerms[0] == "2" || searchTerms[0] == "ezra" || searchTerms[0] == "nehemiah" || searchTerms[0] == "esther" || searchTerms[0] == "job" || searchTerms[0] == "psalms" || searchTerms[0] == "proverbs" || searchTerms[0] == "ecclesiastes" || searchTerms[0] == "song" || searchTerms[0] == "isaiah" || searchTerms[0] == "jeremiah" || searchTerms[0] == "lamentations" || searchTerms[0] == "ezekiel" || searchTerms[0] == "daniel" || searchTerms[0] == "hosea" || searchTerms[0] == "joel" || searchTerms[0] == "amos" || searchTerms[0] == "obadiah" || searchTerms[0] == "jonah" || searchTerms[0] == "micah" || searchTerms[0] == "nahum" || searchTerms[0] == "habakkuk" || searchTerms[0] == "zephaniah" || searchTerms[0] == "haggai" || searchTerms[0] == "zechariah" || searchTerms[0] == "malachi" || searchTerms[0] == "matthew" || searchTerms[0] == "mark" || searchTerms[0] == "luke" || searchTerms[0] == "john" || searchTerms[0] == "acts" || searchTerms[0] == "romans" || searchTerms[0] == "galatians" || searchTerms[0] == "ephesians" || searchTerms[0] == "philippians" || searchTerms[0] == "colossians" || searchTerms[0] == "titus" || searchTerms[0] == "philemon" || searchTerms[0] == "hebrews" || searchTerms[0] == "james" || searchTerms[0] == "jude" || searchTerms[0] == "revelation") {
             $.get("api/scriptures/" + searchTerms[0] + "/" + searchTerms[1], function (data) {
@@ -144,13 +152,6 @@ document.cookie = "cross-site-cookie=bar; SameSite=None; Secure";
                 }
             });
 
-            // function createNewPiece(piece) {
-            //     return('<div class="jumbotron jumbotron-fluid shadow p-2" id="resultsHere" style="width: 45vw;"><h3>'  + piece.title + '</h3><img src="' + piece.picture + '" class="card-img-top"><h6>' + piece.artist + '</h6><h6>Verse: ' + piece.verse + '</div></div>');
-            // }
-
-            // function createNewVideo(piece) {
-            //     return('<div class="jumbotron jumbotron-fluid" style="width: 18rem;"><div class="card-body">' + piece.videoEmbed + '</div><div><h5 class="card-title">' + piece.title + '</h5></div><div>Artist: ' + piece.artist + '</div><div>Verse: ' + piece.verse + '</div></div>');
-            // }
         } else {
             // This next chunk is if the first search word was not a Bible book
             $.get("api/artistArtwork/" + searchTerms[0], function (data) {
@@ -241,8 +242,3 @@ const loginForm = $("form.login");
     };
 
   });
-
-  function genSubmit(chapter) {
-    searchTerms = ["Genesis", chapter];
-    handleArtworkFormSubmit(event);
-};

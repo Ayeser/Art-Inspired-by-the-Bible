@@ -86,13 +86,20 @@ app.get("/api/artPieces", function(req, res) {
   });
 
   app.post("api/contestPieces/", function(req, res) {
-    db.Contest.create(req.body).then(function(dbContest) {
+    db.Contest.create({
+      email: req.body.email,
+      deleteCode: req.body.password,
+picture: upload.cachedFileArray[0]
+    }).then(function(dbContest) {
       res.json(dbContest)
     });
   });
 
   app.post("api/signup", function(req, res) {
-    db.User.create(req.body).then(function(dbSignup) {
+    db.User.create({
+      email: req.body.email,
+      password: req.body.password
+    }).then(function(dbSignup) {
       res.json(dbSignup);
       console.log("Signed up!");
     });
