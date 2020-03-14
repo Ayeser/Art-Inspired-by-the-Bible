@@ -82,7 +82,8 @@ app.get("/api/artPieces", function(req, res) {
       deleteCode: req.body.password,
       picture: req.body.picture
     }).then(function(dbContest) {
-      res.json(dbContest)
+      res.json(dbContest);
+      alert("Contest piece saved");
     });
   });
 
