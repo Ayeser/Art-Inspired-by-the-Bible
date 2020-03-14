@@ -54,7 +54,7 @@ const loginForm = $("form.login");
           selectedCount: 'Select Count',
       },
       images: {
-          baseImage: importedBaseImage,
+          baseImage: ""
       },
       presetFiles: [
           '../public/logo-promosis.png',
