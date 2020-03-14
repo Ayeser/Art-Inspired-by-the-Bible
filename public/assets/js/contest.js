@@ -46,7 +46,7 @@ const loginForm = $("form.login");
                 console.log("Picture submitted!" + data);
             });
     })
-    var upload = new FileUploadWithPreview('contestImage', {
+    var upload = new FileUploadWithPreview('forContest', {
       showDeleteButtonOnImages: true,
       text: {
           chooseFile: 'Choose File',
@@ -54,7 +54,7 @@ const loginForm = $("form.login");
           selectedCount: 'Select Count',
       },
       images: {
-          baseImage: ""
+          baseImage: upload.cachedFileArray[0]
       },
       presetFiles: [
           '../public/logo-promosis.png',
