@@ -111,4 +111,12 @@ app.get("/api/artPieces", function(req, res) {
       })
     }
 })
+
+app.put("/api/artVotes/:num/:upVotes", function(req, res) {
+  db.Artwork.update({upVotes: req.param.upVotes}, {where: {
+    id: req.params.num
+  }})
+}).then(function(dbUpVotes) {
+  console.log(dbUpVotes);
+})
 };
