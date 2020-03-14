@@ -30,7 +30,7 @@ $(document).ready(function() {
       })
         .then(function(data) {
           console.log(data.email + " " + data.password)
-          window.location.replace("/members");
+          window.location.replace("/profile");
           // If there's an error, log the error
         })
         .catch(function(err) {

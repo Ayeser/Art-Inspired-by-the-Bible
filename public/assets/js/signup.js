@@ -30,7 +30,7 @@ $(document).ready(function() {
       })
         .then(function(data) {
           console.log(data.email + " " + data.password);
-          window.location.replace("/profile");
+         alert("Profile successfully created");
           // If there's an error, handle it by throwing up a bootstrap alert
         })
         .catch(handleLoginErr);
