@@ -89,7 +89,8 @@ app.get("/api/artPieces", function(req, res) {
     db.Contest.create({
       title: req.body.email,
       artist: req.body.artist,
-      deleteCode: req.body.password
+      deleteCode: req.body.password,
+      picture: req.body.picture
     }).then(function(dbContest) {
       res.json(dbContest)
     });

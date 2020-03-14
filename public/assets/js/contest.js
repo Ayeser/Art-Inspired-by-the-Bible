@@ -40,8 +40,8 @@ const loginForm = $("form.login");
     }
 
     $("#pictureSubmit").on("click", function () {
-          console.log("For example artist is: " + $("input#artist-input"));
-        $.post("api/contestPiece/", { tite: $("input#title-input"), artist: $("input#artist-input"), deleteCode: $("input#password-input") })
+          console.log("For example picture is: " + upload.cachedFileArray[0]);
+        $.post("api/contestPiece/", { tite: $("input#title-input").val(), artist: $("input#artist-input").val(), deleteCode: $("input#password-input").val(), picture: upload.cachedFileArray[0] })
             .then(function(data) {
                 console.log("Picture submitted!" + data);
             });
