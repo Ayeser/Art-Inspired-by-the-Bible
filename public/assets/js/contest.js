@@ -1,4 +1,4 @@
-FileUploadWithPreview = require("file-upload-with-preview");
+var FileUploadWithPreview = require("file-upload-with-preview");
 
 var myUpload = new FileUploadWithPreview('myUploader', {
   showDeleteButtonOnImages: true,
