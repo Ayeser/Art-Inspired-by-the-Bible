@@ -87,9 +87,9 @@ app.get("/api/artPieces", function(req, res) {
 
   app.post("api/contestPieces/", function(req, res) {
     db.Contest.create({
-      email: req.body.email,
-      deleteCode: req.body.password,
-picture: req.body.upload.cachedFileArray[0]
+      title: req.body.email,
+      artist: req.body.artist,
+      deleteCode: req.body.password
     }).then(function(dbContest) {
       res.json(dbContest)
     });

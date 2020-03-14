@@ -36,8 +36,7 @@ module.exports = function(sequelize, DataTypes) {
           allowNull: false,
       },
       verse: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
+        type: DataTypes.STRING,
     },
       matureContent: {
         type: DataTypes.BOOLEAN,

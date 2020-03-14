@@ -40,7 +40,7 @@ const loginForm = $("form.login");
     }
 
     $("#pictureSubmit").on("click", function () {
-        $.post("api/contestPiece/", { title: "Exodus", chapter: "1" })
+        $.post("api/contestPiece/", { tite: $("input#email-input"), artist: $("input#artist-input"), deleteCode: $("input#password-input") })
             .then(function(data) {
                 console.log("Picture submitted!" + data);
             });
