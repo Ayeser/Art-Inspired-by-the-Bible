@@ -32,5 +32,3 @@ db.sequelize.sync().then(function() {
     console.log("App listening on PORT " + PORT);
   })
 });
-
-Response.cookie('cross-site-cookie', 'bar', { sameSite: 'none', secure: true });
