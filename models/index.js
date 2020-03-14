@@ -65,3 +65,10 @@ verse:1
 }).then(function(dbUser) {
 console.log(dbUser);
 });
+
+db.User.create({
+  email: "Practice@practice.com",
+  password: "password"
+  }).then(function(dbUser) {
+  console.log(dbUser);
+  });

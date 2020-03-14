@@ -1,9 +1,9 @@
 var upload = new FileUploadWithPreview('myUniqueUploadId', {
   showDeleteButtonOnImages: true,
   text: {
-      chooseFile: 'Choose File',
-      browse: 'Browse',
-      selectedCount: 'Select Count',
+      chooseFile: '',
+      browse: '',
+      selectedCount: '',
   },
   images: {
       baseImage: ""
