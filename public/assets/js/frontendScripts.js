@@ -432,5 +432,6 @@ $(document).ready(function () {
         $.put("api/artVotes/" + num + "/" + upVoteNumber, function (data) {
             console.log("UpVotes increased by 1!");
     })
-}
+};
+updateUpvotes();
   });
