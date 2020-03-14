@@ -427,9 +427,9 @@ $(document).ready(function () {
     };
 
     $(document).on("click", ".likeButton", function() {
-        let ArtID = $(this.id);
+        let ArtID = $(this);
         console.log("The ArtID is..." + ArtID);
-        let upVotes = $(this).val();
+        let upVotes = $(this).text();
         upVotes = parseInt(upVotes) + 1;
         upVotes = upVotes.toString();
         console.log(upVotes);
