@@ -1,3 +1,6 @@
+document.cookie = "same-site-cookie=SameSite=Lax";
+document.cookie = "cross-site-cookie=bar; SameSite=None; Secure";
+
 $(document).ready(function () {
 
     $("#scriptureHere").hide();
