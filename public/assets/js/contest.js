@@ -1,4 +1,4 @@
-var upload = new FileUploadWithPreview('forContest', {
+var upload = new FileUploadWithPreview('myUniqueUploadId', {
   showDeleteButtonOnImages: true,
   text: {
       chooseFile: 'Choose File',

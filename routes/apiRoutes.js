@@ -28,12 +28,6 @@ app.get("/api/artPieces", function(req, res) {
       })
     });
 
-  // app.post("/api/artPieces", function(req, res) {
-  //   db.Artwork.create(req.body).then(function(dbArtPieces) {
-  //     res.json(dbArtPieces);
-  //   })
-  // });
-
   app.get("/api/scriptures", function(req, res) {
     console.log("Finding all scriptures from Scriptures table...");
     db.Scripture.findAll({}).then(function(dbScriptures) {
@@ -51,12 +45,6 @@ app.get("/api/artPieces", function(req, res) {
     })
   });
 
-  // app.post("/api/scriptures", function(req, res) {
-  //   db.Scripture.create(req.body).then(function(dbScriptures) {
-  //     res.json(dbScriptures);
-  //   })
-  // });
-
   app.get("/api/videos/:book/:chapter", function(req, res) {
     console.log("Finding all scriptures from selected book...");
     db.Video.findAll({ where: {
@@ -66,12 +54,6 @@ app.get("/api/artPieces", function(req, res) {
       res.json(dbVideos)
     })
   });
-
-  // app.post("/api/videos", function(req, res) {
-  //   db.Video.create(req.body).then(function(dbVideos) {
-  //     res.json(dbVideos);
-  //   })
-  // });
 
   app.get("/api/artistArtwork/:artist", function(req, res) {
     console.log("Finding all artwork from selected artist...");
@@ -106,9 +88,8 @@ app.get("/api/artPieces", function(req, res) {
     db.User.create({
       email: req.body.email,
       password: req.body.password
-    }).then(function(dbSignup) {
-      res.json(dbSignup);
-      console.log("Signed up!");
+    }).then(function() {
+      res.redirect(307, "/api/login");
     });
   });
 
