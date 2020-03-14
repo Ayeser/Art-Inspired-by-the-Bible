@@ -35,13 +35,13 @@ module.exports = function(sequelize, DataTypes) {
   // User.addHook("beforeCreate", function(user) {
   //   user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null);
   // });
-  User.associate = function(models) {
-    User.hasMany(models.MemberLikes, {
-      onDelete: "cascade",
-      foreignKey: {
-        name: 'email'
-      }
-    });
-  };
+  // User.associate = function(models) {
+  //   User.hasMany(models.MemberLikes, {
+  //     onDelete: "cascade",
+  //     foreignKey: {
+  //       name: 'email'
+  //     }
+    // });
+  // };
   return User;
 };
