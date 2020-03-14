@@ -91,7 +91,7 @@ app.get("/api/artPieces", function(req, res) {
     });
   });
 
-  app.post("api/signup/", function(req, res) {
+  app.post("api/signup", function(req, res) {
     db.User.create(req.body).then(function(dbSignup) {
       res.json(dbSignup);
       console.log("Signed up!");

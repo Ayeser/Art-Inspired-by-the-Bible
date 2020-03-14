@@ -23,15 +23,18 @@
 		<div class="row custom-file-container" data-upload-id="myUniqueUploadId">
 			<label class="col-sm-3">You may attach a file to be included in our database: <a href="javascript:void(0)" class="custom-file-container__image-clear" title="Clear Image">&times;</a></label>
 			<label class="col-sm-4 custom-file-container__custom-file" >
-				<input class="col-sm-2" type="file" class="custom-file-container__custom-file__custom-file-input" accept="*" multiple label="Choose File">
+				<input class="col-sm-2" type="file" class="custom-file-container__custom-file__custom-file-input" accept="*" multiple aria-label="Choose File">
 				<input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
 				<span class="col-sm-3 custom-file-container__custom-file__custom-file-control"></span>
 			</label>
-			<div class="row custom-file-container__image-preview"></div>
+			<div class="row">
+				<div class="col-sm-5"></div>
+				<div class="col-sm-4 custom-file-container__image-preview"></div>
+			</div>
 			<div class="row">
 				<div class="col-sm-3"></div>
 
-				<form class="login">
+				<form class="login col-sm-6">
 					<div class="form-group">
 					  <label for="exampleInputEmail1">Who is the artist of this piece?</label>
 					  <input type="email" class="form-control" id="email-input" placeholder="Email">
@@ -40,7 +43,7 @@
 					  <label for="exampleInputPassword1"> What "delete password" would you like to use to delete this piece later if you'd like?</label>
 					  <input type="password" class="form-control" id="password-input" placeholder="Password">
 					</div>
-					<button type="submit" class="btn btn-default">Submit</button>
+					<button type="submit" class="btn btn-info">Submit</button>
 				  </form>
 		</div>
 		</div>
