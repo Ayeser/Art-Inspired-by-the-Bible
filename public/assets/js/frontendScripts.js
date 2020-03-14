@@ -313,10 +313,10 @@ document.cookie = "cross-site-cookie=bar; SameSite=None; Secure";
     function handleArtworkFormSubmit(event) {
         event.preventDefault();
         $("#welcomeDiv").hide();
-        $("#scriptureDiv").hide();
-        $("#artDiv").hide();
-        $("#scriptureHere").empty().show();
-        $("#resultsHere").empty().show();
+        $("#scriptureHere").empty();
+        $("#resultsHere").empty();
+        $("#scriptureHere").show();
+        $("#resultsHere").show();
 
         //if search term recognized as Bible book...
         if (searchTerms[0] == "genesis" || searchTerms[0] == "exodus" || searchTerms[0] == "leviticus" || searchTerms[0] == "numbers" || searchTerms[0] == "deuteronomy" || searchTerms[0] == "joshua" || searchTerms[0] == "judges" || searchTerms[0] == "ruth" || searchTerms[0] == "1" || searchTerms[0] == "2" || searchTerms[0] == "ezra" || searchTerms[0] == "nehemiah" || searchTerms[0] == "esther" || searchTerms[0] == "job" || searchTerms[0] == "psalms" || searchTerms[0] == "proverbs" || searchTerms[0] == "ecclesiastes" || searchTerms[0] == "song" || searchTerms[0] == "isaiah" || searchTerms[0] == "jeremiah" || searchTerms[0] == "lamentations" || searchTerms[0] == "ezekiel" || searchTerms[0] == "daniel" || searchTerms[0] == "hosea" || searchTerms[0] == "joel" || searchTerms[0] == "amos" || searchTerms[0] == "obadiah" || searchTerms[0] == "jonah" || searchTerms[0] == "micah" || searchTerms[0] == "nahum" || searchTerms[0] == "habakkuk" || searchTerms[0] == "zephaniah" || searchTerms[0] == "haggai" || searchTerms[0] == "zechariah" || searchTerms[0] == "malachi" || searchTerms[0] == "matthew" || searchTerms[0] == "mark" || searchTerms[0] == "luke" || searchTerms[0] == "john" || searchTerms[0] == "acts" || searchTerms[0] == "romans" || searchTerms[0] == "galatians" || searchTerms[0] == "ephesians" || searchTerms[0] == "philippians" || searchTerms[0] == "colossians" || searchTerms[0] == "titus" || searchTerms[0] == "philemon" || searchTerms[0] == "hebrews" || searchTerms[0] == "james" || searchTerms[0] == "jude" || searchTerms[0] == "revelation") {
@@ -351,7 +351,7 @@ document.cookie = "cross-site-cookie=bar; SameSite=None; Secure";
                 for (let i = 0; i < data.length; i++) {
                     artToAdd.push(createNewPiece(data[i]));
                 }
-                $("#resultsHere").append("<h1>Art pieces for this artist include: </h1><br /><br />");
+                $("#resultsHere").append("<div class='card'><h1>Art pieces for this artist include: </h1></div>");
                 $("#resultsHere").append(artToAdd);
             })
 
@@ -364,7 +364,7 @@ document.cookie = "cross-site-cookie=bar; SameSite=None; Secure";
                 for (let i = 0; i < data.length; i++) {
                     videosToAdd.push(createNewVideo(data[i]));
                 }
-                $("#resultsHere").append("<h1>Videos for this artist include: </h1><br /><br />");
+                $("#resultsHere").append("<div class='card'><h1>Videos for this artist include: </h1></div>");
                 $("#resultsHere").append(videosToAdd);
             })
 
