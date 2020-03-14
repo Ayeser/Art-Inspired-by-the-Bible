@@ -26,17 +26,11 @@ $(document).ready(function() {
     function signUpUser(email, password) {
       console.log("Email is: " + email + " and password is " + password);
       $.post("/api/signup", {
-        email: email,
-         password: password
+        email: this.email,
+         password: this.password
       }), function(data, status) {
         console.log("Data: " + data + "\nStatus: " + status);
       }
-        .catch(handleLoginErr);
     };
-  
-    function handleLoginErr(err) {
-      $("#alert .msg").text(err.responseJSON);
-      $("#alert").fadeIn(500);
-    }
   });
   

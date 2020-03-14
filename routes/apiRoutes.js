@@ -104,8 +104,8 @@ app.get("/api/artPieces", function(req, res) {
 
   app.post("api/signup", function(req, res) {
     db.User.create({
-      email: email,
-      password: password
+      email: req.body.email,
+      password: req.body.password
     }).then(function(dbSignup) {
       res.json(dbSignup);
       console.log("Signed up!");
