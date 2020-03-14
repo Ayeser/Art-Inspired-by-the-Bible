@@ -38,7 +38,7 @@ document.cookie = "cross-site-cookie=bar; SameSite=None; Secure";
         event.preventDefault();
         $("#nav3").empty().hide();
         $("#nav4").empty().hide();
-        $("#nav3").show(400).append('<div id="pentateuchButtons">Chapters being added soon for books past Genesis<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Genesis">Genesis</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Exodus">Exodus</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Leviticus">Leviticus</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Numbers">Numbers</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Deuteronomy">Deuteronomy</button></div>');
+        $("#nav3").show(400).append('<div id="pentateuchButtons"><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Genesis">Genesis</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Exodus">Exodus</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Leviticus">Leviticus</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Numbers">Numbers</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Deuteronomy">Deuteronomy</button></div>');
         $(document).on("click", "#Genesis", choseGenesis);
     };
     $(document).on("click", "#Exodus" || "#Deuteronomy", comingSoon);

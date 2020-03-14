@@ -20,27 +20,27 @@
 		</nav>
          <div class="container  shadow" style="height: 100vh; background-color: lightblue">   
 	
-		<div class="row contestImage" data-upload-id="myUniqueUploadId">
+		<div class="row custom-file-container" data-upload-id="contestImage">
 			<label class="col-sm-3">You may attach a file to be included in our database: <a href="javascript:void(0)" class="custom-file-container__image-clear" title="Clear Image">&times;</a></label>
-			<label class="col-sm-6 contestImage__custom-file" >
-				<input type="file" class="contestImage__custom-file__custom-file-input" accept="*" multiple aria-label="Choose File">
+			<label class="col-sm-6 custom-file-container__custom-file" >
+				<input type="file" class="custom-file-container__custom-file__custom-file-input" accept="*" multiple aria-label="Choose File">
 				<input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
 			</label>
-				<span class="col-sm-3 contestImage__custom-file__custom-file-control"></span>
+				<span class="col-sm-3 custom-file-container__custom-file__custom-file-control"></span>
 			<div class="row">
 				<div class="col-sm-5"></div>
-				<div class="col-sm-4 contestImage__image-preview"></div>
+				<div class="col-sm-4 custom-file-container__image-preview"></div>
 			</div>
 			<div class="row">
 				<div class="col-sm-3"></div>
 
 				<form class="login col-sm-6">
 					<div class="form-group">
-					  <label for="exampleInputEmail1">What is the title of this piece?</label>
+					  <label for="exampleInputTitle1">What is the title of this piece?</label>
 					  <input type="title" class="form-control" id="title-input" placeholder="Title">
 					</div>
 					<div class="form-group">
-						<label for="exampleInputPassword1"> Who is the artist of this piece?</label>
+						<label for="exampleInputArtist1"> Who is the artist of this piece?</label>
 						<input type="artist" class="form-control" id="artist-input" placeholder="Artist">
 					  </div>
 					<div class="form-group">
