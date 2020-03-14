@@ -11,8 +11,6 @@
 	<script src="https://code.jquery.com/jquery-3.4.1.js"
 		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 	<script src="/assets/js/frontendScripts.js"></script>
-	<link rel="stylesheet" type="css"
-		href="https://unpkg.com/file-upload-with-preview@4.0.2/dist/file-upload-with-preview.min.css">
 </head>
 
 <body style="background-color: moccasin;">
@@ -23,8 +21,9 @@
 	<div class="container  shadow" style="height: 100vh; background-color: lightblue">
 
 		<div class="row custom-file-container" data-upload-id="myUploader">
-			<label class="col-sm-3">You may attach a file to be included in our database: </label>
+			<label class="col-sm-3">You may attach a file to be included in our database: <a href="havascript:void(0)" class="custom-file-container__image-clear" title="Clear Image">x</a></label>
 			<label class="col-sm-6 custom-file-container__custom-file">
+				<input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
 				<input type="file" class="custom-file-container__custom-file__custom-file-input" accept="*"
 					aria-label="Choose File">
 			<span class="col-sm-3 custom-file-container__custom-file__custom-file-control"></span>
@@ -64,7 +63,6 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
 		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
 		crossorigin="anonymous"></script>
-	<script src="https://unpkg.com/file-upload-with-preview@4.0.2/dist/file-upload-with-preview.min.js"></script>
 	<script src="/assets/js/contest.js"></script>
 </body>
 
