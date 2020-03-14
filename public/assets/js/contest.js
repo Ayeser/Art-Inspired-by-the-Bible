@@ -2,14 +2,14 @@ $(document).ready(function() {
 
 //This next section is for the contest page to submit a piece of art
 const loginForm = $("form.login");
-    const emailInput = $("input#email-input");
+    const titleInput = $("input#title-input");
     const passwordInput = $("input#password-input");
   
     // When the form is submitted, we validate there's an email and password entered
     loginForm.on("submit", function(event) {
       event.preventDefault();
       const userData = {
-        email: emailInput.val().trim(),
+        title: titleInput.val().trim(),
         password: passwordInput.val().trim()
       };
   
@@ -40,7 +40,7 @@ const loginForm = $("form.login");
     }
 
     $("#pictureSubmit").on("click", function () {
-        $.post("api/contestPiece/", { tite: $("input#email-input"), artist: $("input#artist-input"), deleteCode: $("input#password-input") })
+        $.post("api/contestPiece/", { tite: $("input#title-input"), artist: $("input#artist-input"), deleteCode: $("input#password-input") })
             .then(function(data) {
                 console.log("Picture submitted!" + data);
             });
