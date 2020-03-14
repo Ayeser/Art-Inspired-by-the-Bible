@@ -410,7 +410,7 @@ $(document).ready(function () {
         };
         function createNewPiece(piece) {
             event.preventDefault();
-            return('<div class="jumbotron jumbotron-fluid shadow p-2" id="resultsHere" style="width: 45vw;"><h3>'  + piece.title + '</h3><img src="' + piece.picture + '" class="card-img-top img-fluid"><h6>' + piece.artist + '</h6><h6>Verse: ' + piece.verse + '</div><button id="' + piece.upVotes + '" onClick="updateUpvotes(' + piece.id + ')">Add like</button><h6>Current likes: ' + parse.Int(piece.upVotes) + '</div>');
+            return('<div class="jumbotron jumbotron-fluid shadow p-2" id="resultsHere" style="width: 45vw;"><h3>'  + piece.title + '</h3><img src="' + piece.picture + '" class="card-img-top img-fluid"><h6>' + piece.artist + '</h6><h6>Verse: ' + piece.verse + '</h6></div>');
         }
 
         function createNewVideo(piece) {
@@ -426,11 +426,4 @@ $(document).ready(function () {
         handleArtworkFormSubmit(event);
     };
 
-    function updateUpvotes(num) {
-        let upVoteNumber = $(this.id) + 1;
-        console.log(upVoteNumber);
-        $.put("api/artVotes/" + num + "/" + upVoteNumber, function (data) {
-            console.log("UpVotes increased by 1!");
-    })
-}
   });
