@@ -24,13 +24,13 @@ $(document).ready(function() {
     // Does a post to the signup route. If successful, we are redirected to the members page
     // Otherwise we log any errors
     function signUpUser(email, password) {
-      console.log("Trying to sign up user");
+      console.log("Email is: " + email + " and password is " + password);
       $.post("/api/signup", {
         email: email,
          password: password
       })
         .then(function(data) {
-          console.log(data.email + " " + data.password);
+          console.log(data);
          alert("Profile successfully created");
           // If there's an error, handle it by throwing up a bootstrap alert
         })
