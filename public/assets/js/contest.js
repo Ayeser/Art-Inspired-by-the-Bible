@@ -57,7 +57,7 @@ const loginForm = $("form.login");
 
     $("#pictureSubmit").on("click", function () {
           console.log("For example picture is: " + JSON.stringify(upload.cachedFileArray[0]));
-        $.post("api/contestPiece/", { tite: $("input#title-input").val(), artist: $("input#artist-input").val(), deleteCode: $("input#password-input").val(), picture: JSON.stringify(forContest.cachedFileArray[0]) })
+        $.post("api/contestPiece/", { tite: $("input#title-input").val(), artist: $("input#artist-input").val(), book: "exodus", chapter: "1", deleteCode: $("input#password-input").val(), picture: JSON.stringify(forContest.cachedFileArray[0]) })
             .then(function(data) {
                 console.log("Picture submitted!" + data);
             });
