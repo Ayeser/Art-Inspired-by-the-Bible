@@ -96,7 +96,7 @@ app.get("/api/artPieces", function(req, res) {
   });
 
   app.get("/api/users", function(req, res) {
-    db.Users.findAll({}).then(function(dbUsers) {
+    db.User.findAll({}).then(function(dbUsers) {
       res.json(dbUsers)
     })
   });

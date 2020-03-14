@@ -1,7 +1,18 @@
-var upload = new FileUploadWithPreview('myUniqueUploadId', {
+var myUpload = new FileUploadWithPreview('myUploader', {
   showDeleteButtonOnImages: true,
-  text: "",
-  image: this.cachedFileArray
+  text: {
+    chooseFile: 'Choose file...',
+    browse: 'Browse',
+    selectedCount: 'files selected'
+  },
+  maxFileCount: 0,
+  images: {
+    baseImage: '',
+    backgroundImage: '',
+    successFileAltImage: '',
+    successPdfImage: '',
+    successVideoImage
+  }
 });
 
 $(document).ready(function() {
@@ -45,12 +56,21 @@ const loginForm = $("form.login");
         });
     }
 
-    $("#pictureSubmit").on("click", function () {
-          console.log("For example picture is: " + JSON.stringify(upload.cachedFileArray[0]));
-        $.post("api/contestPieces/", { tite: $("input#title-input").val(), artist: $("input#artist-input").val(), book: "exodus", chapter: "1", deleteCode: $("input#password-input").val(), picture: JSON.stringify(forContest.cachedFileArray[0]) })
-            .then(function(data) {
-                console.log("Picture submitted!" + data);
-            });
+
+    var myUploadInfoButton = document.querySelector("#pictureSubmit");
+    myUploadInfoButton.addEventListener('click', function() {
+      console.log('Upload:', myUpload, myUpload.cachedFile);
+      myUpload.processFile();
+      myUpload.refreshPreviewPanel();
     })
+
+    
+  
+    //       console.log("For example picture is: " + JSON.stringify(upload.cachedFileArray[0]));
+    //     $.post("api/contestPieces/", { tite: $("input#title-input").val(), artist: $("input#artist-input").val(), book: "exodus", chapter: "1", deleteCode: $("input#password-input").val(), picture: JSON.stringify(forContest.cachedFileArray[0]) })
+    //         .then(function(data) {
+    //             console.log("Picture submitted!" + data);
+    //         });
+    // })
 
 });
