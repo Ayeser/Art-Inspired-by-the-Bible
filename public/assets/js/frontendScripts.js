@@ -437,7 +437,7 @@ $(document).ready(function () {
             type: 'PUT',
             url: '/api/artVotes/' + ArtID + "/" + upVotes,
             contentType: 'application/json',
-            data: {id: this.id, upvotes: upVotes}
+            data: {id: ArtID, upvotes: upVotes}
         }).done(function () {
             console.log('SUCCESS');
         })
