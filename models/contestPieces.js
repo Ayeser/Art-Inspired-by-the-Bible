@@ -43,8 +43,8 @@ module.exports = function(sequelize, DataTypes) {
         default: false
     },
     upvotes: {
-        type: DataTypes.INTEGER,
-        default: 0
+        type: DataTypes.STRING,
+        default: "0"
     },
     createdAt: {
       type:DataTypes.DATE(3),
