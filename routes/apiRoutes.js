@@ -73,7 +73,7 @@ app.get("/api/artPieces", function(req, res) {
     })
   });
 
-  app.post("api/contestPieces/", function(req, res) {
+  app.post("api//contestPieces/", function(req, res) {
     db.Contest.create({}).then(function(dbContest) {
       res.json(dbContest);
       alert("Contest piece saved");
@@ -86,7 +86,7 @@ app.get("/api/artPieces", function(req, res) {
     })
   });
 
-  app.post("api/signup", function(req, res) {
+  app.post("/api/signup", function(req, res) {
     db.User.create({
       email: req.body.email,
       password: req.body.password
@@ -101,7 +101,7 @@ app.get("/api/artPieces", function(req, res) {
     })
   });
 
-  app.get("api/login/", function(req, res) {
+  app.get("/api/login/", function(req, res) {
     if (!req.password) {
       res.json({});
     } else {
