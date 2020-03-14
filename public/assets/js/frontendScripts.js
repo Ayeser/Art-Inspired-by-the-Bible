@@ -427,8 +427,9 @@ $(document).ready(function () {
     };
 
     $(document).on("click", ".likeButton", function() {
-        let ArtID = $(this.id);
-        let upVotes = $(this.upvotes) + 1;
+        let ArtID = $(this.id).val();
+        let upVotes = $(this.upvotes).val();
+        upVotes = parseInt(upVotes) + 1;
         $.ajax({
             type: 'PUT',
             url: '/api/artVotes/' + ArtID + "/" + upVotes,
