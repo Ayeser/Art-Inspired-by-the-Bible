@@ -427,9 +427,12 @@ $(document).ready(function () {
     };
 
     $(document).on("click", ".likeButton", function() {
-        let ArtID = $(this.id).val();
+        let ArtID = $(this).val();
+        console.log(ArtID);
         let upVotes = $(this.upvotes).val();
         upVotes = parseInt(upVotes) + 1;
+        upVotes = upVotes.stringify();
+        console.log(upVotes);
         $.ajax({
             type: 'PUT',
             url: '/api/artVotes/' + ArtID + "/" + upVotes,
