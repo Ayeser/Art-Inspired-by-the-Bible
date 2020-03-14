@@ -410,7 +410,7 @@ $(document).ready(function () {
         };
         function createNewPiece(piece) {
             event.preventDefault();
-            return('<div class="jumbotron jumbotron-fluid shadow p-2" id="resultsHere" style="width: 45vw;"><h3>'  + piece.title + '</h3><img src="' + piece.picture + '" class="card-img-top img-fluid"><h6>' + piece.artist + '</h6><h6>Verse: ' + piece.verse + '</div><button id="' + piece.upvotes + '" onClick="updateUpvotes(' + piece.id + ')">Add like</button><h6>Current likes: ' + piece.upvotes + '</div>');
+            return('<div class="jumbotron jumbotron-fluid shadow p-2" id="resultsHere" style="width: 45vw;"><h3>'  + piece.title + '</h3><img src="' + piece.picture + '" class="card-img-top img-fluid"><h6>' + piece.artist + '</h6><h6>Verse: ' + piece.verse + '</h6><button class="likeButton" id="' + piece.id + '">Add like</button><h6>Current likes: ' + piece.upvotes + '</div></div>');
         }
 
         function createNewVideo(piece) {
@@ -426,12 +426,16 @@ $(document).ready(function () {
         handleArtworkFormSubmit(event);
     };
 
-    function updateUpvotes(num) {
-        let upVoteNumber = $(this.id) + 1;
-        console.log(upVoteNumber);
-        $.put("api/artVotes/" + num + "/" + upVoteNumber, function (data) {
-            console.log("UpVotes increased by 1!");
-    })
-};
-updateUpvotes();
+    $(document).on("click", ".likeButton", function() {
+        let ArtID = $(this.id);
+        let upVotes = $(this.upvotes) + 1;
+        $.ajax({
+            type: 'PUT',
+            url: '/api/artVotes/' + ArtID + "/" + upVotes,
+            contentType: 'application/json',
+            data: {id: this.id, upvotes: upVotes}
+        }).done(function () {
+            console.log('SUCCESS');
+        })
+    });
   });
