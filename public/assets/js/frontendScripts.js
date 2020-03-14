@@ -410,7 +410,7 @@ $(document).ready(function () {
         };
         function createNewPiece(piece) {
             event.preventDefault();
-            return('<div class="jumbotron jumbotron-fluid shadow p-2" id="resultsHere" style="width: 45vw;"><h3>'  + piece.title + '</h3><img src="' + piece.picture + '" class="card-img-top img-fluid"><h6>' + piece.artist + '</h6><h6>Verse: ' + piece.verse + '</h6><button class="likeButton" id="' + piece.id + '">Add like</button><h6>Current likes: ' + piece.upvotes + '</div></div>');
+            return('<div class="jumbotron jumbotron-fluid shadow p-2" id="resultsHere" style="width: 45vw;"><h3>'  + piece.title + '</h3><img src="' + piece.picture + '" class="card-img-top img-fluid"><h6>' + piece.artist + '</h6><h6>Verse: ' + piece.verse + '</h6><h6>Add a like? This piece currently has </h6><button class="likeButton" id="' + piece.id + '">' + piece.upvotes + '</button></div>');
         }
 
         function createNewVideo(piece) {
@@ -427,15 +427,15 @@ $(document).ready(function () {
     };
 
     $(document).on("click", ".likeButton", function() {
-        let ArtID = $(this).val();
+        let ArtID = $(this.id);
         console.log("The ArtID is..." + ArtID);
-        let upVotes = $(this.upvotes).val();
+        let upVotes = $(this).val();
         upVotes = parseInt(upVotes) + 1;
         upVotes = upVotes.toString();
         console.log(upVotes);
         $.ajax({
             type: 'PUT',
-            url: '/api/artVotes/' + this.ArtID + "/" + this.upVotes,
+            url: '/api/artVotes/' + ArtID + "/" + upVotes,
             contentType: 'application/json',
             data: {id: this.id, upvotes: upVotes}
         }).done(function () {
