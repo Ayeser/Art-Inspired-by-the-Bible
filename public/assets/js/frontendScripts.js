@@ -115,11 +115,6 @@ $(document).ready(function () {
         handleArtworkFormSubmit(event);
     };
 
-    function genSubmit(chapter) {
-        searchTerms = ["Genesis", chapter];
-        handleArtworkFormSubmit(event);
-    };
-
     function handleArtworkFormSubmit(event) {
         event.preventDefault();
         $("#welcomeDiv").hide();
@@ -244,3 +239,8 @@ const loginForm = $("form.login");
     });
 
   });
+
+  function genSubmit(chapter) {
+    searchTerms = ["Genesis", chapter];
+    handleArtworkFormSubmit(event);
+};
