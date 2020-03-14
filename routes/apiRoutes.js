@@ -80,6 +80,12 @@ app.get("/api/artPieces", function(req, res) {
     });
   });
 
+  app.get("/api/contestPieces", function(req, res) {
+    db.Contest.findAll({}).then(function(dbContest) {
+      res.json(dbContest)
+    })
+  });
+
   app.post("api/signup", function(req, res) {
     db.User.create({
       email: req.body.email,
@@ -87,6 +93,12 @@ app.get("/api/artPieces", function(req, res) {
     }).then(function() {
       res.redirect(307, "/api/login");
     });
+  });
+
+  app.get("/api/users", function(req, res) {
+    db.Users.findAll({}).then(function(dbUsers) {
+      res.json(dbUsers)
+    })
   });
 
   app.get("api/login/", function(req, res) {
