@@ -1,7 +1,7 @@
 var upload = new FileUploadWithPreview('myUniqueUploadId', {
   showDeleteButtonOnImages: true,
   text: "",
-  image: ""
+  image: this.cachedFileArray
 });
 
 $(document).ready(function() {
