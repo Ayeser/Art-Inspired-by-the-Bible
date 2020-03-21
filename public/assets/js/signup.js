@@ -25,7 +25,7 @@ $(document).ready(function() {
     // Otherwise we log any errors
     function signUpUser(email2, password2) {
       console.log("Email is: " + email2 + " and password is " + password2);
-      console.log("What is being sent is: " + JSON.parse({
+      console.log("What is being sent is: " + JSON.stringify({
         email: email2,
          password: password2
       }));
