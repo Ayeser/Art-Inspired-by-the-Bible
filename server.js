@@ -4,7 +4,7 @@ const session = require("express-session");
 // Requiring passport as we've configured it
 const passport = require("./config/passport");
 
-const PORT = process.env.PORT || 8080;
+const port = process.env.PORT || 8080;
 
 const app = express();
 
@@ -28,7 +28,7 @@ require("./routes/htmlRoutes.js")(app);
 
 // Start our server so that it can begin listening to client requests.
 db.sequelize.sync().then(function() {
-  app.listen(PORT, function() {
+  app.listen(port, function() {
     console.log("App listening on PORT " + PORT);
   })
 });
