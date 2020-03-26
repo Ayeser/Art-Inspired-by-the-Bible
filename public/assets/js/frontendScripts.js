@@ -9,10 +9,10 @@ $(document).ready(function () {
     $(document).on("click", "#OT", makeOldTestamentNav);
     function makeOldTestamentNav() {
         event.preventDefault();
-        $("#nav2").empty().hide();
-        $("#nav3").empty().hide();
-        $("#nav4").empty().hide();
-        $("#nav2").show(400).append('<div id="booksButtons"><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="PentateuchNav">Pentateuch</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="HistoricalBooksNav">Historical Books</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="WisdomNav">Wisdom</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="MajorProphetsNav">Major Prophets</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="MinorProphetsNav">Minor Prophets</button></div>');
+        // $("#nav2").empty().hide();
+        // $("#nav3").empty().hide();
+        // $("#nav4").empty().hide();
+        $("#nav1").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav2"><div id="booksButtons"><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="PentateuchNav">Pentateuch</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="HistoricalBooksNav">Historical Books</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="WisdomNav">Wisdom</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="MajorProphetsNav">Major Prophets</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="MinorProphetsNav">Minor Prophets</button></div></nav>');
         $(document).on("click", "#PentateuchNav", chosePenteteuch);
         $(document).on("click", "#HistoricalBooksNav", choseHistoricalBooks);
         $(document).on("click", "#WisdomBooksNav", choseWisdomBooks);
@@ -22,10 +22,10 @@ $(document).ready(function () {
     };
     function makeNewTestamentNav() {
         event.preventDefault();
-        $("#nav2").empty().hide();
-        $("#nav3").empty().hide();
-        $("#nav4").empty().hide();
-        $("#nav2").show(400).append('<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="GospelsNav">Gospels/Acts</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="PaulineNav">Pauline Epistles</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="EpistlesNav">General Epistles</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="RevelationNav">Revelation</button></nav>');
+        // $("#nav2").empty().hide();
+        // $("#nav3").empty().hide();
+        // $("#nav4").empty().hide();
+        $("#nav1").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav2"><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="GospelsNav">Gospels/Acts</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="PaulineNav">Pauline Epistles</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="EpistlesNav">General Epistles</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="RevelationNav">Revelation</button></nav></nav>');
         $(document).on("click", "#GospelsNav", choseGospelsBooks);
         $(document).on("click", "#PaulineEpistlesNav", chosePaulineBooks);
         $(document).on("click", "#GeneralEpistlesNav", choseGeneralBooks);

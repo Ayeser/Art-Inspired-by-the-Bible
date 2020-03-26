@@ -14,19 +14,3 @@ form.login {
 .card {
   margin: 10px;
 }
-
-.coverPhoto {
-  opacity: 0.3;
-}
-
-#coverText {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size:18px;
-}
-
-#coverBlock {
-  position: relative;
-}
