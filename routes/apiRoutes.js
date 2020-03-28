@@ -97,7 +97,7 @@ module.exports = function (app) {
 
   app.post("/api/signup", function (req, res) {
     db.User.create(req.body).then(function () {
-      res.send("User is created!"));
+      res.send("User is created!");
   });
 });
 
@@ -127,3 +127,5 @@ app.put("/api/artVotes/:num/:upVotes", function (req, res) {
     })
   })
 })
+
+};
