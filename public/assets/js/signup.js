@@ -18,8 +18,8 @@ $(document).ready(function() {
       // If we have an email and password, run the signUpUser function
       signUpUser(userData.email, userData.password);
       console.log("Userdata.email is: " + userData.email);
-      emailInput.val("");
-      passwordInput.val("");
+      // emailInput.val("");
+      // passwordInput.val("");
     });
   });
 
