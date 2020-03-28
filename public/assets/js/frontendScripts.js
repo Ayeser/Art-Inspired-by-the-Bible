@@ -88,6 +88,7 @@ $(document).ready(function () {
     };
 
     function genSubmit(n) {
+        console.log("This function triggers and n is: " + n);
         searchTerms = ["genesis", n];
         handleArtworkFormSubmit(event);
     }
