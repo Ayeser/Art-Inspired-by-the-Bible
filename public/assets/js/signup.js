@@ -17,12 +17,12 @@ $(document).ready(function() {
       }
       // If we have an email and password, run the signUpUser function
       signUpUser(userData.email, userData.password);
+      console.log("Userdata.email is: " + userData.email);
       emailInput.val("");
       passwordInput.val("");
     });
-  
-    // Does a post to the signup route. If successful, we are redirected to the members page
-    // Otherwise we log any errors
+  });
+
     function signUpUser(email2, password2) {
       $.post("/api/signup", {
         email: email2,
@@ -32,5 +32,4 @@ $(document).ready(function() {
         console.log("Data: " + data + "\nStatus: " + status);
       }
     };
-  });
   

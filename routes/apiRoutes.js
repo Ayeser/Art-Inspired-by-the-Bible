@@ -87,7 +87,7 @@ app.get("/api/artPieces", function(req, res) {
   });
 
   app.post("/api/signup", function(req, res) {
-    db.User.create(req.body).then(function() {
+    db.User.create(req).then(function() {
       res.redirect(307, "/login");
     });
   });
