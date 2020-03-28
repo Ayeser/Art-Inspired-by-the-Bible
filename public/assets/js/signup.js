@@ -7,6 +7,7 @@ $(document).ready(function() {
     // When the signup button is clicked, we validate the email and password are not blank
     signUpForm.on("submit", function(event) {
       event.preventDefault();
+      console.log("Button clicked for form submitted");
       const userData = {
         email: emailInput.val().trim(),
         password: passwordInput.val().trim()
@@ -24,6 +25,7 @@ $(document).ready(function() {
   });
 
     function signUpUser(email2, password2) {
+      console.log("And this console message should fire right before api post call is attempted, with email as: " + email2 + " and password as: " + password2);
       $.post("/api/signup", {
         email: email2,
          password: password2
