@@ -10,11 +10,11 @@ app.get("/api/artPieces", function(req, res) {
     })
   });
 
-  app.get("/api/user_data", function(req, res) {
-    db.User.findOne({}).then(function(dbArtPieces) {
-      res.json(dbArtPieces)
-    })
-  });
+  // app.get("/api/user_data", function(req, res) {
+  //   db.User.findOne({}).then(function(dbArtPieces) {
+  //     res.json(dbArtPieces)
+  //   })
+  // });
 
 // route finding ALL images from Artwork table
   app.get("/api/artPieces/:book/:chapter", function(req, res) {
@@ -76,7 +76,6 @@ app.get("/api/artPieces", function(req, res) {
   app.post("/api/contestPieces", function(req, res) {
     db.Contest.create(req.body).then(function(dbContest) {
       res.json(dbContest);
-      alert("Contest piece saved");
     });
   });
 
@@ -87,7 +86,8 @@ app.get("/api/artPieces", function(req, res) {
   });
 
   app.post("/api/signup", function(req, res) {
-    db.User.create(req).then(function() {
+    db.User.create(req).then(function(userSignup) {
+      res.json(userSignup);
       res.redirect(307, "/login");
     });
   });
@@ -110,10 +110,13 @@ app.get("/api/artPieces", function(req, res) {
 })
 
 app.put("/api/artVotes/:num/:upVotes", function(req, res) {
-  db.Artwork.update({upvotes: req.param.upVotes}, {where: {
-    id: req.params.num
-  }}).then(function(dbUpvotes) {
-    console.log(dbUpvotes);
+db.Artwork.findOne({
+  id: req.params.num
+}).then(artwork => {
+  artwork.updateAttributes({
+    upVotes: (upVotes + 1)
   })
 })
+})
+
 };
