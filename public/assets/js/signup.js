@@ -28,7 +28,7 @@ $(document).ready(function() {
         email: email2,
          password: password2
       }), function(data, status) {
-        alert("You signed up! Enjoy being inspired by the art on this site.");
+        console.log("You signed up! Enjoy being inspired by the art on this site.");
         console.log("Data: " + data + "\nStatus: " + status);
       }
     };
