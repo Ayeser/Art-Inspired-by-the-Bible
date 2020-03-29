@@ -98,9 +98,7 @@ module.exports = function (app) {
   app.post("/api/signup", function (req, res) {
     db.User.create(req.body).then(function () {
       res.send("User is created!");
-  })
-}).then(function (signUp) {
-  res.json(signUp)
+  });
 });
 
 app.get("/api/users", function (req, res) {
@@ -118,8 +116,6 @@ app.get("/api/login/", function (req, res) {
       id: req.user.id
     })
   }
-}).then(function (signUp) {
-  res.json(signUp)
 });
 
 app.put("/api/artVotes/:num/:upVotes", function (req, res) {
@@ -129,10 +125,6 @@ app.put("/api/artVotes/:num/:upVotes", function (req, res) {
     artwork.updateAttributes({
       upVotes: (upVotes + 1)
     })
-  })
-}).then(artwork => {
-  artwork.updateAttributes({
-    upVotes: (upVotes + 1)
   })
 })
 
