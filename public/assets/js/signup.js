@@ -31,7 +31,7 @@ function signUpUser(email2, password2) {
   
   Axios.post('/api/signup', {
     email: email2,
-    password, password2
+    password: password2
   }).then(function (data, status) {
     alert("You signed up with " + email2 + "! Enjoy being inspired by the art on this site.");
     console.log("Data: " + data + "\nStatus: " + status);
