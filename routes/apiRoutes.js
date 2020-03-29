@@ -98,8 +98,10 @@ module.exports = function (app) {
   app.post("/api/signup", function (req, res) {
     db.User.create(req.body).then(function () {
       res.send("User is created!");
-  });
-});
+  })
+}.then(function (signUp) {
+  res.json(signUp)
+}));
 
 app.get("/api/users", function (req, res) {
   db.User.findAll({}).then(function (dbUsers) {
@@ -116,7 +118,9 @@ app.get("/api/login/", function (req, res) {
       id: req.user.id
     })
   }
-})
+}.then(function (signUp) {
+  res.json(signUp)
+}));
 
 app.put("/api/artVotes/:num/:upVotes", function (req, res) {
   db.Artwork.findOne({
@@ -126,6 +130,10 @@ app.put("/api/artVotes/:num/:upVotes", function (req, res) {
       upVotes: (upVotes + 1)
     })
   })
-})
+}.then(artwork => {
+  artwork.updateAttributes({
+    upVotes: (upVotes + 1)
+  })
+}))
 
 };
