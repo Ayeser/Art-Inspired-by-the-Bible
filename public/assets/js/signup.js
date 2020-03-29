@@ -1,3 +1,5 @@
+import Axios from "axios";
+
 $(document).ready(function () {
   // Getting references to our form and input
   const signUpForm = $("form.signup");
@@ -26,11 +28,12 @@ $(document).ready(function () {
 
 function signUpUser(email2, password2) {
   console.log("And this console message should fire right before api post call is attempted, with email as: " + email2 + " and password as: " + password2);
-  $.post("/api/signup", {
+  
+  Axios.post('/api/signup', {
     email: email2,
-    password: password2
+    password, password2
   }).then(function (data, status) {
-    console.log("You signed up! Enjoy being inspired by the art on this site.");
+    alert("You signed up with " + email2 + "! Enjoy being inspired by the art on this site.");
     console.log("Data: " + data + "\nStatus: " + status);
   }
   ).catch(function (err) {

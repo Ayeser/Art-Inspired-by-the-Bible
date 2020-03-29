@@ -367,7 +367,7 @@ $(document).ready(function () {
                 for (let i = 0; i < data.length; i++) {
                     artToAdd.push(createNewPiece(data[i]));
                 }
-                $("#resultsHere").append("<h1>Art pieces for this chapter include: </h1><br /><br />");
+                $("#resultsHere").append("<h1 class='rounded clearfix'>Art pieces for this chapter include: </h1><br /><br />");
                 $("#resultsHere").append(artToAdd);
             });
 
@@ -378,7 +378,7 @@ $(document).ready(function () {
                 };
                 if (videosToAdd === []) {
                 } else {
-                    $("#resultsHere").append("<h1>Videos pieces for this chapter include: </h1><br /><br />");
+                    $("#resultsHere").append("<h1 class='rounded clearfix'>Videos pieces for this chapter include: </h1><br /><br />");
                     $("#resultsHere").append(videosToAdd);
                 }
             });
@@ -392,7 +392,7 @@ $(document).ready(function () {
                 for (let i = 0; i < data.length; i++) {
                     artToAdd.push(createNewPiece(data[i]));
                 }
-                $("#resultsHere").append("<div class='card'><h1>Art pieces for this artist include: </h1></div>");
+                $("#resultsHere").append("<div class='card'><h1 class='rounded clearfix'>Art pieces for this artist include: </h1></div>");
                 $("#resultsHere").append(artToAdd);
             })
 
@@ -401,7 +401,7 @@ $(document).ready(function () {
                 for (let i = 0; i < data.length; i++) {
                     videosToAdd.push(createNewVideo(data[i]));
                 }
-                $("#resultsHere").append("<div class='card'><h1>Videos for this artist include: </h1></div>");
+                $("#resultsHere").append("<div class='card'><h1 class='rounded clearfix'>Videos for this artist include: </h1></div>");
                 $("#resultsHere").append(videosToAdd);
             })
         };
@@ -432,7 +432,7 @@ $(document).ready(function () {
             type: 'PUT',
             url: '/api/artVotes/' + ArtID + "/" + upVotes,
             contentType: 'application/json',
-            data: JSON.parse({ id: ArtID, upvotes: upVotes })
+            data: JSON.stringify({ id: ArtID, upvotes: upVotes })
         }).done(function () {
             console.log('SUCCESS');
         });
