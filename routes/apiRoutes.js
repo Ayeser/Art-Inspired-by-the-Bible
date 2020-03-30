@@ -38,7 +38,6 @@ module.exports = function (app) {
   });
 
   app.get("/api/scriptures/:book/:chapter", function (req, res) {
-    console.log("Finding all scriptures from Scriptures table...");
     db.Scripture.findOne({
       where: {
         book: req.params.book,
@@ -50,7 +49,7 @@ module.exports = function (app) {
   });
 
   app.get("/api/videos/:book/:chapter", function (req, res) {
-    console.log("Finding all scriptures from selected book...");
+    console.log("Finding all videos from selected book...");
     db.Video.findAll({
       where: {
         book: req.params.book,
@@ -121,13 +120,15 @@ app.get("/api/users", function (req, res) {
 });
 
 app.get("/api/login/", function (req, res) {
-  if (!req.password) {
+  db.User.findOne({
+    where: {
+      user: req.body.email,
+    }
+  }).then(function (back) {
+  if (password === req.body.password) {
     res.json({});
   } else {
-    res.json({
-      email: req.user.email,
-      id: req.user.id
-    })
+    res.send("The password you inputted does not match our records");
   }
 });
 
