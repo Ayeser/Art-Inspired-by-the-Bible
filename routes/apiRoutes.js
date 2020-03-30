@@ -113,13 +113,7 @@ res.status(400).send('Error in creating new user');
   });
 });
 
-app.get("/api/users", function (req, res) {
-  db.User.findAll({}).then(function (dbUsers) {
-    res.json(dbUsers)
-  })
-});
-
-app.get("/api/login/", function (req, res) {
+app.post("/api/login/", function (req, res) {
   db.User.findOne({
     where: {
       user: req.body.email,
