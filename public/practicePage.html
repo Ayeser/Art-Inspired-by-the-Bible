@@ -16,7 +16,7 @@
 	<body style="background-color: whitesmoke;">
 		<div class="container shadow" style="height: 100vh; background-color: lightblue;">
 			<div class="row justify-content-center m-2">
-				<nav id ="nav1" class="navbar navbar-light bg-light justify-content-between rounded">
+				<nav id ="nav1" class="navbar navbar-light bg-light justify-content-between rounded border-bottom border-primary">
 					<a class="navbar-brand">Art Inspired by the Bible</a>
 					<div>
 						<button class="btn btn-default dropdown-toggle" type="button" id="OT">OT</button>
@@ -26,8 +26,8 @@
 						<button class="btn btn-default" href="./contest.html">Contribute</a>
 					</div>
 					<div>
-						<button class="btn btn-default" href="./login.html">Log-in/Members</a>
-							<a class="nav-link" href="./signup.html">Sign-up</a>
+						<button class="btn btn-default" onclick="window.location.href='./login.html'">Log-in/Members</a>
+							<button class="btn btn-default" onclick="window.location.href = './signup.html'">Sign-up</a>
 					</div>
 
 					<form class="form-inline" id="artworkForm">
