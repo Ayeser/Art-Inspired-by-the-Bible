@@ -7,13 +7,6 @@ module.exports = function(sequelize, DataTypes) {
           len: [1, 150]
         }
       },
-      deleteCode: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          len: [1, 150]
-        }
-      },
       picture: {
         type: DataTypes.STRING,
         allowNull: false,

@@ -25,16 +25,13 @@ $(document).ready(function () {
 });
 
 function signUpUser(email2, password2) {
-  console.log("And this console message should fire right before api post call is attempted, with email as: " + email2 + " and password as: " + password2);
-  
-  axios.post('/api/signup', {
+  $.post("/api/signup", {
     email: email2,
-    password: password2
-  }).then(function (data, status) {
-    alert("You signed up with " + email2 + "! Enjoy being inspired by the art on this site.");
+     password: password2
+  }).then(function(data, status) {
+    console.log("You signed up! Enjoy being inspired by the art on this site.");
     console.log("Data: " + data + "\nStatus: " + status);
-  }
-  ).catch(function (err) {
+  }).catch(function (err) {
     console.log(err);
   });
 };

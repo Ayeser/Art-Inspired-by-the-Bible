@@ -2,14 +2,12 @@ module.exports = function(sequelize, DataTypes) {
     const MemberLikes = sequelize.define("MemberLikes", {
       book: {
         type: DataTypes.STRING,
-        allowNull: "false",
         validate: {
           len: [1, 140]
         }
       },
       chapter: {
           type: DataTypes.STRING,
-          allowNull: false,
       },
       link: {
         type: DataTypes.STRING,

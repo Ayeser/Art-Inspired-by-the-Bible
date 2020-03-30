@@ -37,7 +37,7 @@ const loginForm = $("form.login");
       $.post("/api/contestPieces/", {
         title: userData.title,
         picture: userData.picture,
-        artist: userData.picture,
+        artist: userData.artist,
         book: userData.book,
         chapter: userData.chapter
       })

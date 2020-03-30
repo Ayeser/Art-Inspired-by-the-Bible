@@ -84,7 +84,13 @@ module.exports = function (app) {
   });
 
   app.post("/api/contestPieces", function (req, res) {
-    db.Contest.create(req.body).then(function (dbContest) {
+    return db.Contest.create({
+      title: req.body.title,
+      picture: req.body.picture,
+      artist: req.body.artist,
+      book: req.body.book,
+      chapter: req.body.chapter
+    }).then(function (dbContest) {
       res.json(dbContest);
     });
   });
@@ -130,7 +136,7 @@ app.put("/api/artVotes/:num/:upVotes", function (req, res) {
     id: req.params.num
   }).then(artwork => {
     artwork.updateAttributes({
-      upVotes: (upVotes + 1)
+      upVotes: req.params.upVotes
     })
   })
 })
