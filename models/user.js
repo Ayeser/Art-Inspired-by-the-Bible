@@ -18,7 +18,7 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     },
     tempLiked: {
-      type: DataTypes.LONGTEXT
+      type: DataTypes.TEXT
     },
     createdAt: {
       type:DataTypes.DATE(3),
