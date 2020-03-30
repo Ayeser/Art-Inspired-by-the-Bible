@@ -963,12 +963,7 @@ $(document).ready(function () {
         //if search term recognized as Bible book...
         if (searchTerms[0] == "genesis" || searchTerms[0] == "exodus" || searchTerms[0] == "leviticus" || searchTerms[0] == "numbers" || searchTerms[0] == "deuteronomy" || searchTerms[0] == "joshua" || searchTerms[0] == "judges" || searchTerms[0] == "ruth" || searchTerms[0] == "1" || searchTerms[0] == "2" || searchTerms[0] == "ezra" || searchTerms[0] == "nehemiah" || searchTerms[0] == "esther" || searchTerms[0] == "job" || searchTerms[0] == "psalms" || searchTerms[0] == "proverbs" || searchTerms[0] == "ecclesiastes" || searchTerms[0] == "song" || searchTerms[0] == "isaiah" || searchTerms[0] == "jeremiah" || searchTerms[0] == "lamentations" || searchTerms[0] == "ezekiel" || searchTerms[0] == "daniel" || searchTerms[0] == "hosea" || searchTerms[0] == "joel" || searchTerms[0] == "amos" || searchTerms[0] == "obadiah" || searchTerms[0] == "jonah" || searchTerms[0] == "micah" || searchTerms[0] == "nahum" || searchTerms[0] == "habakkuk" || searchTerms[0] == "zephaniah" || searchTerms[0] == "haggai" || searchTerms[0] == "zechariah" || searchTerms[0] == "malachi" || searchTerms[0] == "matthew" || searchTerms[0] == "mark" || searchTerms[0] == "luke" || searchTerms[0] == "john" || searchTerms[0] == "acts" || searchTerms[0] == "romans" || searchTerms[0] == "galatians" || searchTerms[0] == "ephesians" || searchTerms[0] == "philippians" || searchTerms[0] == "colossians" || searchTerms[0] == "titus" || searchTerms[0] == "philemon" || searchTerms[0] == "hebrews" || searchTerms[0] == "james" || searchTerms[0] == "jude" || searchTerms[0] == "revelation" || searchTerms[0] == "1" || searchTerms[0] == "2" || searchTerms[0] == "3") {searchBibleArt() }
         else if (searchTerms[0] == "1" || searchTerms[0] == "2" || searchTerms[0] == "3") {
-            let firstTerm = searchTerms[0].toString() + searchTerms[1];
-            let secondTerm = searchTerms[2];
-            searchTerms[0] = firstTerm;
-            searchTerms[1] = secondTerm;
-            console.log(searchTerms[0] + " and " + searchTerms[1]);
-            searchBibleArt(searchTerms)
+            searchBibleNumberStart(searchTerms)
         } else if (searchTerms[0] === "song") {
             let newSearchTerms = ["songofsolomon", searchTerms[3]];
             searchTerms = newSearchTerms;
@@ -1060,6 +1055,36 @@ $(document).ready(function () {
         } else {
             searchArtistInstead(searchTerms)
         }
+        // Below function is if the input into search bar starts with 1, 2, or 3, as in '1 Samuel...'
+        function searchBibleNumberStart() {
+            $.get("api/scriptures/" + searchTerms[0] + searchTerms[1] + "/" + searchTerms[2], function (data) {
+                console.log(data);
+                $("#scriptureHere").append("<div>" + data.book + " " + data.chapter + " " + data.passage + "</div>");
+            })
+            $.get("api/artPieces/" + searchTerms[0] + searchTerms[1] +"/" + searchTerms[2], function (data) {
+                const artToAdd = [];
+                for (let i = 0; i < data.length; i++) {
+                    artToAdd.push(createNewPiece(data[i]));
+                }
+                if (artToAdd === []) {
+                } else {
+                    $("#resultsHere").append("<h1 class='rounded clearfix'>Art pieces for this chapter include: </h1><br /><br />");
+                    $("#resultsHere").append(artToAdd);
+                }
+            });
+            $.get("api/videos/" + searchTerms[0] + searchTerms[1] +"/" + searchTerms[2], function (data) {
+                const videosToAdd = [];
+                for (let i = 0; i < data.length; i++) {
+                    videosToAdd.push(createNewVideo(data[i]));
+                };
+                if (videosToAdd === []) {
+                } else {
+                    $("#resultsHere").append("<h1 class='rounded clearfix'>Videos pieces for this chapter include: </h1><br /><br />");
+                    $("#resultsHere").append(videosToAdd);
+                }
+            });
+        };
+// this next function searches the Bible with a Biblebook Chapter inputted.
         function searchBibleArt() {
             $.get("api/scriptures/" + searchTerms[0] + "/" + searchTerms[1], function (data) {
                 console.log(data);
@@ -1089,7 +1114,7 @@ $(document).ready(function () {
                 }
             });
         }
-    
+    // This next function is for if a person inputs an artist into the search bar instead of a Bible book
         function searchArtistInstead() {
             $("#scriptureHere").empty();
             $("#scriptureHere").hide();

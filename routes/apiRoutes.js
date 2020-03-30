@@ -127,13 +127,14 @@ app.post("/api/login/", function (req, res) {
 });
 
 app.put("/api/artVotes/:num/:upVotes", function (req, res) {
-  db.Artwork.findOne({
-    id: req.params.num
-  }).then(artwork => {
-    artwork.updateAttributes({
-      upVotes: req.params.upVotes
-    })
+ const condition = "id = req.params.id";
+
+  db.Artwork.update({
+    upvotes: req.body.upvotes
+  }, condition, function(result) {
+    return res.status(200).end();
   })
 });
 
-})};
+})
+}
