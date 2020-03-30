@@ -1058,7 +1058,7 @@ $(document).ready(function () {
             searchArtistInstead(searchTerms)
         }
         function searchBibleArt() {
-            console.log("searchTerm[0] is: " + searchTerm[0] + " and searchTerm[1] is: " + searchTerm[1]);
+            console.log("searchTerms[0] is: " + searchTerms[0] + " and searchTerms[1] is: " + searchTerms[1]);
             $.get("api/scriptures/" + searchTerms[0] + "/" + searchTerms[1], function (data) {
                 $("#scriptureHere").append(data.book + " " + data.chapter + " " + data.passage);
             })
