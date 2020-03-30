@@ -140,6 +140,6 @@ app.put("/api/artVotes/:num/:upVotes", function (req, res) {
       upVotes: req.params.upVotes
     })
   })
-})
+});
 
-};
+})};
