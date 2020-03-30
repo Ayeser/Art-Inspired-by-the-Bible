@@ -5,7 +5,7 @@ $(document).ready(function () {
     //Menu bar handling
     $(document).on("click", "#OT", makeOldTestamentNav);
     function makeOldTestamentNav() {
-        event.preventDefault();
+        // event.preventDefault();
         $("#nav2").remove();
         $("#nav3").remove();
         $("#nav4").remove();
@@ -18,7 +18,7 @@ $(document).ready(function () {
     };
     $(document).on("click", "#NT", makeNewTestamentNav);
     function makeNewTestamentNav() {
-        event.preventDefault();
+        // event.preventDefault();
         $("#nav2").remove();
         $("#nav3").remove();
         $("#nav4").remove();
@@ -30,7 +30,7 @@ $(document).ready(function () {
     };
 
     function chosePenteteuch() {
-        event.preventDefault();
+        // event.preventDefault();
         $("#nav3").remove();
         $("#nav4").remove();
         $("#nav2").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav3"><div id="pentateuchButtons"><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Genesis">Genesis</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Exodus">Exodus</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Leviticus">Leviticus</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Numbers">Numbers</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Deuteronomy">Deuteronomy</button></div></nav>');
@@ -95,15 +95,19 @@ $(document).ready(function () {
     };
 
     function choseGenesis() {
-        event.preventDefault();
+        // event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="1">1</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="2">2</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="3">3</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="4">4</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="5">5</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="6">6</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="7">7</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="8">8</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="9">9</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="10">10</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="11">11</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="12">12</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="13">13</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="14">14</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="15">15</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="16">16</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="17">17</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="18">18</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="19">19</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="20">20</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="21">21</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="22">22</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="23">23</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="24">24</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="25">25</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="26">26</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="27">27</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="28">28</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="29">29</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="30">30</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="31">31</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="32">32</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="33">33</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="34">34</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="35">35</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="36">36</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="37">37</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="38">38</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="39">39</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="40">40</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="41">41</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="42">42</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="43">43</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="44">44</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="45">45</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="46">46</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="47">47</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="48">48</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="49">49</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="50">50</button></div></nav>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div>');
+        for (i=1;i<51;i++) {
+            $("#nav3").append('<button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav3").append("</div></nav>");
     };
 
     $(document).on("click", ".Gen", function () { searchTerms = ["genesis", this.id]; handleArtworkFormSubmit(event); });
 
     function choseExodus() {
-        event.preventDefault();
+        // event.preventDefault();
         $("#nav4").remove();
         $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div>');
         for (i=1;i<41;i++) {
@@ -111,6 +115,8 @@ $(document).ready(function () {
         };
         $("#nav3").append("</div></nav>");
     };
+
+    $(document).on("click", ".Ex", function () { searchTerms = ["exodus", this.id]; handleArtworkFormSubmit(event); });
 
     function handleArtworkFormSubmit(event) {
         event.preventDefault();
@@ -178,12 +184,12 @@ $(document).ready(function () {
         };
         function createNewPiece(piece) {
             event.preventDefault();
-            return ('<div class="jumbotron jumbotron-fluid shadow p-2" id="resultsHere" style="width: 45vw;"><h3>' + piece.title + '</h3><img src="' + piece.picture + '" class="card-img-top img-fluid"><h6>' + piece.artist + '</h6><h6>Verse: ' + piece.verse + '</h6><button class="likeButton" id="' + piece.id + '">Hit here to add a like, current likes: ' + piece.upvotes + '</button></div>');
+            return ('<div class="jumbotron jumbotron-fluid shadow p-2" id="resultsHere" style="width: 45vw;"><h3>' + piece.title + '</h3><img src="' + piece.picture + '" class="card-img-top img-fluid"><h6>' + piece.artist + '</h6><h6>Verse: ' + piece.verse + '</h6><button class="likeButton" id="' + piece.id + '">Click here to add a like, current likes: ' + piece.upvotes + '</button></div>');
         }
 
         function createNewVideo(piece) {
             event.preventDefault();
-            return ('<div class="jumbotron"><h5 class="card-title">' + piece.title + '</h5><div>Artist: ' + piece.sourceCreator + '</div><div>Verse: ' + piece.verse + '</div><div>' + piece.videoEmbed + '</div><button class="likeButton" id="' + piece.id + '">Hit here to add a like, current likes: ' + piece.upvotes + '</button></div>');
+            return ('<div class="jumbotron"><h5 class="card-title">' + piece.title + '</h5><div>Artist: ' + piece.sourceCreator + '</div><div>Verse: ' + piece.verse + '</div><div>' + piece.videoEmbed + '</div><button class="likeButton" id="' + piece.id + '">Click here to add a like, current likes: ' + piece.upvotes + '</button></div>');
         }
     };
 
