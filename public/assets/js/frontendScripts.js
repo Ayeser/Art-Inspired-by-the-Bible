@@ -1083,7 +1083,8 @@ $(document).ready(function () {
         }
         function searchBibleArt() {
             $.get("api/scriptures/" + searchTerms[0] + "/" + searchTerms[1], function (data) {
-                $("#scriptureHere").append(data.book + " " + data.chapter + " " + data.passage);
+                console.log(JSON.stringify(data));
+                $("#scriptureHere").append("<div>" + data.book + " " + data.chapter + " " + data.passage + "</div>");
             })
             $.get("api/artPieces/" + searchTerms[0] + "/" + searchTerms[1], function (data) {
                 const artToAdd = [];
