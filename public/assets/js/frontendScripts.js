@@ -1058,64 +1058,64 @@ $(document).ready(function () {
         } else {
             searchArtistInstead(searchTerms)
         }
+        function searchBibleArt() {
+            $.get("api/scriptures/" + this.searchTerms[0] + "/" + this.searchTerms[1], function (data) {
+                $("#scriptureHere").append(data.book + " " + data.chapter + " " + data.passage);
+            })
+            $.get("api/artPieces/" + this.searchTerms[0] + "/" + this.searchTerms[1], function (data) {
+                const artToAdd = [];
+                for (let i = 0; i < data.length; i++) {
+                    artToAdd.push(createNewPiece(data[i]));
+                }
+                if (artToAdd === []) {
+                } else {
+                    $("#resultsHere").append("<h1 class='rounded clearfix'>Art pieces for this chapter include: </h1><br /><br />");
+                    $("#resultsHere").append(artToAdd);
+                }
+            });
+    
+            $.get("api/videos/" + this.searchTerms[0] + "/" + this.searchTerms[1], function (data) {
+                const videosToAdd = [];
+                for (let i = 0; i < data.length; i++) {
+                    videosToAdd.push(createNewVideo(data[i]));
+                };
+                if (videosToAdd === []) {
+                } else {
+                    $("#resultsHere").append("<h1 class='rounded clearfix'>Videos pieces for this chapter include: </h1><br /><br />");
+                    $("#resultsHere").append(videosToAdd);
+                }
+            });
+        }
+    
+        function searchArtistInstead() {
+            $("#scriptureHere").empty();
+            $("#scriptureHere").hide();
+            $.get("api/artistArtwork/" + this.searchTerms[0], function (data) {
+                const artToAdd = [];
+                for (let i = 0; i < data.length; i++) {
+                    artToAdd.push(createNewPiece(data[i]));
+                }
+                if (artToAdd === []) {
+                } else {
+                    $("#resultsHere").append("<div class='card'><h1 class='rounded clearfix'>Art pieces for this artist include: </h1></div>");
+                    $("#resultsHere").append(artToAdd);
+                }
+            })
+    
+            $.get("api/artistVideos/" + this.searchTerms[0], function (data) {
+                const videosToAdd = [];
+                for (let i = 0; i < data.length; i++) {
+                    videosToAdd.push(createNewVideo(data[i]));
+                }
+                if (videosToAdd === []) {
+                } else {
+                    $("#resultsHere").append("<div class='card'><h1 class='rounded clearfix'>Videos for this artist include: </h1></div>");
+                    $("#resultsHere").append(videosToAdd);
+                }
+            })
+        };
     };
 
-function searchBibleArt() {
-        $.get("api/scriptures/" + this.searchTerms[0] + "/" + this.searchTerms[1], function (data) {
-            $("#scriptureHere").append(data.book + " " + data.chapter + " " + data.passage);
-        })
-        $.get("api/artPieces/" + this.searchTerms[0] + "/" + this.searchTerms[1], function (data) {
-            const artToAdd = [];
-            for (let i = 0; i < data.length; i++) {
-                artToAdd.push(createNewPiece(data[i]));
-            }
-            if (artToAdd === []) {
-            } else {
-                $("#resultsHere").append("<h1 class='rounded clearfix'>Art pieces for this chapter include: </h1><br /><br />");
-                $("#resultsHere").append(artToAdd);
-            }
-        });
-
-        $.get("api/videos/" + this.searchTerms[0] + "/" + this.searchTerms[1], function (data) {
-            const videosToAdd = [];
-            for (let i = 0; i < data.length; i++) {
-                videosToAdd.push(createNewVideo(data[i]));
-            };
-            if (videosToAdd === []) {
-            } else {
-                $("#resultsHere").append("<h1 class='rounded clearfix'>Videos pieces for this chapter include: </h1><br /><br />");
-                $("#resultsHere").append(videosToAdd);
-            }
-        });
-    }
-
-    function searchArtistInstead() {
-        $("#scriptureHere").empty();
-        $("#scriptureHere").hide();
-        $.get("api/artistArtwork/" + this.searchTerms[0], function (data) {
-            const artToAdd = [];
-            for (let i = 0; i < data.length; i++) {
-                artToAdd.push(createNewPiece(data[i]));
-            }
-            if (artToAdd === []) {
-            } else {
-                $("#resultsHere").append("<div class='card'><h1 class='rounded clearfix'>Art pieces for this artist include: </h1></div>");
-                $("#resultsHere").append(artToAdd);
-            }
-        })
-
-        $.get("api/artistVideos/" + this.searchTerms[0], function (data) {
-            const videosToAdd = [];
-            for (let i = 0; i < data.length; i++) {
-                videosToAdd.push(createNewVideo(data[i]));
-            }
-            if (videosToAdd === []) {
-            } else {
-                $("#resultsHere").append("<div class='card'><h1 class='rounded clearfix'>Videos for this artist include: </h1></div>");
-                $("#resultsHere").append(videosToAdd);
-            }
-        })
-    };
 
     function createNewPiece(piece) {
         event.preventDefault();
