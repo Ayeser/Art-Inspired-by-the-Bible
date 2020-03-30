@@ -96,8 +96,15 @@ module.exports = function (app) {
   });
 
   app.post("/api/signup", function (req, res) {
-    db.User.create(req).then(function () {
-      res.send("User is created!");
+    db.User.create({
+      email: req.body.email,
+      password: req.body.password
+    }).then(function (users) {
+      if (users) {
+        res.send(users);
+      } else {
+res.status(400).send('Error in creating new user');
+      }
   });
 });
 
