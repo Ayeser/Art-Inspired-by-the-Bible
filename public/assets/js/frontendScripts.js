@@ -1058,6 +1058,7 @@ $(document).ready(function () {
             searchArtistInstead(searchTerms)
         }
         function searchBibleArt() {
+            console.log("searchTerm[0] is: " + searchTerm[0] + " and searchTerm[1] is: " + searchTerm[1]);
             $.get("api/scriptures/" + searchTerms[0] + "/" + searchTerms[1], function (data) {
                 $("#scriptureHere").append(data.book + " " + data.chapter + " " + data.passage);
             })
@@ -1118,12 +1119,12 @@ $(document).ready(function () {
 
     function createNewPiece(piece) {
         event.preventDefault();
-        return ('<div class="jumbotron jumbotron-fluid shadow p-2" id="resultsHere" style="width: 45vw;"><h3>' + piece.title + '</h3><img src="' + piece.picture + '" class="card-img-top img-fluid"><h6>' + piece.artist + '</h6><h6>Verse: ' + piece.verse + '</h6><button class="likeButton" id="' + piece.id + '">Click here to add a like, current likes: ' + piece.upvotes + '</button></div>');
+        return ('<div class="jumbotron jumbotron-fluid shadow p-2" id="resultsHere" style="width: 45vw;"><h3>' + piece.title + '</h3><img src="' + piece.picture + '" class="card-img-top img-fluid"><h6>' + piece.artist + '</h6><h6>Book: ' + piece.book + '</h6><h6>Verse: ' + piece.verse + '</h6><button class="likeButton" id="' + piece.id + '">Click here to add a like, current likes: ' + piece.upvotes + '</button></div>');
     }
 
     function createNewVideo(piece) {
         event.preventDefault();
-        return ('<div class="jumbotron"><h5 class="card-title">' + piece.title + '</h5><div>Artist: ' + piece.sourceCreator + '</div><div>Verse: ' + piece.verse + '</div><div>' + piece.videoEmbed + '</div><button class="likeButton" id="' + piece.id + '">Click here to add a like, current likes: ' + piece.upvotes + '</button></div>');
+        return ('<div class="jumbotron"><h5 class="card-title">' + piece.title + '</h5><div>Artist: ' + piece.sourceCreator + '</div><div>Book: ' + piece.book + '</div><div>Verse: ' + piece.verse + '</div><div>' + piece.videoEmbed + '</div><button class="likeButton" id="' + piece.id + '">Click here to add a like, current likes: ' + piece.upvotes + '</button></div>');
     }
 
     $(document).on("submit", "#artworkForm", searchBarSubmit);
