@@ -1059,10 +1059,10 @@ $(document).ready(function () {
             searchArtistInstead(searchTerms)
         }
         function searchBibleArt() {
-            $.get("api/scriptures/" + this.searchTerms[0] + "/" + this.searchTerms[1], function (data) {
+            $.get("api/scriptures/" + searchTerms[0] + "/" + searchTerms[1], function (data) {
                 $("#scriptureHere").append(data.book + " " + data.chapter + " " + data.passage);
             })
-            $.get("api/artPieces/" + this.searchTerms[0] + "/" + this.searchTerms[1], function (data) {
+            $.get("api/artPieces/" + searchTerms[0] + "/" + searchTerms[1], function (data) {
                 const artToAdd = [];
                 for (let i = 0; i < data.length; i++) {
                     artToAdd.push(createNewPiece(data[i]));
@@ -1074,7 +1074,7 @@ $(document).ready(function () {
                 }
             });
     
-            $.get("api/videos/" + this.searchTerms[0] + "/" + this.searchTerms[1], function (data) {
+            $.get("api/videos/" + searchTerms[0] + "/" + searchTerms[1], function (data) {
                 const videosToAdd = [];
                 for (let i = 0; i < data.length; i++) {
                     videosToAdd.push(createNewVideo(data[i]));
@@ -1090,7 +1090,7 @@ $(document).ready(function () {
         function searchArtistInstead() {
             $("#scriptureHere").empty();
             $("#scriptureHere").hide();
-            $.get("api/artistArtwork/" + this.searchTerms[0], function (data) {
+            $.get("api/artistArtwork/" + searchTerms[0], function (data) {
                 const artToAdd = [];
                 for (let i = 0; i < data.length; i++) {
                     artToAdd.push(createNewPiece(data[i]));
@@ -1102,7 +1102,7 @@ $(document).ready(function () {
                 }
             })
     
-            $.get("api/artistVideos/" + this.searchTerms[0], function (data) {
+            $.get("api/artistVideos/" + searchTerms[0], function (data) {
                 const videosToAdd = [];
                 for (let i = 0; i < data.length; i++) {
                     videosToAdd.push(createNewVideo(data[i]));
