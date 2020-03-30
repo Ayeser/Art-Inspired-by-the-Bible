@@ -42,7 +42,8 @@ const loginForm = $("form.login");
         chapter: userData.chapter
       })
         .then(function(data) {
-          console.log("Image successfully added and will be reviewed by a team member before being added to the database");
+          $("login").empty();
+          $("login").append("<h6>Image successfully added and will be reviewed by a team member before being added to the database. You may return to the main page or, if you like to add another link, simply refresh this page</h6>");
         })
         .catch(function(err) {
           console.log(err);

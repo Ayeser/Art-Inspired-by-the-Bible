@@ -97,7 +97,7 @@ $(document).ready(function () {
     function choseGenesis() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="Gen1">1</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="Gen2">2</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="Gen3">3</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="Gen4">4</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="Gen5">5</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="Gen6">6</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="Gen7">7</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="Gen8">8</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="Gen9">9</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="Gen10">10</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="Gen11">11</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="Gen12">12</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="Gen13">13</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="Gen14">14</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="Gen15">15</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="Gen16">16</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="Gen17">17</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="Gen18">18</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="Gen19">19</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="Gen20">20</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="Gen21">21</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="Gen22">22</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="Gen23">23</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="Gen24">24</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="Gen25">25</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="Gen26">26</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="Gen27">27</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="Gen28">28</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="Gen29">29</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="Gen30">30</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="Gen31">31</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="Gen32">32</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="Gen33">33</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="Gen34">34</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="Gen35">35</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="Gen36">36</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="Gen37">37</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="Gen38">38</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="Gen39">39</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="Gen40">40</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="Gen41">41</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="Gen42">42</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="Gen43">43</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="Gen44">44</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="Gen45">45</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="Gen46">46</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="Gen47">47</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="Gen48">48</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="Gen49">49</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="Gen50">50</button></div></nav>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="1">1</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="2">2</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="3">3</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="4">4</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="5">5</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="6">6</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="7">7</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="8">8</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="9">9</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="10">10</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="11">11</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="12">12</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="13">13</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="14">14</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="15">15</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="16">16</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="17">17</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="18">18</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="19">19</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="20">20</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="21">21</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="22">22</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="23">23</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="24">24</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="25">25</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="26">26</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="27">27</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="28">28</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="29">29</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="30">30</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="31">31</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="32">32</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="33">33</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="34">34</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="35">35</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="36">36</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="37">37</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="38">38</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="39">39</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="40">40</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="41">41</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="42">42</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="43">43</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="44">44</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="45">45</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="46">46</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="47">47</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="48">48</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="49">49</button><button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="50">50</button></div></nav>');
     };
 
     function choseExodus() {
@@ -106,246 +106,246 @@ $(document).ready(function () {
         $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Ex1">1</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Ex2">2</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Ex3">3</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Ex4">4</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Ex5">5</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Ex6">6</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Ex7">7</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Ex8">8</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Ex9">9</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Ex10">10</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Ex11">11</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Ex12">12</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Ex13">13</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Ex14">14</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Ex15">15</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Ex16">16</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Ex17">17</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Ex18">18</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Ex19">19</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Ex20">20</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Ex21">21</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Ex22">22</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Ex23">23</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Ex24">24</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Ex25">25</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Ex26">26</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Ex27">27</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Ex28">28</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Ex29">29</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Ex30">30</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Ex31">31</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Ex32">32</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Ex33">33</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Ex34">34</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Ex35">35</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Ex36">36</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Ex37">37</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Ex38">38</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Ex39">39</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Ex40">40</button></div></nav>');
     };
 
-    $(document).on("click", ".Gen", function () { console.log("The id for this clicked button is: " + this.id) });
+    $(document).on("click", ".Gen", function () { searchTerms = ["genesis", "this.id"]; handleArtworkFormSubmit(event); });
 
-    $(document).on("click", "#Gen1", function () { searchTerms = ["genesis", "1"]; handleArtworkFormSubmit(event); });
+    // $(document).on("click", "#Gen1", function () { searchTerms = ["genesis", "1"]; handleArtworkFormSubmit(event); });
 
-    $(document).on("click", "#Gen2", function () {
-        searchTerms = ["genesis", "2"];
-        handleArtworkFormSubmit(event);
-    });
+    // $(document).on("click", "#Gen2", function () {
+    //     searchTerms = ["genesis", "2"];
+    //     handleArtworkFormSubmit(event);
+    // });
 
-    $(document).on("click", "#Gen3", function () {
-        searchTerms = ["genesis", "3"];
-        handleArtworkFormSubmit(event);
-    });
+    // $(document).on("click", "#Gen3", function () {
+    //     searchTerms = ["genesis", "3"];
+    //     handleArtworkFormSubmit(event);
+    // });
 
-    $(document).on("click", "#Gen4", function () {
-        searchTerms = ["genesis", "4"];
-        handleArtworkFormSubmit(event);
-    });
+    // $(document).on("click", "#Gen4", function () {
+    //     searchTerms = ["genesis", "4"];
+    //     handleArtworkFormSubmit(event);
+    // });
 
-    $(document).on("click", "#Gen5", function () {
-        searchTerms = ["genesis", "5"];
-        handleArtworkFormSubmit(event);
-    });
+    // $(document).on("click", "#Gen5", function () {
+    //     searchTerms = ["genesis", "5"];
+    //     handleArtworkFormSubmit(event);
+    // });
 
-    $(document).on("click", "#Gen6", function () {
-        searchTerms = ["genesis", "6"];
-        handleArtworkFormSubmit(event);
-    });
+    // $(document).on("click", "#Gen6", function () {
+    //     searchTerms = ["genesis", "6"];
+    //     handleArtworkFormSubmit(event);
+    // });
 
-    $(document).on("click", "#Gen7", function () {
-        searchTerms = ["genesis", "7"];
-        handleArtworkFormSubmit(event);
-    });
+    // $(document).on("click", "#Gen7", function () {
+    //     searchTerms = ["genesis", "7"];
+    //     handleArtworkFormSubmit(event);
+    // });
 
-    $(document).on("click", "#Gen8", function () {
-        searchTerms = ["genesis", "8"];
-        handleArtworkFormSubmit(event);
-    });
+    // $(document).on("click", "#Gen8", function () {
+    //     searchTerms = ["genesis", "8"];
+    //     handleArtworkFormSubmit(event);
+    // });
 
-    $(document).on("click", "#Gen9", function () {
-        searchTerms = ["genesis", "9"];
-        handleArtworkFormSubmit(event);
-    });
+    // $(document).on("click", "#Gen9", function () {
+    //     searchTerms = ["genesis", "9"];
+    //     handleArtworkFormSubmit(event);
+    // });
 
-    $(document).on("click", "#Gen10", function () {
-        searchTerms = ["genesis", "10"];
-        handleArtworkFormSubmit(event);
-    });
+    // $(document).on("click", "#Gen10", function () {
+    //     searchTerms = ["genesis", "10"];
+    //     handleArtworkFormSubmit(event);
+    // });
 
-    $(document).on("click", "#Gen11", function () {
-        searchTerms = ["genesis", "11"];
-        handleArtworkFormSubmit(event);
-    });
+    // $(document).on("click", "#Gen11", function () {
+    //     searchTerms = ["genesis", "11"];
+    //     handleArtworkFormSubmit(event);
+    // });
 
-    $(document).on("click", "#Gen12", function () {
-        searchTerms = ["genesis", "12"];
-        handleArtworkFormSubmit(event);
-    });
+    // $(document).on("click", "#Gen12", function () {
+    //     searchTerms = ["genesis", "12"];
+    //     handleArtworkFormSubmit(event);
+    // });
 
-    $(document).on("click", "#Gen13", function () {
-        searchTerms = ["genesis", "13"];
-        handleArtworkFormSubmit(event);
-    });
+    // $(document).on("click", "#Gen13", function () {
+    //     searchTerms = ["genesis", "13"];
+    //     handleArtworkFormSubmit(event);
+    // });
 
-    $(document).on("click", "#Gen14", function () {
-        searchTerms = ["genesis", "14"];
-        handleArtworkFormSubmit(event);
-    });
+    // $(document).on("click", "#Gen14", function () {
+    //     searchTerms = ["genesis", "14"];
+    //     handleArtworkFormSubmit(event);
+    // });
 
-    $(document).on("click", "#Gen15", function () {
-        searchTerms = ["genesis", "15"];
-        handleArtworkFormSubmit(event);
-    });
+    // $(document).on("click", "#Gen15", function () {
+    //     searchTerms = ["genesis", "15"];
+    //     handleArtworkFormSubmit(event);
+    // });
 
-    $(document).on("click", "#Gen16", function () {
-        searchTerms = ["genesis", "16"];
-        handleArtworkFormSubmit(event);
-    });
+    // $(document).on("click", "#Gen16", function () {
+    //     searchTerms = ["genesis", "16"];
+    //     handleArtworkFormSubmit(event);
+    // });
 
-    $(document).on("click", "#Gen17", function () {
-        searchTerms = ["genesis", "17"];
-        handleArtworkFormSubmit(event);
-    });
+    // $(document).on("click", "#Gen17", function () {
+    //     searchTerms = ["genesis", "17"];
+    //     handleArtworkFormSubmit(event);
+    // });
 
-    $(document).on("click", "#Gen18", function () {
-        searchTerms = ["genesis", "18"];
-        handleArtworkFormSubmit(event);
-    });
+    // $(document).on("click", "#Gen18", function () {
+    //     searchTerms = ["genesis", "18"];
+    //     handleArtworkFormSubmit(event);
+    // });
 
-    $(document).on("click", "#Gen19", function () {
-        searchTerms = ["genesis", "19"];
-        handleArtworkFormSubmit(event);
-    });
+    // $(document).on("click", "#Gen19", function () {
+    //     searchTerms = ["genesis", "19"];
+    //     handleArtworkFormSubmit(event);
+    // });
 
-    $(document).on("click", "#Gen20", function () {
-        searchTerms = ["genesis", "20"];
-        handleArtworkFormSubmit(event);
-    });
+    // $(document).on("click", "#Gen20", function () {
+    //     searchTerms = ["genesis", "20"];
+    //     handleArtworkFormSubmit(event);
+    // });
 
-    $(document).on("click", "#Gen21", function () {
-        searchTerms = ["genesis", "21"];
-        handleArtworkFormSubmit(event);
-    });
+    // $(document).on("click", "#Gen21", function () {
+    //     searchTerms = ["genesis", "21"];
+    //     handleArtworkFormSubmit(event);
+    // });
 
-    $(document).on("click", "#Gen22", function () {
-        searchTerms = ["genesis", "22"];
-        handleArtworkFormSubmit(event);
-    });
-    $(document).on("click", "#Gen23", function () {
-        searchTerms = ["genesis", "23"];
-        handleArtworkFormSubmit(event);
-    });
-    $(document).on("click", "#Gen24", function () {
-        searchTerms = ["genesis", "24"];
-        handleArtworkFormSubmit(event);
-    });
+    // $(document).on("click", "#Gen22", function () {
+    //     searchTerms = ["genesis", "22"];
+    //     handleArtworkFormSubmit(event);
+    // });
+    // $(document).on("click", "#Gen23", function () {
+    //     searchTerms = ["genesis", "23"];
+    //     handleArtworkFormSubmit(event);
+    // });
+    // $(document).on("click", "#Gen24", function () {
+    //     searchTerms = ["genesis", "24"];
+    //     handleArtworkFormSubmit(event);
+    // });
 
-    $(document).on("click", "#Gen25", function () {
-        searchTerms = ["genesis", "25"];
-        handleArtworkFormSubmit(event);
-    });
+    // $(document).on("click", "#Gen25", function () {
+    //     searchTerms = ["genesis", "25"];
+    //     handleArtworkFormSubmit(event);
+    // });
 
-    $(document).on("click", "#Gen26", function () {
-        searchTerms = ["genesis", "26"];
-        handleArtworkFormSubmit(event);
-    });
+    // $(document).on("click", "#Gen26", function () {
+    //     searchTerms = ["genesis", "26"];
+    //     handleArtworkFormSubmit(event);
+    // });
 
-    $(document).on("click", "#Gen27", function () {
-        searchTerms = ["genesis", "27"];
-        handleArtworkFormSubmit(event);
-    });
-    $(document).on("click", "#Gen28", function () {
-        searchTerms = ["genesis", "28"];
-        handleArtworkFormSubmit(event);
-    });
-    $(document).on("click", "#Gen29", function () {
-        searchTerms = ["genesis", "29"];
-        handleArtworkFormSubmit(event);
-    });
-    $(document).on("click", "#Gen30", function () {
-        searchTerms = ["genesis", "30"];
-        handleArtworkFormSubmit(event);
-    });
-    $(document).on("click", "#Gen31", function () {
-        searchTerms = ["genesis", "26"];
-        handleArtworkFormSubmit(event);
-    });
-    $(document).on("click", "#Gen32", function () {
-        searchTerms = ["genesis", "26"];
-        handleArtworkFormSubmit(event);
-    });
-    $(document).on("click", "#Gen33", function () {
-        searchTerms = ["genesis", "33"];
-        handleArtworkFormSubmit(event);
-    });
+    // $(document).on("click", "#Gen27", function () {
+    //     searchTerms = ["genesis", "27"];
+    //     handleArtworkFormSubmit(event);
+    // });
+    // $(document).on("click", "#Gen28", function () {
+    //     searchTerms = ["genesis", "28"];
+    //     handleArtworkFormSubmit(event);
+    // });
+    // $(document).on("click", "#Gen29", function () {
+    //     searchTerms = ["genesis", "29"];
+    //     handleArtworkFormSubmit(event);
+    // });
+    // $(document).on("click", "#Gen30", function () {
+    //     searchTerms = ["genesis", "30"];
+    //     handleArtworkFormSubmit(event);
+    // });
+    // $(document).on("click", "#Gen31", function () {
+    //     searchTerms = ["genesis", "26"];
+    //     handleArtworkFormSubmit(event);
+    // });
+    // $(document).on("click", "#Gen32", function () {
+    //     searchTerms = ["genesis", "26"];
+    //     handleArtworkFormSubmit(event);
+    // });
+    // $(document).on("click", "#Gen33", function () {
+    //     searchTerms = ["genesis", "33"];
+    //     handleArtworkFormSubmit(event);
+    // });
 
-    $(document).on("click", "#Gen34", function () {
-        searchTerms = ["genesis", "34"];
-        handleArtworkFormSubmit(event);
-    });
+    // $(document).on("click", "#Gen34", function () {
+    //     searchTerms = ["genesis", "34"];
+    //     handleArtworkFormSubmit(event);
+    // });
 
-    $(document).on("click", "#Gen35", function () {
-        searchTerms = ["genesis", "35"];
-        handleArtworkFormSubmit(event);
-    });
+    // $(document).on("click", "#Gen35", function () {
+    //     searchTerms = ["genesis", "35"];
+    //     handleArtworkFormSubmit(event);
+    // });
 
-    $(document).on("click", "#Gen36", function () {
-        searchTerms = ["genesis", "36"];
-        handleArtworkFormSubmit(event);
-    });
+    // $(document).on("click", "#Gen36", function () {
+    //     searchTerms = ["genesis", "36"];
+    //     handleArtworkFormSubmit(event);
+    // });
 
-    $(document).on("click", "#Gen37", function () {
-        searchTerms = ["genesis", "37"];
-        handleArtworkFormSubmit(event);
-    });
+    // $(document).on("click", "#Gen37", function () {
+    //     searchTerms = ["genesis", "37"];
+    //     handleArtworkFormSubmit(event);
+    // });
 
-    $(document).on("click", "#Gen38", function () {
-        searchTerms = ["genesis", "38"];
-        handleArtworkFormSubmit(event);
-    });
+    // $(document).on("click", "#Gen38", function () {
+    //     searchTerms = ["genesis", "38"];
+    //     handleArtworkFormSubmit(event);
+    // });
 
-    $(document).on("click", "#Gen39", function () {
-        searchTerms = ["genesis", "39"];
-        handleArtworkFormSubmit(event);
-    });
+    // $(document).on("click", "#Gen39", function () {
+    //     searchTerms = ["genesis", "39"];
+    //     handleArtworkFormSubmit(event);
+    // });
 
-    $(document).on("click", "#Gen40", function () {
-        searchTerms = ["genesis", "40"];
-        handleArtworkFormSubmit(event);
-    });
+    // $(document).on("click", "#Gen40", function () {
+    //     searchTerms = ["genesis", "40"];
+    //     handleArtworkFormSubmit(event);
+    // });
 
-    $(document).on("click", "#Gen41", function () {
-        searchTerms = ["genesis", "41"];
-        handleArtworkFormSubmit(event);
-    });
+    // $(document).on("click", "#Gen41", function () {
+    //     searchTerms = ["genesis", "41"];
+    //     handleArtworkFormSubmit(event);
+    // });
 
-    $(document).on("click", "#Gen42", function () {
-        searchTerms = ["genesis", "42"];
-        handleArtworkFormSubmit(event);
-    });
+    // $(document).on("click", "#Gen42", function () {
+    //     searchTerms = ["genesis", "42"];
+    //     handleArtworkFormSubmit(event);
+    // });
 
-    $(document).on("click", "#Gen43", function () {
-        searchTerms = ["genesis", "43"];
-        handleArtworkFormSubmit(event);
-    });
+    // $(document).on("click", "#Gen43", function () {
+    //     searchTerms = ["genesis", "43"];
+    //     handleArtworkFormSubmit(event);
+    // });
 
-    $(document).on("click", "#Gen44", function () {
-        searchTerms = ["genesis", "44"];
-        handleArtworkFormSubmit(event);
-    });
+    // $(document).on("click", "#Gen44", function () {
+    //     searchTerms = ["genesis", "44"];
+    //     handleArtworkFormSubmit(event);
+    // });
 
-    $(document).on("click", "#Gen45", function () {
-        searchTerms = ["genesis", "45"];
-        handleArtworkFormSubmit(event);
-    });
+    // $(document).on("click", "#Gen45", function () {
+    //     searchTerms = ["genesis", "45"];
+    //     handleArtworkFormSubmit(event);
+    // });
 
-    $(document).on("click", "#Gen46", function () {
-        searchTerms = ["genesis", "46"];
-        handleArtworkFormSubmit(event);
-    });
+    // $(document).on("click", "#Gen46", function () {
+    //     searchTerms = ["genesis", "46"];
+    //     handleArtworkFormSubmit(event);
+    // });
 
-    $(document).on("click", "#Gen47", function () {
-        searchTerms = ["genesis", "47"];
-        handleArtworkFormSubmit(event);
-    });
+    // $(document).on("click", "#Gen47", function () {
+    //     searchTerms = ["genesis", "47"];
+    //     handleArtworkFormSubmit(event);
+    // });
 
-    $(document).on("click", "#Gen48", function () {
-        searchTerms = ["genesis", "48"];
-        handleArtworkFormSubmit(event);
-    });
+    // $(document).on("click", "#Gen48", function () {
+    //     searchTerms = ["genesis", "48"];
+    //     handleArtworkFormSubmit(event);
+    // });
 
-    $(document).on("click", "#Gen49", function () {
-        searchTerms = ["genesis", "49"];
-        handleArtworkFormSubmit(event);
-    });
+    // $(document).on("click", "#Gen49", function () {
+    //     searchTerms = ["genesis", "49"];
+    //     handleArtworkFormSubmit(event);
+    // });
 
-    $(document).on("click", "#Gen50", function () {
-        searchTerms = ["genesis", "50"];
-        handleArtworkFormSubmit(event);
-    });
+    // $(document).on("click", "#Gen50", function () {
+    //     searchTerms = ["genesis", "50"];
+    //     handleArtworkFormSubmit(event);
+    // });
 
     function handleArtworkFormSubmit(event) {
         event.preventDefault();

@@ -6,6 +6,10 @@ a:link {
     color: white;
 }
 
+nav {
+  border-bottom: 5px solid black;
+}
+
 form.signup,
 form.login {
   margin-top: 50px;
