@@ -963,97 +963,97 @@ $(document).ready(function () {
         //if search term recognized as Bible book...
         if (searchTerms[0] == "genesis" || searchTerms[0] == "exodus" || searchTerms[0] == "leviticus" || searchTerms[0] == "numbers" || searchTerms[0] == "deuteronomy" || searchTerms[0] == "joshua" || searchTerms[0] == "judges" || searchTerms[0] == "ruth" || searchTerms[0] == "1" || searchTerms[0] == "2" || searchTerms[0] == "ezra" || searchTerms[0] == "nehemiah" || searchTerms[0] == "esther" || searchTerms[0] == "job" || searchTerms[0] == "psalms" || searchTerms[0] == "proverbs" || searchTerms[0] == "ecclesiastes" || searchTerms[0] == "song" || searchTerms[0] == "isaiah" || searchTerms[0] == "jeremiah" || searchTerms[0] == "lamentations" || searchTerms[0] == "ezekiel" || searchTerms[0] == "daniel" || searchTerms[0] == "hosea" || searchTerms[0] == "joel" || searchTerms[0] == "amos" || searchTerms[0] == "obadiah" || searchTerms[0] == "jonah" || searchTerms[0] == "micah" || searchTerms[0] == "nahum" || searchTerms[0] == "habakkuk" || searchTerms[0] == "zephaniah" || searchTerms[0] == "haggai" || searchTerms[0] == "zechariah" || searchTerms[0] == "malachi" || searchTerms[0] == "matthew" || searchTerms[0] == "mark" || searchTerms[0] == "luke" || searchTerms[0] == "john" || searchTerms[0] == "acts" || searchTerms[0] == "romans" || searchTerms[0] == "galatians" || searchTerms[0] == "ephesians" || searchTerms[0] == "philippians" || searchTerms[0] == "colossians" || searchTerms[0] == "titus" || searchTerms[0] == "philemon" || searchTerms[0] == "hebrews" || searchTerms[0] == "james" || searchTerms[0] == "jude" || searchTerms[0] == "revelation" || searchTerms[0] == "1" || searchTerms[0] == "2" || searchTerms[0] == "3") {searchBibleArt() }
         else if (searchTerms[0] === "1" || searchTerms[0] == "2" || searchTerms[0] == "3") {
-            searchTerm[0] = searchTerm[0] + " " + searchterm[1];
-            searchTerm[1] = searchTerm[2];
-            console.log("search term 0 is " + searchTerm[0] + "and searchTerm[1] is now " + searchTerm[1]);
+            searchTerms[0] = searchTerms[0] + " " + searchtTerms[1];
+            searchTerms[1] = searchTerms[2];
+            console.log("search term 0 is " + searchTerms[0] + "and searchTerm[1] is now " + searchTerms[1]);
             searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "song") {
-            searchTerm[0] = "song of solomon";
-            searchTerm[1] = searchTerm[3];
+            searchTerms[0] = "song of solomon";
+            searchTerms[1] = searchTerms[3];
             searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "gen") {
-            searchTerm[0] = "genesis";
+            searchTerms[0] = "genesis";
             searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "ex") {
-            searchTerm[0] = "exodus";
+            searchTerms[0] = "exodus";
             searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "lev") {
-            searchTerm[0] = "leviticus";
+            searchTerms[0] = "leviticus";
             searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "num") {
-            searchTerm[0] = "numbers";
+            searchTerms[0] = "numbers";
             searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "deut") {
-            searchTerm[0] = "deuteronomy";
+            searchTerms[0] = "deuteronomy";
             searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "neh") {
-            searchTerm[0] = "nehemiah";
+            searchTerms[0] = "nehemiah";
             searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "psa" || searchTerms[0] == "salms" || searchTerms[0] == "psalm") {
-            searchTerm[0] = "psalms";
+            searchTerms[0] = "psalms";
             searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "pro") {
-            searchTerm[0] = "proverbs";
+            searchTerms[0] = "proverbs";
             searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "ecc" || searchTerms[0] == "eclesiastes") {
-            searchTerm[0] = "ecclesiastes";
+            searchTerms[0] = "ecclesiastes";
             searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "isa") {
-            searchTerm[0] = "isaiah";
+            searchTerms[0] = "isaiah";
             searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "jer") {
-            searchTerm[0] = "jeremiah";
+            searchTerms[0] = "jeremiah";
             searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "lam") {
-            searchTerm[0] = "lamentations";
+            searchTerms[0] = "lamentations";
             searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "eze") {
-            searchTerm[0] = "ezekiel";
+            searchTerms[0] = "ezekiel";
             searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "hos") {
-            searchTerm[0] = "hosea";
+            searchTerms[0] = "hosea";
             searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "oba") {
-            searchTerm[0] = "obadiah";
+            searchTerms[0] = "obadiah";
             searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "habakuk") {
-            searchTerm[0] = "habakkuk";
+            searchTerms[0] = "habakkuk";
             searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "hagai") {
-            searchTerm[0] = "haggai";
+            searchTerms[0] = "haggai";
             searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "zech") {
-            searchTerm[0] = "zechariah";
+            searchTerms[0] = "zechariah";
             searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "zeph") {
-            searchTerm[0] = "zephaniah";
+            searchTerms[0] = "zephaniah";
             searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "malaki" || searchTerms[0] == "mal") {
-            searchTerm[0] = "malachi";
+            searchTerms[0] = "malachi";
             searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "mat") {
-            searchTerm[0] = "matthew";
+            searchTerms[0] = "matthew";
             searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "rom") {
-            searchTerm[0] = "romans";
+            searchTerms[0] = "romans";
             searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "gal") {
-            searchTerm[0] = "galatians";
+            searchTerms[0] = "galatians";
             searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "eph") {
-            searchTerm[0] = "ephesians";
+            searchTerms[0] = "ephesians";
             searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "phil" || searchTerms[0] == "philipians") {
-            searchTerm[0] = "philippians";
+            searchTerms[0] = "philippians";
             searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "col") {
-            searchTerm[0] = "colossians";
+            searchTerms[0] = "colossians";
             searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "heb") {
-            searchTerm[0] = "hebrews";
+            searchTerms[0] = "hebrews";
             searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "rev" || searchTerms[0] == "revelations") {
-            searchTerm[0] = "revelation";
+            searchTerms[0] = "revelation";
             searchBibleArt(searchTerms)
         } else {
             searchArtistInstead(searchTerms)
