@@ -96,10 +96,12 @@ module.exports = function (app) {
   });
 
   app.post("/api/signup", function (req, res) {
-    return db.User.create(["email", "password"],
-      [req.body.email, req.body.password]).then(function (users) {
+    return db.User.create({
+      email: req.body.email,
+      password: req.body.password
+    }).then(function (users) {
       if (users) {
-        res.json({ id: result.insertId });
+        res.send(users);
       } else {
 res.status(400).send('Error in creating new user');
       }
@@ -124,13 +126,13 @@ app.get("/api/login/", function (req, res) {
 });
 
 app.put("/api/artVotes/:num/:upVotes", function (req, res) {
-  const whichArt = "id = " + req.params.num;
-  db.Artwork.update({
-    upVotes: req.params.upVotes
-  }, whichArt, function (result) {
-    return res.status(200).end();
+  db.Artwork.findOne({
+    id: req.params.num
+  }).then(artwork => {
+    artwork.updateAttributes({
+      upVotes: (upVotes + 1)
+    })
   })
-  
-});
+})
 
 };
