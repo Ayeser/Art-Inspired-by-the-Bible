@@ -9,7 +9,7 @@ $(document).ready(function () {
         $("#nav2").remove();
         $("#nav3").remove();
         $("#nav4").remove();
-        $("#nav1").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav2"><div id="booksButtons"><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="PentateuchNav">Pentateuch</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="HistoricalBooksNav">Historical Books</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="WisdomNav">Wisdom</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="MajorProphetsNav">Major Prophets</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="MinorProphetsNav">Minor Prophets</button></div></nav>');
+        $("#nav1").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav2"><div id="booksButtons"><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="PentateuchNav">Pentateuch</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="HistoricalBooksNav">Historical Books</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="WisdomBooksNav">Wisdom</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="MajorProphetsNav">Major Prophets</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="MinorProphetsNav">Minor Prophets</button></div></nav>');
         $(document).on("click", "#PentateuchNav", chosePentateuch);
         $(document).on("click", "#HistoricalBooksNav", choseHistoricalBooks);
         $(document).on("click", "#WisdomBooksNav", choseWisdomBooks);
@@ -22,7 +22,7 @@ $(document).ready(function () {
         $("#nav2").remove();
         $("#nav3").remove();
         $("#nav4").remove();
-        $("#nav1").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav2"><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="GospelsNav">Gospels/Acts</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="PaulineNav">Pauline Epistles</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="EpistlesNav">General Epistles</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="RevelationNav">Revelation</button></nav></nav>');
+        $("#nav1").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav2"><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="GospelsNav">Gospels/Acts</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="PaulineEpistlesNav">Pauline Epistles</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="GeneralEpistlesNav">General Epistles</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="RevelationNav">Revelation</button></nav></nav>');
         $(document).on("click", "#GospelsNav", choseGospelsBooks);
         $(document).on("click", "#PaulineEpistlesNav", chosePaulineBooks);
         $(document).on("click", "#GeneralEpistlesNav", choseGeneralBooks);
@@ -965,101 +965,102 @@ $(document).ready(function () {
         else if (searchTerms[0] === "1" || searchTerms[0] == "2" || searchTerms[0] == "3") {
             searchTerm[0] = searchTerm[0] + " " + searchterm[1];
             searchTerm[1] = searchTerm[2];
-            searchBibleArt()
+            console.log("search term 0 is " + searchTerm[0] + "and searchTerm[1] is now " + searchTerm[1]);
+            searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "song") {
             searchTerm[0] = "song of solomon";
             searchTerm[1] = searchTerm[3];
-            searchBibleArt()
+            searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "gen") {
             searchTerm[0] = "genesis";
-            searchBibleArt()
+            searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "ex") {
             searchTerm[0] = "exodus";
-            searchBibleArt()
+            searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "lev") {
             searchTerm[0] = "leviticus";
-            searchBibleArt()
+            searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "num") {
             searchTerm[0] = "numbers";
-            searchBibleArt()
+            searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "deut") {
             searchTerm[0] = "deuteronomy";
-            searchBibleArt()
+            searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "neh") {
             searchTerm[0] = "nehemiah";
-            searchBibleArt()
+            searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "psa" || searchTerms[0] == "salms" || searchTerms[0] == "psalm") {
             searchTerm[0] = "psalms";
-            searchBibleArt()
+            searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "pro") {
             searchTerm[0] = "proverbs";
-            searchBibleArt()
+            searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "ecc" || searchTerms[0] == "eclesiastes") {
             searchTerm[0] = "ecclesiastes";
-            searchBibleArt()
+            searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "isa") {
             searchTerm[0] = "isaiah";
-            searchBibleArt()
+            searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "jer") {
             searchTerm[0] = "jeremiah";
-            searchBibleArt()
+            searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "lam") {
             searchTerm[0] = "lamentations";
-            searchBibleArt()
+            searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "eze") {
             searchTerm[0] = "ezekiel";
-            searchBibleArt()
+            searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "hos") {
             searchTerm[0] = "hosea";
-            searchBibleArt()
+            searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "oba") {
             searchTerm[0] = "obadiah";
-            searchBibleArt()
+            searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "habakuk") {
             searchTerm[0] = "habakkuk";
-            searchBibleArt()
+            searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "hagai") {
             searchTerm[0] = "haggai";
-            searchBibleArt()
+            searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "zech") {
             searchTerm[0] = "zechariah";
-            searchBibleArt()
+            searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "zeph") {
             searchTerm[0] = "zephaniah";
-            searchBibleArt()
+            searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "malaki" || searchTerms[0] == "mal") {
             searchTerm[0] = "malachi";
-            searchBibleArt()
+            searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "mat") {
             searchTerm[0] = "matthew";
-            searchBibleArt()
+            searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "rom") {
             searchTerm[0] = "romans";
-            searchBibleArt()
+            searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "gal") {
             searchTerm[0] = "galatians";
-            searchBibleArt()
+            searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "eph") {
             searchTerm[0] = "ephesians";
-            searchBibleArt()
+            searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "phil" || searchTerms[0] == "philipians") {
             searchTerm[0] = "philippians";
-            searchBibleArt()
+            searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "col") {
             searchTerm[0] = "colossians";
-            searchBibleArt()
+            searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "heb") {
             searchTerm[0] = "hebrews";
-            searchBibleArt()
+            searchBibleArt(searchTerms)
         } else if (searchTerms[0] === "rev" || searchTerms[0] == "revelations") {
             searchTerm[0] = "revelation";
-            searchBibleArt()
+            searchBibleArt(searchTerms)
         } else {
-            searchArtistInstead()
+            searchArtistInstead(searchTerms)
         }
     };
 
-function searchBibleArt() {
+function searchBibleArt(searchTerms) {
         $.get("api/scriptures/" + searchTerms[0] + "/" + searchTerms[1], function (data) {
             $("#scriptureHere").append(data.book + " " + data.chapter + " " + data.passage);
         })
