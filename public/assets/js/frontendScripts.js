@@ -177,7 +177,7 @@ $(document).ready(function () {
         for (i = 1; i < 51; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle" id="gen" type="button" data-toggle="dropdown" chapNumber="' + i + '">' + i + '</button>');
         };
-        $("#nav4").append("</div></nav>");
+        $("#navDiv3").append("</div></nav>");
     };
 
     $(document).on("click", ".gen", function () { searchTerms = ["genesis", this.chapNumber]; handleArtworkFormSubmit(event); });
