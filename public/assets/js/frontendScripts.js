@@ -1169,8 +1169,8 @@ $(document).ready(function () {
         console.log(upVotes);
         const likeButton = $(this);
 
-        $.put("/api/artVotes/" + ArtID + "/" + upVotes, {
-            id: ARTID,
+        $.put("/api/artVotes", {
+            id: ArtID,
             upvotes: upVotes
         }).then(function (data, status) {
             likeButton.html("You added your like!");

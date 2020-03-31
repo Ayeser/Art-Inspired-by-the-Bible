@@ -116,7 +116,7 @@ res.status(400).send('Error in creating new user');
 app.post("/api/login/", function (req, res) {
   db.User.findOne({
     where: {
-      user: req.body.email,
+      email: req.body.email,
     }
   }).then(function (back) {
   if (password === req.body.password) {
@@ -126,8 +126,8 @@ app.post("/api/login/", function (req, res) {
   }
 });
 
-app.put("/api/artVotes/:num/:upVotes", function (req, res) {
- const condition = "id = " + req.params.num;
+app.put("/api/artVotes", function (req, res) {
+ const condition = "id = " + req.body.id;
 
   db.Artwork.update({
     upvotes: req.body.upvotes
