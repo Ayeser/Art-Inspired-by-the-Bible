@@ -1169,8 +1169,8 @@ $(document).ready(function () {
         console.log(upVotes);
 
         $.put("/api/artVotes/" + ArtID + "/" + upVotes, {
-            id: req.params.ARTID,
-            upvotes: req.params.upVotes
+            id: ARTID,
+            upvotes: upVotes
         }).then(function (data, status) {
             $(this).html("You added your like!");
             console.log("Data: " + JSON.stringify(data) + "\nStatus: " + status);
