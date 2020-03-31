@@ -1171,11 +1171,12 @@ $(document).ready(function () {
 
         $.ajax({
             url: "/api/artVotes",
-        method: "put",
-    data: {
-        id: ArtID,
-        upvotes: upVotes
-    }}).then(function (data, status) {
+        method: "PUT",
+        dataType: "JSON",
+    data: `{
+        "id": ${ArtID},
+        "upvotes": ${upVotes}
+    }`}).then(function (data, status) {
             likeButton.html("You added your like!");
             console.log("Data: " + JSON.stringify(data) + "\nStatus: " + status);
         }).catch(function (err) {
