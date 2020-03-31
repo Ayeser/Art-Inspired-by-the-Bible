@@ -24,10 +24,10 @@ module.exports = function (app) {
         book: req.params.book,
         chapter: req.params.chapter
       },
-      include: [{
-        model: db.Video,
-        model: db.Artwork
-      }]
+      // include: [{
+      //   model: db.Video,
+      //   model: db.Artwork
+      // }]
     }
     ).then(dbArtPieces => {
       res.json(dbArtPieces);
