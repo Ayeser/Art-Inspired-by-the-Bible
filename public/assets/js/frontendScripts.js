@@ -34,11 +34,11 @@ $(document).ready(function () {
         $("#nav3").remove();
         $("#nav4").remove();
         $("#nav2").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav3"><div id="pentateuchButtons"><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Genesis" chapsInBook="51">Genesis</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Exodus" chapsInBook="41">Exodus</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Leviticus" chapsInBook="28">Leviticus</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Numbers" chapsInBook="37">Numbers</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Deuteronomy" chapsInBook="35">Deuteronomy</button></div></nav>');
-        // $(document).on("click", "#Genesis", choseGenesis);
-        // $(document).on("click", "#Exodus", choseExodus);
-        // $(document).on("click", "#Leviticus", choseLeviticus);
-        // $(document).on("click", "#Numbers", choseNumbers);
-        // $(document).on("click", "#Deuteronomy", choseDeuteronomy);
+        $(document).on("click", "#Genesis", choseGenesis);
+        $(document).on("click", "#Exodus", choseExodus);
+        $(document).on("click", "#Leviticus", choseLeviticus);
+        $(document).on("click", "#Numbers", choseNumbers);
+        $(document).on("click", "#Deuteronomy", choseDeuteronomy);
     };
 
     function choseHistoricalBooks() {
@@ -158,809 +158,809 @@ $(document).ready(function () {
         $(document).on("click", "#Revelation", choseRevelation);
     };
 
-    $(document).on("click", this.id, function createChapBtns() {
+    // $(document).on("click", this.id, function createChapBtns() {
+    //     event.preventDefault();
+    //     $("#nav4").remove();
+    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+    //     for (i = 1; i < this.chapsInBook; i++) {
+    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle" bibleBook="' + this.id + '" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+    //     };
+    //     $("#nav4").append("</div></nav>");
+    // });
+
+    //     $(document).on("click", this.bibleBook, function () { searchTerms = [this.bibleBook, this.id]; handleArtworkFormSubmit(event); });
+
+    function choseGenesis() {
         event.preventDefault();
         $("#nav4").remove();
         $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-        for (i = 1; i < this.chapsInBook; i++) {
-            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle" bibleBook="' + this.id + '" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        for (i = 1; i < 51; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle" id="gen" type="button" data-toggle="dropdown" chapNumber="' + i + '">' + i + '</button>');
         };
         $("#nav4").append("</div></nav>");
-    });
-
-        $(document).on("click", this.bibleBook, function () { searchTerms = [this.bibleBook, this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseGenesis() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 51; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Gen" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".Gen", function () { searchTerms = ["genesis", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseExodus() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 41; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Ex" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".Ex", function () { searchTerms = ["exodus", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseLeviticus() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 29; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Lev" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".Lev", function () { searchTerms = ["leviticus", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseNumbers() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 37; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Num" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".Num", function () { searchTerms = ["numbers", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseDeuteronomy() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 35; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Deut" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".Deut", function () { searchTerms = ["deuteronomy", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseJoshua() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 25; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Josh" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".Josh", function () { searchTerms = ["joshua", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseJudges() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 22; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Judge" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".Judge", function () { searchTerms = ["judges", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseRuth() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 5; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Rut" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".Rut", function () { searchTerms = ["ruth", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseFirstSamuel() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 32; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle FSam" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".FSam", function () { searchTerms = ["1", "samuel", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseSecondSamuel() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 25; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle SSam" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".SSam", function () { searchTerms = ["2", "samuel", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseFirstKings() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 23; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle FKin" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".FKin", function () { searchTerms = ["1", "kings", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseSecondKings() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 26; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle SKin" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".SKin", function () { searchTerms = ["2", "kings", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseFirstChronicles() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 30; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle FChron" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".FChron", function () { searchTerms = ["1", "chronicles", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseSecondChronicles() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 37; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle SChron" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".SChron", function () { searchTerms = ["2", "chronicles", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseEzra() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 11; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Ezr" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".Ezr", function () { searchTerms = ["ezra", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseNehemiah() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 14; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Neh" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".Neh", function () { searchTerms = ["nehemiah", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseEsther() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 11; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Esth" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".Esth", function () { searchTerms = ["esther", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseJob() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 43; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Jo" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".Jo", function () { searchTerms = ["job", this.id]; handleArtworkFormSubmit(event); });
-
-    // function chosePsalms() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 151; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Psa" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".Psa", function () { searchTerms = ["psalms", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseProverbs() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 32; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Prov" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".Prov", function () { searchTerms = ["proverbs", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseEcclesiastes() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 13; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Eccl" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".Eccl", function () { searchTerms = ["ecclesiastes", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseSongofSolomon() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 9; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle SoS" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".SoS", function () { searchTerms = ["song", "of", "solomon", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseIsaiah() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 67; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Isa" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".Isa", function () { searchTerms = ["isaiah", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseJeremiah() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 53; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Jer" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".Jer", function () { searchTerms = ["jeremiah", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseLamentations() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 6; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Lam" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".Lam", function () { searchTerms = ["lamentations", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseEzekiel() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 49; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Eze" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".Eze", function () { searchTerms = ["ezekiel", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseDaniel() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 13; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Dan" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".Dan", function () { searchTerms = ["daniel", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseHosea() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 15; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Hos" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".Hos", function () { searchTerms = ["hosea", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseJoel() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 4; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Joe" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".Joe", function () { searchTerms = ["joel", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseAmos() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 10; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Amo" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".Amo", function () { searchTerms = ["amos", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseObadiah() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 2; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Oba" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".Oba", function () { searchTerms = ["obadiah", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseJonah() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 5; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Jona" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".Jona", function () { searchTerms = ["jonah", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseMicah() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 8; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Mic" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".Mic", function () { searchTerms = ["micah", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseNahum() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 4; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Nah" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".Nah", function () { searchTerms = ["nahum", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseHabakkuk() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 4; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Hab" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".Hab", function () { searchTerms = ["habakkuk", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseZephaniah() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 4; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Zeph" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".Zeph", function () { searchTerms = ["zephaniah", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseHaggai() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 3; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Hag" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".Hag", function () { searchTerms = ["haggai", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseZechariah() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 15; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Zech" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".Zech", function () { searchTerms = ["zechariah", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseMalachi() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 5; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Mala" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".Mala", function () { searchTerms = ["malachi", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseMatthew() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 29; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Matt" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".Matt", function () { searchTerms = ["matthew", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseMark() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 17; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Mar" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".Mar", function () { searchTerms = ["mark", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseLuke() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 25; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Luk" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".Luk", function () { searchTerms = ["luke", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseJohn() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 22; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Joh" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".Joh", function () { searchTerms = ["john", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseActs() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 29; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Act" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".Act", function () { searchTerms = ["acts", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseRomans() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 17; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Rom" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".Rom", function () { searchTerms = ["romans", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseFirstCorinthians() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 17; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle FCor" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".FCor", function () { searchTerms = ["1", "corinthians", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseSecondCorinthians() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 14; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle SCor" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".SCor", function () { searchTerms = ["2", "corinthians", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseGalatians() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 7; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Gal" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".Gal", function () { searchTerms = ["galatians", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseEphesians() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 7; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Eph" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".Eph", function () { searchTerms = ["ephesians", this.id]; handleArtworkFormSubmit(event); });
-
-    // function chosePhilippians() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 5; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Phil" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".Phil", function () { searchTerms = ["philippians", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseColossians() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 5; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Col" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".Col", function () { searchTerms = ["colossians", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseFirstThessalonians() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 6; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle FThes" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".FThes", function () { searchTerms = ["1", "thessalonians", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseSecondThessalonians() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 4; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle SThes" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".SThes", function () { searchTerms = ["2", "thessalonians", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseFirstTimothy() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 7; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle FTim" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".FTim", function () { searchTerms = ["1", "timothy", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseSecondTimothy() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 5; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle STim" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".STim", function () { searchTerms = ["2", "timothy", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseTitus() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 4; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Tit" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".Tit", function () { searchTerms = ["titus", this.id]; handleArtworkFormSubmit(event); });
-
-    // function chosePhilemon() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 2; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle phile" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".phile", function () { searchTerms = ["philemon", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseHebrews() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 14; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle heb" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".heb", function () { searchTerms = ["hebrews", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseJames() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 6; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle jam" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".jam", function () { searchTerms = ["james", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseFirstPeter() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 6; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle FPet" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".FPet", function () { searchTerms = ["1", "peter", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseSecondPeter() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 4; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle SPet" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".SPet", function () { searchTerms = ["2", "peter", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseFirstJohn() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 6; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle FJohn" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".FJohn", function () { searchTerms = ["1", "john", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseSecondJohn() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 2; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle SJohn" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".SJohn", function () { searchTerms = ["2", "john", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseThirdJohn() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 2; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle TJohn" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".TJohn", function () { searchTerms = ["3", "john", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseJude() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 2; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Jud" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".Jud", function () { searchTerms = ["jude", this.id]; handleArtworkFormSubmit(event); });
-
-    // function choseRevelation() {
-    //     event.preventDefault();
-    //     $("#nav4").remove();
-    //     $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
-    //     for (i = 1; i < 23; i++) {
-    //         $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Rev" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
-    //     };
-    //     $("#nav4").append("</div></nav>");
-    // };
-
-    // $(document).on("click", ".Rev", function () { searchTerms = ["revelation", this.id]; handleArtworkFormSubmit(event); });
+    };
+
+    $(document).on("click", "gen", function () { searchTerms = ["genesis", this.chapNumber]; handleArtworkFormSubmit(event); });
+
+    function choseExodus() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 41; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Ex" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".Ex", function () { searchTerms = ["exodus", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseLeviticus() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 29; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Lev" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".Lev", function () { searchTerms = ["leviticus", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseNumbers() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 37; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Num" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".Num", function () { searchTerms = ["numbers", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseDeuteronomy() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 35; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Deut" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".Deut", function () { searchTerms = ["deuteronomy", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseJoshua() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 25; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Josh" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".Josh", function () { searchTerms = ["joshua", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseJudges() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 22; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Judge" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".Judge", function () { searchTerms = ["judges", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseRuth() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 5; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Rut" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".Rut", function () { searchTerms = ["ruth", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseFirstSamuel() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 32; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle FSam" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".FSam", function () { searchTerms = ["1", "samuel", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseSecondSamuel() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 25; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle SSam" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".SSam", function () { searchTerms = ["2", "samuel", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseFirstKings() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 23; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle FKin" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".FKin", function () { searchTerms = ["1", "kings", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseSecondKings() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 26; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle SKin" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".SKin", function () { searchTerms = ["2", "kings", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseFirstChronicles() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 30; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle FChron" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".FChron", function () { searchTerms = ["1", "chronicles", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseSecondChronicles() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 37; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle SChron" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".SChron", function () { searchTerms = ["2", "chronicles", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseEzra() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 11; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Ezr" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".Ezr", function () { searchTerms = ["ezra", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseNehemiah() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 14; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Neh" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".Neh", function () { searchTerms = ["nehemiah", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseEsther() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 11; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Esth" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".Esth", function () { searchTerms = ["esther", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseJob() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 43; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Jo" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".Jo", function () { searchTerms = ["job", this.id]; handleArtworkFormSubmit(event); });
+
+    function chosePsalms() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 151; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Psa" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".Psa", function () { searchTerms = ["psalms", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseProverbs() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 32; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Prov" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".Prov", function () { searchTerms = ["proverbs", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseEcclesiastes() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 13; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Eccl" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".Eccl", function () { searchTerms = ["ecclesiastes", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseSongofSolomon() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 9; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle SoS" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".SoS", function () { searchTerms = ["song", "of", "solomon", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseIsaiah() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 67; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Isa" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".Isa", function () { searchTerms = ["isaiah", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseJeremiah() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 53; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Jer" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".Jer", function () { searchTerms = ["jeremiah", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseLamentations() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 6; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Lam" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".Lam", function () { searchTerms = ["lamentations", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseEzekiel() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 49; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Eze" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".Eze", function () { searchTerms = ["ezekiel", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseDaniel() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 13; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Dan" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".Dan", function () { searchTerms = ["daniel", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseHosea() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 15; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Hos" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".Hos", function () { searchTerms = ["hosea", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseJoel() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 4; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Joe" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".Joe", function () { searchTerms = ["joel", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseAmos() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 10; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Amo" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".Amo", function () { searchTerms = ["amos", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseObadiah() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 2; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Oba" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".Oba", function () { searchTerms = ["obadiah", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseJonah() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 5; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Jona" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".Jona", function () { searchTerms = ["jonah", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseMicah() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 8; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Mic" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".Mic", function () { searchTerms = ["micah", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseNahum() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 4; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Nah" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".Nah", function () { searchTerms = ["nahum", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseHabakkuk() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 4; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Hab" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".Hab", function () { searchTerms = ["habakkuk", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseZephaniah() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 4; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Zeph" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".Zeph", function () { searchTerms = ["zephaniah", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseHaggai() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 3; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Hag" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".Hag", function () { searchTerms = ["haggai", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseZechariah() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 15; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Zech" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".Zech", function () { searchTerms = ["zechariah", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseMalachi() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 5; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Mala" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".Mala", function () { searchTerms = ["malachi", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseMatthew() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 29; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Matt" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".Matt", function () { searchTerms = ["matthew", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseMark() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 17; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Mar" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".Mar", function () { searchTerms = ["mark", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseLuke() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 25; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Luk" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".Luk", function () { searchTerms = ["luke", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseJohn() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 22; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Joh" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".Joh", function () { searchTerms = ["john", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseActs() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 29; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Act" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".Act", function () { searchTerms = ["acts", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseRomans() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 17; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Rom" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".Rom", function () { searchTerms = ["romans", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseFirstCorinthians() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 17; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle FCor" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".FCor", function () { searchTerms = ["1", "corinthians", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseSecondCorinthians() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 14; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle SCor" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".SCor", function () { searchTerms = ["2", "corinthians", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseGalatians() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 7; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Gal" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".Gal", function () { searchTerms = ["galatians", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseEphesians() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 7; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Eph" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".Eph", function () { searchTerms = ["ephesians", this.id]; handleArtworkFormSubmit(event); });
+
+    function chosePhilippians() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 5; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Phil" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".Phil", function () { searchTerms = ["philippians", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseColossians() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 5; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Col" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".Col", function () { searchTerms = ["colossians", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseFirstThessalonians() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 6; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle FThes" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".FThes", function () { searchTerms = ["1", "thessalonians", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseSecondThessalonians() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 4; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle SThes" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".SThes", function () { searchTerms = ["2", "thessalonians", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseFirstTimothy() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 7; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle FTim" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".FTim", function () { searchTerms = ["1", "timothy", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseSecondTimothy() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 5; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle STim" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".STim", function () { searchTerms = ["2", "timothy", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseTitus() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 4; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Tit" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".Tit", function () { searchTerms = ["titus", this.id]; handleArtworkFormSubmit(event); });
+
+    function chosePhilemon() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 2; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle phile" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".phile", function () { searchTerms = ["philemon", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseHebrews() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 14; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle heb" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".heb", function () { searchTerms = ["hebrews", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseJames() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 6; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle jam" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".jam", function () { searchTerms = ["james", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseFirstPeter() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 6; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle FPet" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".FPet", function () { searchTerms = ["1", "peter", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseSecondPeter() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 4; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle SPet" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".SPet", function () { searchTerms = ["2", "peter", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseFirstJohn() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 6; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle FJohn" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".FJohn", function () { searchTerms = ["1", "john", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseSecondJohn() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 2; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle SJohn" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".SJohn", function () { searchTerms = ["2", "john", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseThirdJohn() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 2; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle TJohn" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".TJohn", function () { searchTerms = ["3", "john", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseJude() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 2; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Jud" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".Jud", function () { searchTerms = ["jude", this.id]; handleArtworkFormSubmit(event); });
+
+    function choseRevelation() {
+        event.preventDefault();
+        $("#nav4").remove();
+        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        for (i = 1; i < 23; i++) {
+            $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Rev" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
+        };
+        $("#nav4").append("</div></nav>");
+    };
+
+    $(document).on("click", ".Rev", function () { searchTerms = ["revelation", this.id]; handleArtworkFormSubmit(event); });
 
     function handleArtworkFormSubmit(event) {
         event.preventDefault();
