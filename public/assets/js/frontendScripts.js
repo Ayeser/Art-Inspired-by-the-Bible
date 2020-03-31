@@ -1167,12 +1167,13 @@ $(document).ready(function () {
         console.log("The ArtID is..." + ArtID);
         let upVotes = $(this).text() + 1;
         console.log(upVotes);
+        const likeButton = $(this);
 
         $.put("/api/artVotes/" + ArtID + "/" + upVotes, {
             id: ARTID,
             upvotes: upVotes
         }).then(function (data, status) {
-            $(this).html("You added your like!");
+            likeButton.html("You added your like!");
             console.log("Data: " + JSON.stringify(data) + "\nStatus: " + status);
         }).catch(function (err) {
             console.log(err);

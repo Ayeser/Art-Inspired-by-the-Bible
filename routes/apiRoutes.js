@@ -127,7 +127,7 @@ app.post("/api/login/", function (req, res) {
 });
 
 app.put("/api/artVotes/:num/:upVotes", function (req, res) {
- const condition = "id = req.params.id";
+ const condition = "id = " + req.params.num;
 
   db.Artwork.update({
     upvotes: req.body.upvotes
