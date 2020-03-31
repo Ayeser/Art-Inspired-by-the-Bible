@@ -34,13 +34,13 @@ $(document).ready(function () {
         $("#nav3").remove();
         $("#nav4").remove();
         $("#nav2").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav3"><div id="pentateuchButtons"><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Genesis" chapsInBook="51">Genesis</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Exodus" chapsInBook="41">Exodus</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Leviticus" chapsInBook="28">Leviticus</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Numbers" chapsInBook="37">Numbers</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Deuteronomy" chapsInBook="35">Deuteronomy</button></div></nav>');
-        $(document).on("click", "#Genesis", choseGenesis);
-        $(document).on("click", "#Exodus", choseExodus);
-        $(document).on("click", "#Leviticus", choseLeviticus);
-        $(document).on("click", "#Numbers", choseNumbers);
-        $(document).on("click", "#Deuteronomy", choseDeuteronomy);
     };
-
+    $(document).on("click", "#Genesis", choseGenesis);
+    $(document).on("click", "#Exodus", choseExodus);
+    $(document).on("click", "#Leviticus", choseLeviticus);
+    $(document).on("click", "#Numbers", choseNumbers);
+    $(document).on("click", "#Deuteronomy", choseDeuteronomy);
+    
     function choseHistoricalBooks() {
         event.preventDefault();
         $("#nav3").remove();
@@ -180,7 +180,7 @@ $(document).ready(function () {
         $("#nav4").append("</div></nav>");
     };
 
-    $(document).on("click", "gen", function () { searchTerms = ["genesis", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", ".gen", function () { searchTerms = ["genesis", this.chapNumber]; handleArtworkFormSubmit(event); });
 
     function choseExodus() {
         event.preventDefault();
