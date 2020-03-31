@@ -25,7 +25,7 @@ module.exports = function (app) {
         chapter: req.params.chapter
       },
       include: [{
-        model: db.Videos,
+        model: db.Video,
         where: {book: req.params.book,
         chapter: req.params.chapter}
       }]
