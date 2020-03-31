@@ -30,7 +30,7 @@ $(document).ready(function() {
       })
         .then(function(data) {
           console.log(data.email + " " + data.password)
-          window.location.replace("/profile");
+          window.location.pathname = "/profile";
           // If there's an error, log the error
         })
         .catch(function(err) {

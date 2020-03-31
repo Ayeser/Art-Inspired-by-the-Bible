@@ -1169,10 +1169,13 @@ $(document).ready(function () {
         console.log(upVotes);
         const likeButton = $(this);
 
-        $.put("/api/artVotes", {
-            id: ArtID,
-            upvotes: upVotes
-        }).then(function (data, status) {
+        $.ajax({
+            url: "/api/artVotes",
+        method: "put",
+    data: {
+        id: ArtID,
+        upvotes: upVotes
+    }}).then(function (data, status) {
             likeButton.html("You added your like!");
             console.log("Data: " + JSON.stringify(data) + "\nStatus: " + status);
         }).catch(function (err) {

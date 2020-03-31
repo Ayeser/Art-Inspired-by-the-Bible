@@ -118,9 +118,10 @@ app.post("/api/login/", function (req, res) {
     where: {
       email: req.body.email,
     }
-  }).then(function (back) {
+  }).then(function (userData) {
   if (password === req.body.password) {
-    res.json({});
+    userData.password = undefined;
+    res.json(userData);
   } else {
     res.send("The password you inputted does not match our records");
   }
