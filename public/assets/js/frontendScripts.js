@@ -1077,10 +1077,10 @@ $(document).ready(function () {
                 const artToAdd = [];
                 for (let i = 0; i < data.length; i++) {
                     artToAdd.push(createNewPiece(data[i]));
-                }
+                };
                 if (artToAdd === []) {
                 } else {
-                    $("#resultsHere").append("<h1 class='rounded clearfix'>Art pieces for this chapter include: </h1><br /><br />");
+                    $("#searchTermTitle").append(searchTerms.stringify());
                     $("#resultsHere").append(artToAdd);
                 }
             });
@@ -1159,12 +1159,12 @@ $(document).ready(function () {
 
     function createNewPiece(piece) {
         event.preventDefault();
-        return ('<div class="jumbotron jumbotron-fluid shadow p-2" id="resultsHere" style="width: 45vw;"><h3>' + piece.title + '</h3><img src="' + piece.picture + '" class="card-img-top img-fluid"><h6>' + piece.artist + '</h6><h6>Book: ' + piece.book + '</h6><h6>Verse: ' + piece.verse + '</h6><button class="likeButton" id="' + piece.id + '">Click here to add a like, current likes: ' + piece.upvotes + '</button></div>');
+        return ('<div class="col-sm-3"><h5 class="card-title">' + piece.title + '</h3><img class="img-responsive" src="' + piece.picture + '"><p>Artist: ' + piece.artist + '</p><p>Book: ' + piece.book + '</p><p>Verse: ' + piece.verse + '</p><button class="likeButton" id="' + piece.id + '">Click here to add a like, current likes: ' + piece.upvotes + '</button></div>');
     }
 
     function createNewVideo(piece) {
         event.preventDefault();
-        return ('<div class="jumbotron"><h5 class="card-title">' + piece.title + '</h5><div>Artist: ' + piece.sourceCreator + '</div><div>Book: ' + piece.book + '</div><div>Verse: ' + piece.verse + '</div><div>' + piece.videoEmbed + '</div><button class="likeButton" id="' + piece.id + '">Click here to add a like, current likes: ' + piece.upvotes + '</button></div>');
+        return ('<div class="col-sm-3"><h5 class="card-title">' + piece.title + '</h5><p>Artist: ' + piece.sourceCreator + '</p><p>Book: ' + piece.book + '</p><p>Verse: ' + piece.verse + '</p><div>' + piece.videoEmbed + '</div><button class="likeButton" id="' + piece.id + '">Click here to add a like, current likes: ' + piece.upvotes + '</button></div>');
     }
 
     $(document).on("submit", "#artworkForm", searchBarSubmit);

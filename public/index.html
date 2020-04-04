@@ -6,65 +6,74 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-		<link rel="stylesheet" href="/assets/css/style.css" type="css" />
+		<link rel="stylesheet" href="./assets/css/style.css" type="text/css" />
 		<title>Art Inspired by the Bible</title>
 		<script src="https://code.jquery.com/jquery-3.4.1.js"
 			integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 		<script src="/assets/js/frontendScripts.js"></script>
 	</head>
 
-	<body style="background-color: whitesmoke;">
-		<div class="container shadow" style="height: 100vh; background-color: lightblue;">
-			<div class="row justify-content-center m-2">
-				<nav id ="nav1" class="navbar navbar-light bg-light justify-content-between rounded border-bottom border-primary">
-					<a class="navbar-brand">Art Inspired by the Bible</a>
-					<div>
-						<button class="btn btn-default dropdown-toggle" type="button" id="OT">OT</button>
-						<button class="btn btn-default dropdown-toggle" type="button" id="NT">NT</button>
-					</div>
-					<div>
-						<button class="btn btn-default" href="/contest.html">Contribute</a>
-					</div>
-					<div>
-						<button class="btn btn-default" onclick="window.location.href='/login.html'">Log-in/Members</a>
-							<button class="btn btn-default" onclick="window.location.href = '/signup.html'">Sign-up</a>
-					</div>
+	<body>
 
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="nav1">
+			<div class="container-fluid">
+			  <div class="navbar-header">
+				<a class="navbar-brand" href="#">Art Inspired by the Bible</a>
+				</div>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				  </button>
+				  <div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav">
+					  <li class="nav-item">
+						<a class="nav-link" href="https://glacial-falls-40496.herokuapp.com/">Welcome <span class="sr-only">(current)</span></a>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" href="#" id="OT">OT</a>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" href="#" id="NT">NT</a>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" href="/contest.html">Contribute</a>
+					  </li>
+					</ul>
+				  </div>
 					<form class="form-inline" id="artworkForm">
 						<input class="form-control mr-sm-2" id="searchArtwork" type="search" placeholder="Search chapter or artist"
 							aria-label="Search">
 						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
 					</form>
-				</nav>
-			</div>
-
-<div class="row justify center m-2" id="welcomeDiv">
-	<div class="col-sm-2"></div>
-	<div class="col-sm-8 card shadow p-2 text-center">
-		<h1>This site is simple: Art inspired by the Bible</h1>
-		<p style="font: icon">
-			The Bible has inspired more art than any other source material. Are you a hardcore atheist but curious about what inspires so many? Welcome! Are you a professor looking to do some academic work? Welcome! Are you a person of faith looking for a creative way to get back into Scripture? Welcome!
-		</p>
-		<p style="font: icon">
-			If you're not convinced looking at Bible-inspired art has any merit, consider this thought from Barbara Brown Taylor in her book God in Pain: "Did [Jesus] wake up every morning wondering what God had in store for him that day and praying that he would be equal to the task? I suppose that the only people who have struggled with this question as hard as theologians have are the artists who dare to portray Christ — especially Christ on the cross — and who must decide what to show there. Should the eyes show confidence or bewilderment? Should they look up to heaven or be cast down to earth? Should the head be held high and defiant or should it fall to one side, heavy with the weight of the world? Should the hands be clenched or open? Should the body be that of someone in his prime or the husk of a man about to cast off his fetters and fly? Over the centuries, those who have portrayed Christ in paint, metal, wood, or stone have answered those questions in every conceivable way."
-		</p>
-		<img class="img-fluid" src="https://i2.wp.com/matthewwester.com/wp-content/uploads/BibleArtProject/bibleWelcome.jpg" alt="" style="text-align:center">
-	</div>
-	<div class="col-sm-1"></div>
-</div>
-
-			<div class="row justify-center m-2">
-				<div class="col-sm-1"></div>
-					<div class="jumbotron shadow p-2 col-sm-3" id="scriptureHere">
-					</div>
-				<div class="col-sm-7" id="resultsHere" style="font: icon;">
 				</div>
-				<div class="col-sm-1"></div>
+		  </nav>
+		  
+		  <div class="jumbotron welcomeJumbotron">
+			<div class="card bg-dark border border-warning mb-3 transbox">
+			  <h1>This site is simple: Art Inspired by the Bible</h1>      
+			  <p>Whether you're a hardcore atheist curious about the book itself, a professor doing some research on art history, a person of faith hoping to find inspiration, or a seeker wanting to explore, this site is for you.</p>
 			</div>
-		</div>
+		  </div>
 
-		
+		  <div class="container-fluid bg-3 bg-dark welcomeDiv">    
+			<h3></h3><br>
+			<div class="row">
+				<p>There is no source material that has inspired more art than the Bible. Begin exploring above by doing a search for a Bible chapter or a popular artist.</p>
+				<p>There is great value in considering how the Bible has inspired artists. Consider this quote from Barbara Brown Taylor in her book God in Pain: "Did [Jesus] wake up every morning wondering what God had in store for him that day and praying that he would be equal to the task? I suppose that the only people who have struggled with this question as hard as theologians have are the artists who dare to portray Christ — especially Christ on the cross — and who must decide what to show there. Should the eyes show confidence or bewilderment? Should they look up to heaven or be cast down to earth? Should the head be held high and defiant or should it fall to one side, heavy with the weight of the world? Should the hands be clenched or open? Should the body be that of someone in his prime or the husk of a man about to cast off his fetters and fly? Over the centuries, those who have portrayed Christ in paint, metal, wood, or stone have answered those questions in every conceivable way."</p>
+			</div>
+			
+		  <div class="container-fluid bg-3 text-center">    
+			<h3 id="searchTermTitle"></h3><br>
+			<div class="row">
+			  <div class="col-sm-3 bg-dark" id="scriptureHere"></div>
+			  <div class="col-sm-9 bg-dark" id="resultsHere"></div>
 
+			</div>
+		  </div><br>
+		  
+		  <footer class="page-footer font-small bg-dark">
+			<p>All Scriptures are in the World English Bible translation (because it is open domain and a decent translation).</p>
+			</div>
+		  </footer>
 
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
 		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
