@@ -965,6 +965,7 @@ $(document).ready(function () {
     function handleArtworkFormSubmit(event) {
         event.preventDefault();
         $("#welcomeDiv").hide();
+        $("#welcomeJumbotron").hide();
         $("#scriptureHere").empty();
         $("#resultsHere").empty();
         $("#scriptureHere").show();
