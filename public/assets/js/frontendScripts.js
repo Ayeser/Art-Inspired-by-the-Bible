@@ -9,7 +9,7 @@ $(document).ready(function () {
         $("#nav2").remove();
         $("#nav3").remove();
         $("#nav4").remove();
-        $("#nav1").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav2"><div id="booksButtons"><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="PentateuchNav">Pentateuch</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="HistoricalBooksNav">Historical Books</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="WisdomBooksNav">Wisdom</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="MajorProphetsNav">Major Prophets</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="MinorProphetsNav">Minor Prophets</button></div></nav>');
+        $("#nav1").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav2"><div id="booksButtons"><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="PentateuchNav">Pentateuch</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="HistoricalBooksNav">Historical Books</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="WisdomBooksNav">Wisdom</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="MajorProphetsNav">Major Prophets</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="MinorProphetsNav">Minor Prophets</button></div></nav>');
         $(document).on("click", "#PentateuchNav", chosePentateuch);
         $(document).on("click", "#HistoricalBooksNav", choseHistoricalBooks);
         $(document).on("click", "#WisdomBooksNav", choseWisdomBooks);
@@ -22,7 +22,7 @@ $(document).ready(function () {
         $("#nav2").remove();
         $("#nav3").remove();
         $("#nav4").remove();
-        $("#nav1").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav2"><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="GospelsNav">Gospels/Acts</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="PaulineEpistlesNav">Pauline Epistles</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="GeneralEpistlesNav">General Epistles</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="RevelationNav">Revelation</button></nav></nav>');
+        $("#nav1").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav2"><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="GospelsNav">Gospels/Acts</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="PaulineEpistlesNav">Pauline Epistles</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="GeneralEpistlesNav">General Epistles</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="RevelationNav">Revelation</button></nav></nav>');
         $(document).on("click", "#GospelsNav", choseGospelsBooks);
         $(document).on("click", "#PaulineEpistlesNav", chosePaulineBooks);
         $(document).on("click", "#GeneralEpistlesNav", choseGeneralBooks);
@@ -33,7 +33,7 @@ $(document).ready(function () {
         event.preventDefault();
         $("#nav3").remove();
         $("#nav4").remove();
-        $("#nav2").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav3"><div id="pentateuchButtons"><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Genesis" chapsInBook="51">Genesis</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Exodus" chapsInBook="41">Exodus</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Leviticus" chapsInBook="28">Leviticus</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Numbers" chapsInBook="37">Numbers</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Deuteronomy" chapsInBook="35">Deuteronomy</button></div></nav>');
+        $("#nav2").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav3"><div id="pentateuchButtons"><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Genesis" chapsInBook="51">Genesis</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Exodus" chapsInBook="41">Exodus</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Leviticus" chapsInBook="28">Leviticus</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Numbers" chapsInBook="37">Numbers</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Deuteronomy" chapsInBook="35">Deuteronomy</button></div></nav>');
     };
     $(document).on("click", "#Genesis", choseGenesis);
     $(document).on("click", "#Exodus", choseExodus);
@@ -45,7 +45,7 @@ $(document).ready(function () {
         event.preventDefault();
         $("#nav3").remove();
         $("#nav4").remove();
-        $("#nav2").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav3"><div id="booksButtons"><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Joshua">Joshua</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Judges">Judges</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Ruth">Ruth</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="FirstSamuel">1 Samuel</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="SecondSamuel">2 Samuel</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="FirstKings">1 Kings</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="SecondKings">2 Kings</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="FirstChronicles">1 Chronicles</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="SecondChronicles">2 Chronicles</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Ezra">Ezra</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Nehemiah">Nehemiah</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Esther">Esther</button></div></nav>');
+        $("#nav2").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav3"><div id="booksButtons"><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Joshua">Joshua</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Judges">Judges</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Ruth">Ruth</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="FirstSamuel">1 Samuel</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="SecondSamuel">2 Samuel</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="FirstKings">1 Kings</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="SecondKings">2 Kings</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="FirstChronicles">1 Chronicles</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="SecondChronicles">2 Chronicles</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Ezra">Ezra</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Nehemiah">Nehemiah</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Esther">Esther</button></div></nav>');
         $(document).on("click", "#Joshua", choseJoshua);
         $(document).on("click", "#Judges", choseJudges);
         $(document).on("click", "#Ruth", choseRuth);
@@ -64,7 +64,7 @@ $(document).ready(function () {
         event.preventDefault();
         $("#nav3").remove();
         $("#nav4").remove();
-        $("#nav2").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav3"><div id="wisdomButtons"><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Job">Job</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Psalms">Psalms</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Proverbs">Proverbs</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Ecclesiastes">Ecclesiastes</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="SongOfSolomon">Song of Solomon</button></div></nav>');
+        $("#nav2").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav3"><div id="wisdomButtons"><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Job">Job</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Psalms">Psalms</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Proverbs">Proverbs</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Ecclesiastes">Ecclesiastes</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="SongOfSolomon">Song of Solomon</button></div></nav>');
         $(document).on("click", "#Job", choseJob);
         $(document).on("click", "#Psalms", chosePsalms);
         $(document).on("click", "#Proverbs", choseProverbs);
@@ -76,7 +76,7 @@ $(document).ready(function () {
         event.preventDefault();
         $("#nav3").remove();
         $("#nav4").remove();
-        $("#nav2").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav3"><div id="majorProphetsButtons"><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Isaiah">Isaiah</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Jeremiah">Jeremiah</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Lamentations">Lamentations</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Ezekiel">Ezekiel</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Daniel">Daniel</button></div></nav>');
+        $("#nav2").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav3"><div id="majorProphetsButtons"><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Isaiah">Isaiah</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Jeremiah">Jeremiah</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Lamentations">Lamentations</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Ezekiel">Ezekiel</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Daniel">Daniel</button></div></nav>');
         $(document).on("click", "#Isaiah", choseIsaiah);
         $(document).on("click", "#Jeremiah", choseJeremiah);
         $(document).on("click", "#Lamentations", choseLamentations);
@@ -88,7 +88,7 @@ $(document).ready(function () {
         event.preventDefault();
         $("#nav3").remove();
         $("#nav4").remove();
-        $("#nav2").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav3"><div id="minorProphetsButtons"><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Hosea">Hosea</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Joel">Joel</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Amos">Amos</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Obadiah">Obadiah</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Jonah">Jonah</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Micah">Micah</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Nahum">Nahum</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Habakkuk">Habakkuk</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Zephaniah">Zephaniah</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Haggai">Haggai</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Zechariah">Zechariah</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Malachi">Malachi</button></div></nav>');
+        $("#nav2").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav3"><div id="minorProphetsButtons"><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Hosea">Hosea</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Joel">Joel</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Amos">Amos</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Obadiah">Obadiah</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Jonah">Jonah</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Micah">Micah</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Nahum">Nahum</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Habakkuk">Habakkuk</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Zephaniah">Zephaniah</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Haggai">Haggai</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Zechariah">Zechariah</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Malachi">Malachi</button></div></nav>');
         $(document).on("click", "#Hosea", choseHosea);
         $(document).on("click", "#Joel", choseJoel);
         $(document).on("click", "#Amos", choseAmos);
@@ -107,7 +107,7 @@ $(document).ready(function () {
         event.preventDefault();
         $("#nav3").remove();
         $("#nav4").remove();
-        $("#nav2").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav3"><div id="GospelsButtons"><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Matthew">Matthew</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Mark">Mark</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Luke">Luke</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="John">John</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Acts">Acts</button></div></nav>');
+        $("#nav2").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav3"><div id="GospelsButtons"><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Matthew">Matthew</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Mark">Mark</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Luke">Luke</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="John">John</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Acts">Acts</button></div></nav>');
         $(document).on("click", "#Matthew", choseMatthew);
         $(document).on("click", "#Mark", choseMark);
         $(document).on("click", "#Luke", choseLuke);
@@ -119,7 +119,7 @@ $(document).ready(function () {
         event.preventDefault();
         $("#nav3").remove();
         $("#nav4").remove();
-        $("#nav2").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav3"><div id="PaulineButtons"><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Romans">Romans</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="FirstCorinthians">1 Corinthians</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="SecondCorinthians">2 Corinthians</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Galatians">Galatians</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Ephesians">Ephesians</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Philippians">Philippians</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Colossians">Colossians</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="FirstThessalonians">1 Thessalonians</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="SecondThessalonians">2 Thessalonians</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="FirstTimothy">1 Timothy</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="SecondTimothy">2 Timothy</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Titus">Titus</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Philemon">Philemon</button></div></nav>');
+        $("#nav2").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav3"><div id="PaulineButtons"><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Romans">Romans</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="FirstCorinthians">1 Corinthians</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="SecondCorinthians">2 Corinthians</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Galatians">Galatians</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Ephesians">Ephesians</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Philippians">Philippians</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Colossians">Colossians</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="FirstThessalonians">1 Thessalonians</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="SecondThessalonians">2 Thessalonians</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="FirstTimothy">1 Timothy</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="SecondTimothy">2 Timothy</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Titus">Titus</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Philemon">Philemon</button></div></nav>');
         $(document).on("click", "#Romans", choseRomans);
         $(document).on("click", "#FirstCorinthians", choseFirstCorinthians);
         $(document).on("click", "#SecondCorinthians", choseSecondCorinthians);
@@ -139,7 +139,7 @@ $(document).ready(function () {
         event.preventDefault();
         $("#nav3").remove();
         $("#nav4").remove();
-        $("#nav2").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav3"><div id="GeneralEpistlesButtons"><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Hebrews">Hebrews</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="James">James</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="FirstPeter">1 Peter</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="SecondPeter">2 Peter</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="FirstJohn">1 John</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="SecondJohn">2 John</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="ThirdJohn">3 John</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Jude">Jude</button></div></nav>');
+        $("#nav2").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav3"><div id="GeneralEpistlesButtons"><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Hebrews">Hebrews</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="James">James</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="FirstPeter">1 Peter</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="SecondPeter">2 Peter</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="FirstJohn">1 John</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="SecondJohn">2 John</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="ThirdJohn">3 John</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Jude">Jude</button></div></nav>');
         $(document).on("click", "#Hebrews", choseHebrews);
         $(document).on("click", "#James", choseJames);
         $(document).on("click", "#FirstPeter", choseFirstPeter);
@@ -154,7 +154,7 @@ $(document).ready(function () {
         event.preventDefault();
         $("#nav3").remove();
         $("#nav4").remove();
-        $("#nav2").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav3"><div>Chapters being added soon<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Revelation">Revelation</button></div></nav>');
+        $("#nav2").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav3"><div>Chapters being added soon<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="Revelation">Revelation</button></div></nav>');
         $(document).on("click", "#Revelation", choseRevelation);
     };
 
@@ -173,7 +173,7 @@ $(document).ready(function () {
     function choseGenesis() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 51; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle" id="gen" type="button" data-toggle="dropdown" chapNumber="' + i + '">' + i + '</button>');
         };
@@ -185,7 +185,7 @@ $(document).ready(function () {
     function choseExodus() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 41; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Ex" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -197,7 +197,7 @@ $(document).ready(function () {
     function choseLeviticus() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 29; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Lev" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -209,7 +209,7 @@ $(document).ready(function () {
     function choseNumbers() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 37; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Num" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -221,7 +221,7 @@ $(document).ready(function () {
     function choseDeuteronomy() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 35; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Deut" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -233,7 +233,7 @@ $(document).ready(function () {
     function choseJoshua() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 25; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Josh" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -245,7 +245,7 @@ $(document).ready(function () {
     function choseJudges() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 22; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Judge" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -257,7 +257,7 @@ $(document).ready(function () {
     function choseRuth() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 5; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Rut" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -269,7 +269,7 @@ $(document).ready(function () {
     function choseFirstSamuel() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 32; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle FSam" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -281,7 +281,7 @@ $(document).ready(function () {
     function choseSecondSamuel() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 25; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle SSam" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -293,7 +293,7 @@ $(document).ready(function () {
     function choseFirstKings() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 23; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle FKin" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -305,7 +305,7 @@ $(document).ready(function () {
     function choseSecondKings() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 26; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle SKin" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -317,7 +317,7 @@ $(document).ready(function () {
     function choseFirstChronicles() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 30; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle FChron" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -329,7 +329,7 @@ $(document).ready(function () {
     function choseSecondChronicles() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 37; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle SChron" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -341,7 +341,7 @@ $(document).ready(function () {
     function choseEzra() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 11; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Ezr" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -353,7 +353,7 @@ $(document).ready(function () {
     function choseNehemiah() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 14; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Neh" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -365,7 +365,7 @@ $(document).ready(function () {
     function choseEsther() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 11; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Esth" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -377,7 +377,7 @@ $(document).ready(function () {
     function choseJob() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 43; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Jo" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -389,7 +389,7 @@ $(document).ready(function () {
     function chosePsalms() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 151; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Psa" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -401,7 +401,7 @@ $(document).ready(function () {
     function choseProverbs() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 32; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Prov" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -413,7 +413,7 @@ $(document).ready(function () {
     function choseEcclesiastes() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 13; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Eccl" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -425,7 +425,7 @@ $(document).ready(function () {
     function choseSongofSolomon() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 9; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle SoS" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -437,7 +437,7 @@ $(document).ready(function () {
     function choseIsaiah() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 67; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Isa" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -449,7 +449,7 @@ $(document).ready(function () {
     function choseJeremiah() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 53; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Jer" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -461,7 +461,7 @@ $(document).ready(function () {
     function choseLamentations() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 6; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Lam" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -473,7 +473,7 @@ $(document).ready(function () {
     function choseEzekiel() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 49; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Eze" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -485,7 +485,7 @@ $(document).ready(function () {
     function choseDaniel() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 13; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Dan" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -497,7 +497,7 @@ $(document).ready(function () {
     function choseHosea() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 15; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Hos" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -509,7 +509,7 @@ $(document).ready(function () {
     function choseJoel() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 4; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Joe" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -521,7 +521,7 @@ $(document).ready(function () {
     function choseAmos() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 10; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Amo" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -533,7 +533,7 @@ $(document).ready(function () {
     function choseObadiah() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 2; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Oba" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -545,7 +545,7 @@ $(document).ready(function () {
     function choseJonah() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 5; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Jona" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -557,7 +557,7 @@ $(document).ready(function () {
     function choseMicah() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 8; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Mic" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -569,7 +569,7 @@ $(document).ready(function () {
     function choseNahum() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 4; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Nah" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -581,7 +581,7 @@ $(document).ready(function () {
     function choseHabakkuk() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 4; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Hab" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -593,7 +593,7 @@ $(document).ready(function () {
     function choseZephaniah() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 4; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Zeph" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -605,7 +605,7 @@ $(document).ready(function () {
     function choseHaggai() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 3; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Hag" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -617,7 +617,7 @@ $(document).ready(function () {
     function choseZechariah() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 15; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Zech" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -629,7 +629,7 @@ $(document).ready(function () {
     function choseMalachi() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 5; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Mala" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -641,7 +641,7 @@ $(document).ready(function () {
     function choseMatthew() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 29; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Matt" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -653,7 +653,7 @@ $(document).ready(function () {
     function choseMark() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 17; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Mar" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -665,7 +665,7 @@ $(document).ready(function () {
     function choseLuke() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 25; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Luk" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -677,7 +677,7 @@ $(document).ready(function () {
     function choseJohn() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 22; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Joh" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -689,7 +689,7 @@ $(document).ready(function () {
     function choseActs() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 29; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Act" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -701,7 +701,7 @@ $(document).ready(function () {
     function choseRomans() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 17; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Rom" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -713,7 +713,7 @@ $(document).ready(function () {
     function choseFirstCorinthians() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 17; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle FCor" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -725,7 +725,7 @@ $(document).ready(function () {
     function choseSecondCorinthians() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 14; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle SCor" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -737,7 +737,7 @@ $(document).ready(function () {
     function choseGalatians() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 7; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Gal" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -749,7 +749,7 @@ $(document).ready(function () {
     function choseEphesians() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 7; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Eph" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -761,7 +761,7 @@ $(document).ready(function () {
     function chosePhilippians() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 5; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Phil" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -773,7 +773,7 @@ $(document).ready(function () {
     function choseColossians() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 5; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Col" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -785,7 +785,7 @@ $(document).ready(function () {
     function choseFirstThessalonians() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 6; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle FThes" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -797,7 +797,7 @@ $(document).ready(function () {
     function choseSecondThessalonians() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 4; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle SThes" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -821,7 +821,7 @@ $(document).ready(function () {
     function choseSecondTimothy() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 5; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle STim" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -833,7 +833,7 @@ $(document).ready(function () {
     function choseTitus() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 4; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Tit" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -845,7 +845,7 @@ $(document).ready(function () {
     function chosePhilemon() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 2; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle phile" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -857,7 +857,7 @@ $(document).ready(function () {
     function choseHebrews() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 14; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle heb" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -869,7 +869,7 @@ $(document).ready(function () {
     function choseJames() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 6; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle jam" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -881,7 +881,7 @@ $(document).ready(function () {
     function choseFirstPeter() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 6; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle FPet" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -893,7 +893,7 @@ $(document).ready(function () {
     function choseSecondPeter() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 4; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle SPet" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -905,7 +905,7 @@ $(document).ready(function () {
     function choseFirstJohn() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 6; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle FJohn" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -917,7 +917,7 @@ $(document).ready(function () {
     function choseSecondJohn() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 2; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle SJohn" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -929,7 +929,7 @@ $(document).ready(function () {
     function choseThirdJohn() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 2; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle TJohn" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -941,7 +941,7 @@ $(document).ready(function () {
     function choseJude() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 2; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Jud" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -953,7 +953,7 @@ $(document).ready(function () {
     function choseRevelation() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="row navbar navbar-light bg-light justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
+        $("#nav3").show(400).append('<nav class="row navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav4"><div id="navDiv3>');
         for (i = 1; i < 23; i++) {
             $("#navDiv3").append('<button class="btn btn-default dropdown-toggle Rev" type="button" data-toggle="dropdown" id="' + i + '">' + i + '</button>');
         };
@@ -968,7 +968,7 @@ $(document).ready(function () {
         $("#welcomeJumbotron").hide();
         $("#scriptureHere").empty();
         $("#resultsHere").empty();
-        $("#scriptureHere").show();
+        $("#afterSearchDiv").show();
         $("#resultsHere").show();
         document.cookie = "same-site-cookie=SameSite=Lax";
         document.cookie = "cross-site-cookie=bar; SameSite=None; Secure";
@@ -1092,7 +1092,6 @@ $(document).ready(function () {
                 };
                 if (videosToAdd === []) {
                 } else {
-                    $("#resultsHere").append("<h1 class='rounded clearfix'>Videos pieces for this chapter include: </h1><br /><br />");
                     $("#resultsHere").append(videosToAdd);
                 }
             });
@@ -1110,7 +1109,6 @@ $(document).ready(function () {
                 }
                 if (artToAdd === []) {
                 } else {
-                    $("#resultsHere").append("<h1 class='rounded clearfix'>Art pieces for this chapter include: </h1><br /><br />");
                     $("#resultsHere").append(artToAdd);
                 }
             });
@@ -1122,7 +1120,6 @@ $(document).ready(function () {
                 };
                 if (videosToAdd === []) {
                 } else {
-                    $("#resultsHere").append("<h1 class='rounded clearfix'>Videos pieces for this chapter include: </h1><br /><br />");
                     $("#resultsHere").append(videosToAdd);
                 }
             });
@@ -1138,7 +1135,6 @@ $(document).ready(function () {
                 }
                 if (artToAdd === []) {
                 } else {
-                    $("#resultsHere").append("<div class='card'><h1 class='rounded clearfix'>Art pieces for this artist include: </h1></div>");
                     $("#resultsHere").append(artToAdd);
                 }
             })
@@ -1150,7 +1146,6 @@ $(document).ready(function () {
                 }
                 if (videosToAdd === []) {
                 } else {
-                    $("#resultsHere").append("<div class='card'><h1 class='rounded clearfix'>Videos for this artist include: </h1></div>");
                     $("#resultsHere").append(videosToAdd);
                 }
             })
@@ -1160,12 +1155,12 @@ $(document).ready(function () {
 
     function createNewPiece(piece) {
         event.preventDefault();
-        return ('<div class="col-sm-3"><h5 class="card-title">' + piece.title + '</h3><img class="img-responsive" src="' + piece.picture + '"><p>Artist: ' + piece.artist + '</p><p>Book: ' + piece.book + '</p><p>Verse: ' + piece.verse + '</p><button class="likeButton" id="' + piece.id + '">Click here to add a like, current likes: ' + piece.upvotes + '</button></div>');
+        return ('<div class="col-sm-3"><h5 class="card-title">' + piece.title + '</h3><img class="img-responsive" src="' + piece.picture + '"><p>Artist: ' + piece.artist + '</p><p>Book: ' + piece.book + '</p><p>Verse: ' + piece.verse + '</p></div>');
     }
 
     function createNewVideo(piece) {
         event.preventDefault();
-        return ('<div class="col-sm-3"><h5 class="card-title">' + piece.title + '</h5><p>Artist: ' + piece.sourceCreator + '</p><p>Book: ' + piece.book + '</p><p>Verse: ' + piece.verse + '</p><div>' + piece.videoEmbed + '</div><button class="likeButton" id="' + piece.id + '">Click here to add a like, current likes: ' + piece.upvotes + '</button></div>');
+        return ('<div class="col-sm-3"><h5 class="card-title">' + piece.title + '</h5><p>Artist: ' + piece.sourceCreator + '</p><p>Book: ' + piece.book + '</p><p>Verse: ' + piece.verse + '</p><div>' + piece.videoEmbed + '</div></div>');
     }
 
     $(document).on("submit", "#artworkForm", searchBarSubmit);
