@@ -13,7 +13,7 @@ a:link {
   background-color: transparent;
 }
 
-.welcomeJumbotron {
+#welcomeJumbotron {
 background-image: url("https://i2.wp.com/matthewwester.com/wp-content/uploads/BibleArtProject/mustardPencil.jpg");
 /* height: 100%; */
 color: white;
@@ -31,7 +31,7 @@ font-family: Arial, Helvetica, sans-serif;
   float: right;
 }
 
-.welcomeDiv {
+#welcomeDiv {
   color:white;
 }
 
