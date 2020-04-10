@@ -1,7 +1,5 @@
 $(document).ready(function () {
-
-    $("#scriptureHere").hide();
-    $("#resultsHere").hide();
+    $("#afterSearchDiv").hide();
     //Menu bar handling
     $(document).on("click", "#OT", makeOldTestamentNav);
     function makeOldTestamentNav() {
@@ -970,6 +968,7 @@ $(document).ready(function () {
         $("#scriptureHere").empty();
         $("#resultsHere").empty();
         $("#afterSearchDiv").show();
+        $("#afterSearchDiv").append('<h3 id="searchTermTitle"></h3><br><div class="row"><div class="col-sm-3 bg-dark" id="scriptureHere"></div><div class="col-sm-9 bg-dark" id="resultsHere"></div></div>');
         document.cookie = "same-site-cookie=SameSite=Lax";
         document.cookie = "cross-site-cookie=bar; SameSite=None; Secure";
 
