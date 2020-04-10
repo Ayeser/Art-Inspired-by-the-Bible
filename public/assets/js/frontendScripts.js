@@ -9,13 +9,14 @@ $(document).ready(function () {
         $("#nav2").remove();
         $("#nav3").remove();
         $("#nav4").remove();
-        $("#nav1").show(400).append('<nav class="container-fluid navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav2"><div id="booksButtons"><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="PentateuchNav">Pentateuch</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="HistoricalBooksNav">Historical Books</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="WisdomBooksNav">Wisdom</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="MajorProphetsNav">Major Prophets</button><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="MinorProphetsNav">Minor Prophets</button></div></nav>');
+        $("#nav1").show(400).append('<nav class="container-fluid navbar navbar-dark bg-dark justify-content-between rounded clearfix" id="nav2"><div id="booksButtons"><a class="nav-link" href="#" id="PentateuchNav">Pentateuch</a><a class="nav-link" href="#" id="HistoricalBooksNav">Historical Books</a><a class="nav-link" href="#" id="WisdomBooksNav">Wisdom</a><a class="nav-link" href="#" id="MajorProphetsNav">Major Prophets</a><a class="nav-link" href="#" id="MinorProphetsNav">Minor Prophets</a></div></nav>');
         $(document).on("click", "#PentateuchNav", chosePentateuch);
         $(document).on("click", "#HistoricalBooksNav", choseHistoricalBooks);
         $(document).on("click", "#WisdomBooksNav", choseWisdomBooks);
         $(document).on("click", "#MajorProphetsNav", choseMajorProphetsBooks);
         $(document).on("click", "#MinorProphetsNav", choseMinorProphetsBooks);
     };
+
     $(document).on("click", "#NT", makeNewTestamentNav);
     function makeNewTestamentNav() {
         event.preventDefault();
