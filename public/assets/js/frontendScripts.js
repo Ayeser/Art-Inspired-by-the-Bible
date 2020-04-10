@@ -970,8 +970,6 @@ $(document).ready(function () {
         $("#scriptureHere").empty();
         $("#resultsHere").empty();
         $("#afterSearchDiv").show();
-        $("#resultsHere").show();
-        $("#scriptureHere").show();
         document.cookie = "same-site-cookie=SameSite=Lax";
         document.cookie = "cross-site-cookie=bar; SameSite=None; Secure";
 
