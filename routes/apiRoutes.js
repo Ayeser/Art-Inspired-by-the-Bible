@@ -20,14 +20,20 @@ module.exports = function (app) {
   app.get("/api/artPieces/:book/:chapter", function (req, res) {
     console.log("Searching for pieces of art from selected book...");
     db.Artwork.findAll({
+      order: [
+        ['verse', 'DESC']
+      ],
       where: {
         book: req.params.book,
         chapter: req.params.chapter
       },
-      // include: [{
-      //   model: db.Video,
-      //   model: db.Artwork
-      // }]
+      include: [{
+        model: db.Video,
+        where: {
+          book: req.params.book,
+          chapter: req.params.chapter
+        }
+      }]
     }
     ).then(dbArtPieces => {
       res.json(dbArtPieces);
@@ -55,6 +61,9 @@ module.exports = function (app) {
   app.get("/api/videos/:book/:chapter", function (req, res) {
     console.log("Finding all videos from selected book...");
     db.Video.findAll({
+      order: [
+        ['verse', 'DESC']
+      ],
       where: {
         book: req.params.book,
         chapter: req.params.chapter
