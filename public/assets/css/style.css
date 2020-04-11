@@ -32,6 +32,8 @@ font-family: Arial, Helvetica, sans-serif;
   float: right;
   border-radius: 2;
   border-color:  #ecbf1f;
+  background-color: black;
+  color: white;
 }
 
 #welcomeDiv {
