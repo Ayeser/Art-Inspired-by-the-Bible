@@ -26,14 +26,7 @@ module.exports = function (app) {
       where: {
         book: req.params.book,
         chapter: req.params.chapter
-      },
-      include: [{
-        model: db.Video,
-        where: {
-          book: req.params.book,
-          chapter: req.params.chapter
-        }
-      }]
+      }
     }
     ).then(dbArtPieces => {
       res.json(dbArtPieces);
