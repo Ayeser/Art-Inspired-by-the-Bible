@@ -49,13 +49,5 @@ module.exports = function(sequelize, DataTypes) {
       defaultValue: sequelize.literal('CURRENT_TIMESTAMP(3)')
     }
 });
-Video.associate = function(models) {
-  Video.belongsTo(models.Artwork, {
-    onDelete: "cascade",
-    foreignKey: {
-      name: 'chapter'
-    }
-  });
-};
     return Video;
   };
