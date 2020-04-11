@@ -30,10 +30,10 @@ font-family: Arial, Helvetica, sans-serif;
 
 .card {
   float: right;
-  border-radius: 2;
-  border-color:  #ecbf1f;
+  border-radius: 3;
+  border-color:  green;
   background-color: black;
-  color: white;
+  color: #ecbf1f;
 }
 
 #welcomeDiv {
@@ -45,6 +45,7 @@ font-family: Arial, Helvetica, sans-serif;
 
 #afterSearchDiv {
   color:white;
+  margin-top: -10px;
 }
 
 div.transbox {

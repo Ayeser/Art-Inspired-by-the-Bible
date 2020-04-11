@@ -180,7 +180,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#gen", function () { searchTerms = ["genesis", this.attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#gen", function () { searchTerms = ["genesis", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseExodus() {
         event.preventDefault();
@@ -191,7 +191,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#Ex", function () { searchTerms = ["exodus", this.attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#Ex", function () { searchTerms = ["exodus", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseLeviticus() {
         event.preventDefault();
@@ -1078,12 +1078,12 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
 
     function createNewPiece(piece) {
         event.preventDefault();
-        return ('<div class="col-sm-6 card"><h5 class="card-title">' + piece.title + '</h3><img class="img-responsive" src="' + piece.picture + '"><p>Artist: ' + piece.artist + '</p><p>Book: ' + piece.book + '</p><p>Verse: ' + piece.verse + '</p></div>');
+        return ('<div class="col-sm-12 card"><h5 class="card-title">' + piece.title + '</h3><img class="img-responsive" src="' + piece.picture + '"><p>Artist: ' + piece.artist + '</p><p>Book: ' + piece.book + '</p><p>Verse: ' + piece.verse + '</p></div>');
     }
 
     function createNewVideo(piece) {
         event.preventDefault();
-        return ('<div class="col-sm-6 card"><h5 class="card-title">' + piece.title + '</h5><p>Artist: ' + piece.sourceCreator + '</p><p>Book: ' + piece.book + '</p><p>Verse: ' + piece.verse + '</p><div>' + piece.videoEmbed + '</div></div>');
+        return ('<div class="col-sm-12 card"><h5 class="card-title">' + piece.title + '</h5><p>Artist: ' + piece.sourceCreator + '</p><p>Book: ' + piece.book + '</p><p>Verse: ' + piece.verse + '</p><div>' + piece.videoEmbed + '</div></div>');
     }
 
     $(document).on("submit", "#artworkForm", searchBarSubmit);
