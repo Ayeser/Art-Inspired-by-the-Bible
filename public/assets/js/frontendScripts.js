@@ -180,7 +180,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#gen", function () { searchTerms = ["genesis", this.chapNumber.toString()]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#gen", function () { searchTerms = ["genesis", this.attr(chapNumber).toString()]; handleArtworkFormSubmit(event); });
 
     function choseExodus() {
         event.preventDefault();
@@ -191,7 +191,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#Ex", function () { searchTerms = ["exodus", this.chapNumber.toString()]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#Ex", function () { searchTerms = ["exodus", this.attr(chapNumber).toString()]; handleArtworkFormSubmit(event); });
 
     function choseLeviticus() {
         event.preventDefault();

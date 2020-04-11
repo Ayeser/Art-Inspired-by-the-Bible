@@ -30,6 +30,8 @@ font-family: Arial, Helvetica, sans-serif;
 
 .card {
   float: right;
+  border-radius: 2;
+  border-color:  #ecbf1f;
 }
 
 #welcomeDiv {
