@@ -889,7 +889,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function handleArtworkFormSubmit(event) {
         event.preventDefault();
         $("#afterSearchDiv").remove();
-        $("#welcomeDiv").after('<div class="container-fluid bg-3 text-center" id="afterSearchDiv"><h3 id="searchTermTitle"></h3><br><div class="row"><div class="col-sm-3 bg-dark" id="scriptureHere"></div><div class="col-sm-9 bg-dark" id="resultsHere"></div></div></div>');
+        $("#welcomeDiv").after('<div class="container-fluid bg-3 text-center" id="afterSearchDiv"><h3 id="searchTermTitle"></h3><div class="row"><div class="col-sm-3 bg-dark" id="scriptureHere"></div><div class="col-sm-9 bg-dark" id="resultsHere"></div></div></div>');
         $("#welcomeDiv").remove();
         $("#welcomeJumbotron").remove();
         document.cookie = "same-site-cookie=SameSite=Lax";
@@ -1051,6 +1051,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         function searchArtistInstead() {
             $("#scriptureHere").empty();
             $("#scriptureHere").hide();
+            $("#searchTermTitle").append(searchTerms);
             $.get("api/artistArtwork/" + searchTerms[0], function (data) {
                 const artToAdd = [];
                 for (let i = 0; i < data.length; i++) {
@@ -1078,12 +1079,12 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
 
     function createNewPiece(piece) {
         event.preventDefault();
-        return ('<div class="col-sm-12 card"><h5 class="card-title">' + piece.title + '</h3><img class="img-responsive" src="' + piece.picture + '"><p>Artist: ' + piece.artist + '</p><p>Book: ' + piece.book + '</p><p>Verse: ' + piece.verse + '</p></div>');
+        return ('<div class="col-sm-12 card"><h5 class="card-title">' + piece.title + '</h3><img class="img-responsive" src="' + piece.picture + '"><p>Artist: ' + piece.artist + ', Book: ' + piece.book + ', Verse: ' + piece.verse + '</p></div>');
     }
 
     function createNewVideo(piece) {
         event.preventDefault();
-        return ('<div class="col-sm-12 card"><h5 class="card-title">' + piece.title + '</h5><p>Artist: ' + piece.sourceCreator + '</p><p>Book: ' + piece.book + '</p><p>Verse: ' + piece.verse + '</p><div>' + piece.videoEmbed + '</div></div>');
+        return ('<div class="col-sm-12 card"><h5 class="card-title">' + piece.title + '</h5><p>Artist: ' + piece.sourceCreator + ', Book: ' + piece.book + ', Verse: ' + piece.verse + '</p><div>' + piece.videoEmbed + '</div></div>');
     }
 
     $(document).on("submit", "#artworkForm", searchBarSubmit);
