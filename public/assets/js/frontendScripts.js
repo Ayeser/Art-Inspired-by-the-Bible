@@ -1,5 +1,13 @@
 $(document).ready(function () {
     //Menu bar handling
+    $(document).on("click", "#contribute", contributeArt);
+    function contributeArt() {
+        event.preventDefault();
+        $("#nav2").remove();
+        $("#nav3").remove();
+        $("#nav4").remove();
+        $("#nav1").show(400).after('<div class="container shadow" style="height: 100vh; background-color: #343a40" id="contributeForm"><div class="row"><div class="col-sm-3"></div><form class="login col-sm-6"><div class="form-group"><label for="exampleInputTitle1">Please put the link of your artwork here:</label><input type="link" class="form-control" id="picture-input" placeholder="Picture Link"></div><div class="form-group"><label for="exampleInputTitle1">What is the title of this piece?</label><input type="title" class="form-control" id="title-input" placeholder="Title"></div><div class="form-group"><label for="exampleInputArtist1"> Who is the artist of this piece?</label><input type="artist" class="form-control" id="artist-input" placeholder="Artist"></div><div class="form-group"><label for="exampleInputPassword1"> What book of the Bible is this art inspired by?</label><input type="book" class="form-control" id="book-input" placeholder="Book of the Bible"></div><div class="form-group"><label for="exampleInputPassword1"> What chapter of this Bible book is this art inspired by?</label><input type="book" class="form-control" id="chapter-input" placeholder="Chapter"></div><button type="submit" id="pictureSubmit" class="btn btn-info">Submit</button></form><div class="col-sm-3"></div></div></div>'};
+
     $(document).on("click", "#OT", makeOldTestamentNav);
     function makeOldTestamentNav() {
         event.preventDefault();
@@ -889,6 +897,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", $(thi
     function handleArtworkFormSubmit(event) {
         event.preventDefault();
         $("#afterSearchDiv").remove();
+        $("#contributeForm").remove();
         $("#welcomeDiv").after('<div class="container-fluid bg-3 text-center" id="afterSearchDiv"><h3 id="searchTermTitle"></h3><div class="row"><div class="col-sm-3 bg-dark" id="scriptureHere"></div><div class="col-sm-9 bg-dark" id="resultsHere"></div></div></div>');
         $("#welcomeDiv").remove();
         $("#welcomeJumbotron").remove();
