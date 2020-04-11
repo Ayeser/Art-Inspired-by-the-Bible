@@ -157,7 +157,7 @@ $(document).ready(function () {
     };
 };
 
-$(document).on("click", ".rev", function () { searchTerms = ["revelation", this.chapNumber]; handleArtworkFormSubmit(event); });
+$(document).on("click", ".rev", function () { searchTerms = ["revelation", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     // $(document).on("click", this.id, function createChapBtns() {
     //     event.preventDefault();
@@ -202,7 +202,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#Lev", function () { searchTerms = ["leviticus", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#Lev", function () { searchTerms = ["leviticus", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseNumbers() {
         event.preventDefault();
@@ -213,7 +213,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#Num", function () { searchTerms = ["numbers", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#Num", function () { searchTerms = ["numbers", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseDeuteronomy() {
         event.preventDefault();
@@ -224,7 +224,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#Deut", function () { searchTerms = ["deuteronomy", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#Deut", function () { searchTerms = ["deuteronomy", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseJoshua() {
         event.preventDefault();
@@ -235,7 +235,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#Josh", function () { searchTerms = ["joshua", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#Josh", function () { searchTerms = ["joshua", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseJudges() {
         event.preventDefault();
@@ -246,7 +246,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#Judge", function () { searchTerms = ["judges", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#Judge", function () { searchTerms = ["judges", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseRuth() {
         event.preventDefault();
@@ -257,7 +257,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#Rut", function () { searchTerms = ["ruth", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#Rut", function () { searchTerms = ["ruth", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseFirstSamuel() {
         event.preventDefault();
@@ -268,7 +268,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#FSam", function () { searchTerms = ["1", "samuel", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#FSam", function () { searchTerms = ["1", "samuel", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseSecondSamuel() {
         event.preventDefault();
@@ -279,7 +279,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#SSam", function () { searchTerms = ["2", "samuel", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#SSam", function () { searchTerms = ["2", "samuel", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseFirstKings() {
         event.preventDefault();
@@ -290,7 +290,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#FKin", function () { searchTerms = ["1", "kings", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#FKin", function () { searchTerms = ["1", "kings", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseSecondKings() {
         event.preventDefault();
@@ -301,7 +301,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#SKin", function () { searchTerms = ["2", "kings", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#SKin", function () { searchTerms = ["2", "kings", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseFirstChronicles() {
         event.preventDefault();
@@ -312,7 +312,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#FChron", function () { searchTerms = ["1", "chronicles", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#FChron", function () { searchTerms = ["1", "chronicles", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseSecondChronicles() {
         event.preventDefault();
@@ -323,7 +323,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#SChron", function () { searchTerms = ["2", "chronicles", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#SChron", function () { searchTerms = ["2", "chronicles", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseEzra() {
         event.preventDefault();
@@ -334,7 +334,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#Ezr", function () { searchTerms = ["ezra", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#Ezr", function () { searchTerms = ["ezra", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseNehemiah() {
         event.preventDefault();
@@ -345,7 +345,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#Neh", function () { searchTerms = ["nehemiah", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#Neh", function () { searchTerms = ["nehemiah", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseEsther() {
         event.preventDefault();
@@ -356,7 +356,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#Esth", function () { searchTerms = ["esther", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#Esth", function () { searchTerms = ["esther", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseJob() {
         event.preventDefault();
@@ -367,7 +367,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#Jo", function () { searchTerms = ["job", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#Jo", function () { searchTerms = ["job", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function chosePsalms() {
         event.preventDefault();
@@ -378,7 +378,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#Psa", function () { searchTerms = ["psalms", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#Psa", function () { searchTerms = ["psalms", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseProverbs() {
         event.preventDefault();
@@ -389,7 +389,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#Prov", function () { searchTerms = ["proverbs", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#Prov", function () { searchTerms = ["proverbs", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseEcclesiastes() {
         event.preventDefault();
@@ -400,7 +400,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#Eccl", function () { searchTerms = ["ecclesiastes", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#Eccl", function () { searchTerms = ["ecclesiastes", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseSongofSolomon() {
         event.preventDefault();
@@ -411,7 +411,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#SoS", function () { searchTerms = ["song", "of", "solomon", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#SoS", function () { searchTerms = ["song", "of", "solomon", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseIsaiah() {
         event.preventDefault();
@@ -422,7 +422,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#Isa", function () { searchTerms = ["isaiah", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#Isa", function () { searchTerms = ["isaiah", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseJeremiah() {
         event.preventDefault();
@@ -433,7 +433,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#Jer", function () { searchTerms = ["jeremiah", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#Jer", function () { searchTerms = ["jeremiah", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseLamentations() {
         event.preventDefault();
@@ -444,7 +444,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#Lam", function () { searchTerms = ["lamentations", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#Lam", function () { searchTerms = ["lamentations", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseEzekiel() {
         event.preventDefault();
@@ -455,7 +455,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#Eze", function () { searchTerms = ["ezekiel", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#Eze", function () { searchTerms = ["ezekiel", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseDaniel() {
         event.preventDefault();
@@ -466,7 +466,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#Dan", function () { searchTerms = ["daniel", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#Dan", function () { searchTerms = ["daniel", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseHosea() {
         event.preventDefault();
@@ -477,7 +477,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#Hos", function () { searchTerms = ["hosea", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#Hos", function () { searchTerms = ["hosea", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseJoel() {
         event.preventDefault();
@@ -488,7 +488,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#Joe", function () { searchTerms = ["joel", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#Joe", function () { searchTerms = ["joel", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseAmos() {
         event.preventDefault();
@@ -499,7 +499,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#Amo", function () { searchTerms = ["amos", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#Amo", function () { searchTerms = ["amos", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseObadiah() {
         event.preventDefault();
@@ -510,7 +510,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#Oba", function () { searchTerms = ["obadiah", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#Oba", function () { searchTerms = ["obadiah", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseJonah() {
         event.preventDefault();
@@ -521,7 +521,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#Jona", function () { searchTerms = ["jonah", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#Jona", function () { searchTerms = ["jonah", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseMicah() {
         event.preventDefault();
@@ -532,7 +532,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#Mic", function () { searchTerms = ["micah", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#Mic", function () { searchTerms = ["micah", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseNahum() {
         event.preventDefault();
@@ -543,7 +543,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#Nah", function () { searchTerms = ["nahum", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#Nah", function () { searchTerms = ["nahum", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseHabakkuk() {
         event.preventDefault();
@@ -554,7 +554,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#Hab", function () { searchTerms = ["habakkuk", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#Hab", function () { searchTerms = ["habakkuk", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseZephaniah() {
         event.preventDefault();
@@ -565,7 +565,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#Zeph", function () { searchTerms = ["zephaniah", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#Zeph", function () { searchTerms = ["zephaniah", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseHaggai() {
         event.preventDefault();
@@ -576,7 +576,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#Hag", function () { searchTerms = ["haggai", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#Hag", function () { searchTerms = ["haggai", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseZechariah() {
         event.preventDefault();
@@ -587,7 +587,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#Zech", function () { searchTerms = ["zechariah", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#Zech", function () { searchTerms = ["zechariah", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseMalachi() {
         event.preventDefault();
@@ -598,7 +598,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#Mala", function () { searchTerms = ["malachi", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#Mala", function () { searchTerms = ["malachi", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseMatthew() {
         event.preventDefault();
@@ -609,7 +609,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#Matt", function () { searchTerms = ["matthew", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#Matt", function () { searchTerms = ["matthew", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseMark() {
         event.preventDefault();
@@ -620,7 +620,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#Mar", function () { searchTerms = ["mark", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#Mar", function () { searchTerms = ["mark", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseLuke() {
         event.preventDefault();
@@ -631,7 +631,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#Luk", function () { searchTerms = ["luke", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#Luk", function () { searchTerms = ["luke", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseJohn() {
         event.preventDefault();
@@ -642,7 +642,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#Joh", function () { searchTerms = ["john", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#Joh", function () { searchTerms = ["john", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseActs() {
         event.preventDefault();
@@ -653,7 +653,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#Act", function () { searchTerms = ["acts", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#Act", function () { searchTerms = ["acts", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseRomans() {
         event.preventDefault();
@@ -664,7 +664,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#Rom", function () { searchTerms = ["romans", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#Rom", function () { searchTerms = ["romans", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseFirstCorinthians() {
         event.preventDefault();
@@ -675,7 +675,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#FCor", function () { searchTerms = ["1", "corinthians", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#FCor", function () { searchTerms = ["1", "corinthians", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseSecondCorinthians() {
         event.preventDefault();
@@ -686,7 +686,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#SCor", function () { searchTerms = ["2", "corinthians", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#SCor", function () { searchTerms = ["2", "corinthians", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseGalatians() {
         event.preventDefault();
@@ -697,7 +697,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#Gal", function () { searchTerms = ["galatians", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#Gal", function () { searchTerms = ["galatians", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseEphesians() {
         event.preventDefault();
@@ -708,7 +708,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#Eph", function () { searchTerms = ["ephesians", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#Eph", function () { searchTerms = ["ephesians", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function chosePhilippians() {
         event.preventDefault();
@@ -719,7 +719,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#Phil", function () { searchTerms = ["philippians", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#Phil", function () { searchTerms = ["philippians", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseColossians() {
         event.preventDefault();
@@ -730,7 +730,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#Col", function () { searchTerms = ["colossians", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#Col", function () { searchTerms = ["colossians", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseFirstThessalonians() {
         event.preventDefault();
@@ -741,7 +741,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#FThes", function () { searchTerms = ["1", "thessalonians", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#FThes", function () { searchTerms = ["1", "thessalonians", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseSecondThessalonians() {
         event.preventDefault();
@@ -752,7 +752,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#SThes", function () { searchTerms = ["2", "thessalonians", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#SThes", function () { searchTerms = ["2", "thessalonians", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseFirstTimothy() {
         event.preventDefault();
@@ -763,7 +763,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#FTim", function () { searchTerms = ["1", "timothy", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#FTim", function () { searchTerms = ["1", "timothy", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseSecondTimothy() {
         event.preventDefault();
@@ -774,7 +774,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#STim", function () { searchTerms = ["2", "timothy", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#STim", function () { searchTerms = ["2", "timothy", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseTitus() {
         event.preventDefault();
@@ -785,7 +785,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#Tit", function () { searchTerms = ["titus", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#Tit", function () { searchTerms = ["titus", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function chosePhilemon() {
         event.preventDefault();
@@ -796,7 +796,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#phile", function () { searchTerms = ["philemon", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#phile", function () { searchTerms = ["philemon", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseHebrews() {
         event.preventDefault();
@@ -807,7 +807,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#heb", function () { searchTerms = ["hebrews", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#heb", function () { searchTerms = ["hebrews", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseJames() {
         event.preventDefault();
@@ -818,7 +818,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#jam", function () { searchTerms = ["james", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#jam", function () { searchTerms = ["james", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseFirstPeter() {
         event.preventDefault();
@@ -829,7 +829,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#FPet", function () { searchTerms = ["1", "peter", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#FPet", function () { searchTerms = ["1", "peter", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseSecondPeter() {
         event.preventDefault();
@@ -840,7 +840,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#SPet", function () { searchTerms = ["2", "peter", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#SPet", function () { searchTerms = ["2", "peter", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseFirstJohn() {
         event.preventDefault();
@@ -851,7 +851,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#FJohn", function () { searchTerms = ["1", "john", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#FJohn", function () { searchTerms = ["1", "john", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseSecondJohn() {
         event.preventDefault();
@@ -862,7 +862,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#SJohn", function () { searchTerms = ["2", "john", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#SJohn", function () { searchTerms = ["2", "john", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseThirdJohn() {
         event.preventDefault();
@@ -873,7 +873,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#TJohn", function () { searchTerms = ["3", "john", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#TJohn", function () { searchTerms = ["3", "john", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function choseJude() {
         event.preventDefault();
@@ -884,7 +884,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
     };
 
-    $(document).on("click", "#Jud", function () { searchTerms = ["jude", this.chapNumber]; handleArtworkFormSubmit(event); });
+    $(document).on("click", "#Jud", function () { searchTerms = ["jude", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     function handleArtworkFormSubmit(event) {
         event.preventDefault();
