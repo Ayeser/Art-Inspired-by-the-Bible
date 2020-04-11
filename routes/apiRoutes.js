@@ -10,18 +10,11 @@ module.exports = function (app) {
     })
   });
 
-  // app.get("/api/user_data", function(req, res) {
-  //   db.User.findOne({}).then(function(dbArtPieces) {
-  //     res.json(dbArtPieces)
-  //   })
-  // });
-
-  // route finding ALL images from Artwork table
   app.get("/api/artPieces/:book/:chapter", function (req, res) {
     console.log("Searching for pieces of art from selected book...");
     db.Artwork.findAll({
       order: [
-        ['verse', 'DESC']
+        ['verse', 'ASC']
       ],
       where: {
         book: req.params.book,
@@ -30,13 +23,6 @@ module.exports = function (app) {
     }
     ).then(dbArtPieces => {
       res.json(dbArtPieces);
-    })
-  });
-
-  app.get("/api/scriptures", function (req, res) {
-    console.log("Finding all scriptures from Scriptures table...");
-    db.Scripture.findAll({}).then(function (dbScriptures) {
-      res.json(dbScriptures)
     })
   });
 
@@ -55,7 +41,7 @@ module.exports = function (app) {
     console.log("Finding all videos from selected book...");
     db.Video.findAll({
       order: [
-        ['verse', 'DESC']
+        ['verse', 'ASC']
       ],
       where: {
         book: req.params.book,
