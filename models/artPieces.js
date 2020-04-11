@@ -49,13 +49,13 @@ module.exports = function(sequelize, DataTypes) {
       defaultValue: sequelize.literal('CURRENT_TIMESTAMP(3)')
     }
 });
-// Artwork.associate = function(models) {
-//   Artwork.hasMany(models.Video, {
-//     onDelete: "cascade",
-//     foreignKey: {
-//       name: 'chapter'
-//     }
-//   });
-// };
+Artwork.associate = function(models) {
+  Artwork.hasMany(models.Video, {
+    onDelete: "cascade",
+    foreignKey: {
+      name: 'chapter'
+    }
+  });
+};
     return Artwork;
   };
