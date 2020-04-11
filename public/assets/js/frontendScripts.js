@@ -7,7 +7,7 @@ $(document).ready(function () {
         $("#nav2").remove();
         $("#nav3").remove();
         $("#nav4").remove();
-        $("#nav1").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav2"><a class="nav-link" href="#" id="PentateuchNav">Pentateuch</a><a class="nav-link" href="#" id="HistoricalBooksNav">Historical Books</a><a class="nav-link" href="#" id="WisdomBooksNav">Wisdom</a><a class="nav-link" href="#" id="MajorProphetsNav">Major Prophets</a><a class="nav-link" href="#" id="MinorProphetsNav">Minor Prophets</a></nav>');
+        $("#nav1").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav2"><a class="nav-link" href="#" id="PentateuchNav">Pentateuch</a><a class="nav-link" href="#" id="HistoricalBooksNav">Historical Books</a><a class="nav-link" href="#" id="WisdomBooksNav">Wisdom</a><a class="nav-link" href="#" id="MajorProphetsNav">Major Prophets</a><a class="nav-link" href="#" id="MinorProphetsNav">Minor Prophets</a></nav>');
         $(document).on("click", "#PentateuchNav", chosePentateuch);
         $(document).on("click", "#HistoricalBooksNav", choseHistoricalBooks);
         $(document).on("click", "#WisdomBooksNav", choseWisdomBooks);
@@ -21,7 +21,7 @@ $(document).ready(function () {
         $("#nav2").remove();
         $("#nav3").remove();
         $("#nav4").remove();
-        $("#nav1").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav2"><a class="nav-link" href="#" id="GospelsNav">Gospels/Acts</a><a class="nav-link" href="#" id="PaulineEpistlesNav">Pauline Epistles</a><a class="nav-link" href="#" id="GeneralEpistlesNav">General Epistles</a><a class="nav-link" href="#" id="RevelationNav">Revelation</a></nav></nav>');
+        $("#nav1").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav2"><a class="nav-link" href="#" id="GospelsNav">Gospels/Acts</a><a class="nav-link" href="#" id="PaulineEpistlesNav">Pauline Epistles</a><a class="nav-link" href="#" id="GeneralEpistlesNav">General Epistles</a><a class="nav-link" href="#" id="RevelationNav">Revelation</a></nav></nav>');
         $(document).on("click", "#GospelsNav", choseGospelsBooks);
         $(document).on("click", "#PaulineEpistlesNav", chosePaulineBooks);
         $(document).on("click", "#GeneralEpistlesNav", choseGeneralBooks);
@@ -32,7 +32,7 @@ $(document).ready(function () {
         event.preventDefault();
         $("#nav3").remove();
         $("#nav4").remove();
-        $("#nav2").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav3"><a class="nav-link" href="#" id="Genesis" chapsInBook="51">Genesis</a><a class="nav-link" href="#" id="Exodus" chapsInBook="41">Exodus</a><a class="nav-link" href="#" id="Leviticus" chapsInBook="28">Leviticus</a><a class="nav-link" href="#" id="Numbers" chapsInBook="37">Numbers</a><a class="nav-link" href="#" id="Deuteronomy" chapsInBook="35">Deuteronomy</a></nav>');
+        $("#nav2").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav3"><a class="nav-link" href="#" id="Genesis" chapsInBook="51">Genesis</a><a class="nav-link" href="#" id="Exodus" chapsInBook="41">Exodus</a><a class="nav-link" href="#" id="Leviticus" chapsInBook="28">Leviticus</a><a class="nav-link" href="#" id="Numbers" chapsInBook="37">Numbers</a><a class="nav-link" href="#" id="Deuteronomy" chapsInBook="35">Deuteronomy</a></nav>');
     };
     $(document).on("click", "#Genesis", choseGenesis);
     $(document).on("click", "#Exodus", choseExodus);
@@ -44,7 +44,7 @@ $(document).ready(function () {
         event.preventDefault();
         $("#nav3").remove();
         $("#nav4").remove();
-        $("#nav2").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav3"><a class="nav-link" href="#" id="Joshua">Joshua</a><a class="nav-link" href="#" id="Judges">Judges</a><a class="nav-link" href="#" id="Ruth">Ruth</a><a class="nav-link" href="#" id="FirstSamuel">1 Samuel</a><a class="nav-link" href="#" id="SecondSamuel">2 Samuel</a><a class="nav-link" href="#" id="FirstKings">1 Kings</a><a class="nav-link" href="#" id="SecondKings">2 Kings</a><a class="nav-link" href="#" id="FirstChronicles">1 Chronicles</a><a class="nav-link" href="#" id="SecondChronicles">2 Chronicles</a><a class="nav-link" href="#" id="Ezra">Ezra</a><a class="nav-link" href="#" id="Nehemiah">Nehemiah</a><a class="nav-link" href="#" id="Esther">Esther</a></nav>');
+        $("#nav2").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav3"><a class="nav-link" href="#" id="Joshua">Joshua</a><a class="nav-link" href="#" id="Judges">Judges</a><a class="nav-link" href="#" id="Ruth">Ruth</a><a class="nav-link" href="#" id="FirstSamuel">1 Samuel</a><a class="nav-link" href="#" id="SecondSamuel">2 Samuel</a><a class="nav-link" href="#" id="FirstKings">1 Kings</a><a class="nav-link" href="#" id="SecondKings">2 Kings</a><a class="nav-link" href="#" id="FirstChronicles">1 Chronicles</a><a class="nav-link" href="#" id="SecondChronicles">2 Chronicles</a><a class="nav-link" href="#" id="Ezra">Ezra</a><a class="nav-link" href="#" id="Nehemiah">Nehemiah</a><a class="nav-link" href="#" id="Esther">Esther</a></nav>');
         $(document).on("click", "#Joshua", choseJoshua);
         $(document).on("click", "#Judges", choseJudges);
         $(document).on("click", "#Ruth", choseRuth);
@@ -63,7 +63,7 @@ $(document).ready(function () {
         event.preventDefault();
         $("#nav3").remove();
         $("#nav4").remove();
-        $("#nav2").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav3"><a class="nav-link" href="#" id="Job">Job</a><a class="nav-link" href="#" id="Psalms">Psalms</a><a class="nav-link" href="#" id="Proverbs">Proverbs</a><a class="nav-link" href="#" id="Ecclesiastes">Ecclesiastes</a><a class="nav-link" href="#" id="SongOfSolomon">Song of Solomon</a></nav>');
+        $("#nav2").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav3"><a class="nav-link" href="#" id="Job">Job</a><a class="nav-link" href="#" id="Psalms">Psalms</a><a class="nav-link" href="#" id="Proverbs">Proverbs</a><a class="nav-link" href="#" id="Ecclesiastes">Ecclesiastes</a><a class="nav-link" href="#" id="SongOfSolomon">Song of Solomon</a></nav>');
         $(document).on("click", "#Job", choseJob);
         $(document).on("click", "#Psalms", chosePsalms);
         $(document).on("click", "#Proverbs", choseProverbs);
@@ -75,7 +75,7 @@ $(document).ready(function () {
         event.preventDefault();
         $("#nav3").remove();
         $("#nav4").remove();
-        $("#nav2").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav3"><a class="nav-link" href="#" id="Isaiah">Isaiah</a><a class="nav-link" href="#" id="Jeremiah">Jeremiah</a><a class="nav-link" href="#" id="Lamentations">Lamentations</a><a class="nav-link" href="#" id="Ezekiel">Ezekiel</a><a class="nav-link" href="#" id="Daniel">Daniel</a></nav>');
+        $("#nav2").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav3"><a class="nav-link" href="#" id="Isaiah">Isaiah</a><a class="nav-link" href="#" id="Jeremiah">Jeremiah</a><a class="nav-link" href="#" id="Lamentations">Lamentations</a><a class="nav-link" href="#" id="Ezekiel">Ezekiel</a><a class="nav-link" href="#" id="Daniel">Daniel</a></nav>');
         $(document).on("click", "#Isaiah", choseIsaiah);
         $(document).on("click", "#Jeremiah", choseJeremiah);
         $(document).on("click", "#Lamentations", choseLamentations);
@@ -87,7 +87,7 @@ $(document).ready(function () {
         event.preventDefault();
         $("#nav3").remove();
         $("#nav4").remove();
-        $("#nav2").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav3"><a class="nav-link" href="#" id="Hosea">Hosea</a><a class="nav-link" href="#" id="Joel">Joel</a><a class="nav-link" href="#" id="Amos">Amos</a><a class="nav-link" href="#" id="Obadiah">Obadiah</a><a class="nav-link" href="#" id="Jonah">Jonah</a><a class="nav-link" href="#" id="Micah">Micah</a><a class="nav-link" href="#" id="Nahum">Nahum</a><a class="nav-link" href="#" id="Habakkuk">Habakkuk</a><a class="nav-link" href="#" id="Zephaniah">Zephaniah</a><a class="nav-link" href="#" id="Haggai">Haggai</a><a class="nav-link" href="#" id="Zechariah">Zechariah</a><a class="nav-link" href="#" id="Malachi">Malachi</a></nav>');
+        $("#nav2").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav3"><a class="nav-link" href="#" id="Hosea">Hosea</a><a class="nav-link" href="#" id="Joel">Joel</a><a class="nav-link" href="#" id="Amos">Amos</a><a class="nav-link" href="#" id="Obadiah">Obadiah</a><a class="nav-link" href="#" id="Jonah">Jonah</a><a class="nav-link" href="#" id="Micah">Micah</a><a class="nav-link" href="#" id="Nahum">Nahum</a><a class="nav-link" href="#" id="Habakkuk">Habakkuk</a><a class="nav-link" href="#" id="Zephaniah">Zephaniah</a><a class="nav-link" href="#" id="Haggai">Haggai</a><a class="nav-link" href="#" id="Zechariah">Zechariah</a><a class="nav-link" href="#" id="Malachi">Malachi</a></nav>');
         $(document).on("click", "#Hosea", choseHosea);
         $(document).on("click", "#Joel", choseJoel);
         $(document).on("click", "#Amos", choseAmos);
@@ -106,7 +106,7 @@ $(document).ready(function () {
         event.preventDefault();
         $("#nav3").remove();
         $("#nav4").remove();
-        $("#nav2").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav3"><a class="nav-link" href="#" id="Matthew">Matthew</a><a class="nav-link" href="#" id="Mark">Mark</a><a class="nav-link" href="#" id="Luke">Luke</a><a class="nav-link" href="#" id="John">John</a><a class="nav-link" href="#" id="Acts">Acts</a></nav>');
+        $("#nav2").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav3"><a class="nav-link" href="#" id="Matthew">Matthew</a><a class="nav-link" href="#" id="Mark">Mark</a><a class="nav-link" href="#" id="Luke">Luke</a><a class="nav-link" href="#" id="John">John</a><a class="nav-link" href="#" id="Acts">Acts</a></nav>');
         $(document).on("click", "#Matthew", choseMatthew);
         $(document).on("click", "#Mark", choseMark);
         $(document).on("click", "#Luke", choseLuke);
@@ -118,7 +118,7 @@ $(document).ready(function () {
         event.preventDefault();
         $("#nav3").remove();
         $("#nav4").remove();
-        $("#nav2").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav3"><a class="nav-link" href="#" id="Romans">Romans</a><a class="nav-link" href="#" id="FirstCorinthians">1 Corinthians</a><a class="nav-link" href="#" id="SecondCorinthians">2 Corinthians</a><a class="nav-link" href="#" id="Galatians">Galatians</a><a class="nav-link" href="#" id="Ephesians">Ephesians</a><a class="nav-link" href="#" id="Philippians">Philippians</a><a class="nav-link" href="#" id="Colossians">Colossians</a><a class="nav-link" href="#" id="FirstThessalonians">1 Thessalonians</a><a class="nav-link" href="#" id="SecondThessalonians">2 Thessalonians</a><a class="nav-link" href="#" id="FirstTimothy">1 Timothy</a><a class="nav-link" href="#" id="SecondTimothy">2 Timothy</a><a class="nav-link" href="#" id="Titus">Titus</a><a class="nav-link" href="#" id="Philemon">Philemon</a></nav>');
+        $("#nav2").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav3"><a class="nav-link" href="#" id="Romans">Romans</a><a class="nav-link" href="#" id="FirstCorinthians">1 Corinthians</a><a class="nav-link" href="#" id="SecondCorinthians">2 Corinthians</a><a class="nav-link" href="#" id="Galatians">Galatians</a><a class="nav-link" href="#" id="Ephesians">Ephesians</a><a class="nav-link" href="#" id="Philippians">Philippians</a><a class="nav-link" href="#" id="Colossians">Colossians</a><a class="nav-link" href="#" id="FirstThessalonians">1 Thessalonians</a><a class="nav-link" href="#" id="SecondThessalonians">2 Thessalonians</a><a class="nav-link" href="#" id="FirstTimothy">1 Timothy</a><a class="nav-link" href="#" id="SecondTimothy">2 Timothy</a><a class="nav-link" href="#" id="Titus">Titus</a><a class="nav-link" href="#" id="Philemon">Philemon</a></nav>');
         $(document).on("click", "#Romans", choseRomans);
         $(document).on("click", "#FirstCorinthians", choseFirstCorinthians);
         $(document).on("click", "#SecondCorinthians", choseSecondCorinthians);
@@ -138,7 +138,7 @@ $(document).ready(function () {
         event.preventDefault();
         $("#nav3").remove();
         $("#nav4").remove();
-        $("#nav2").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav3"><a class="nav-link" href="#" id="Hebrews">Hebrews</a><a class="nav-link" href="#" id="James">James</a><a class="nav-link" href="#" id="FirstPeter">1 Peter</a><a class="nav-link" href="#" id="SecondPeter">2 Peter</a><a class="nav-link" href="#" id="FirstJohn">1 John</a><a class="nav-link" href="#" id="SecondJohn">2 John</a><a class="nav-link" href="#" id="ThirdJohn">3 John</a><a class="nav-link" href="#" id="Jude">Jude</a></nav>');
+        $("#nav2").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav3"><a class="nav-link" href="#" id="Hebrews">Hebrews</a><a class="nav-link" href="#" id="James">James</a><a class="nav-link" href="#" id="FirstPeter">1 Peter</a><a class="nav-link" href="#" id="SecondPeter">2 Peter</a><a class="nav-link" href="#" id="FirstJohn">1 John</a><a class="nav-link" href="#" id="SecondJohn">2 John</a><a class="nav-link" href="#" id="ThirdJohn">3 John</a><a class="nav-link" href="#" id="Jude">Jude</a></nav>');
         $(document).on("click", "#Hebrews", choseHebrews);w
         $(document).on("click", "#James", choseJames);
         $(document).on("click", "#FirstPeter", choseFirstPeter);
@@ -152,11 +152,11 @@ $(document).ready(function () {
     function choseRevelationBook() {
         event.preventDefault();
     $("#nav3").remove();
-    $("#nav2").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav3">');
+    $("#nav2").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav3">');
     for (i = 1; i < 23; i++) {
-        $("#nav2").append('<a class="nav-link" href="#" id="rev" chapNumber="' + i + '">' + i + '</a>');
+        $("#nav2").appendAfter('<a class="nav-link" href="#" id="rev" chapNumber="' + i + '">' + i + '</a>');
     };
-    $("#nav2").append("</nav>");
+    $("#nav2").appendAfter("</nav>");
 };
 
 $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -176,11 +176,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseGenesis() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 51; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="gen" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="gen" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#gen", function () { searchTerms = ["genesis", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -188,11 +188,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseExodus() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 41; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="Ex" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="Ex" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#Ex", function () { searchTerms = ["exodus", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -200,11 +200,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseLeviticus() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 29; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="Lev" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="Lev" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#Lev", function () { searchTerms = ["leviticus", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -212,11 +212,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseNumbers() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 37; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="Num" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="Num" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#Num", function () { searchTerms = ["numbers", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -224,11 +224,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseDeuteronomy() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 35; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="Deut" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="Deut" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#Deut", function () { searchTerms = ["deuteronomy", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -236,11 +236,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseJoshua() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 25; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="Josh" chapNumber="' + i + '">' + i + '</button>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="Josh" chapNumber="' + i + '">' + i + '</button>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#Josh", function () { searchTerms = ["joshua", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -248,11 +248,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseJudges() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 22; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="Judge" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="Judge" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#Judge", function () { searchTerms = ["judges", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -260,11 +260,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseRuth() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row  navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row  navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 5; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="Rut" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="Rut" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#Rut", function () { searchTerms = ["ruth", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -272,11 +272,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseFirstSamuel() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 32; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="FSam" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="FSam" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#FSam", function () { searchTerms = ["1", "samuel", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -284,11 +284,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseSecondSamuel() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 25; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="SSam" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="SSam" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#SSam", function () { searchTerms = ["2", "samuel", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -296,11 +296,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseFirstKings() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 23; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="FKin" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="FKin" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#FKin", function () { searchTerms = ["1", "kings", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -308,11 +308,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseSecondKings() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 26; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="SKin" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="SKin" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#SKin", function () { searchTerms = ["2", "kings", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -320,11 +320,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseFirstChronicles() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 30; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="FChron" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="FChron" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#FChron", function () { searchTerms = ["1", "chronicles", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -332,11 +332,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseSecondChronicles() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 37; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="SChron" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="SChron" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#SChron", function () { searchTerms = ["2", "chronicles", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -344,11 +344,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseEzra() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 11; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="Ezr" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="Ezr" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#Ezr", function () { searchTerms = ["ezra", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -356,11 +356,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseNehemiah() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 14; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="Neh" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="Neh" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#Neh", function () { searchTerms = ["nehemiah", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -368,11 +368,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseEsther() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 11; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="Esth" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="Esth" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#Esth", function () { searchTerms = ["esther", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -380,11 +380,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseJob() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 43; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="Jo" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="Jo" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#Jo", function () { searchTerms = ["job", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -392,11 +392,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function chosePsalms() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 151; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="Psa" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="Psa" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#Psa", function () { searchTerms = ["psalms", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -404,11 +404,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseProverbs() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 32; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="Prov" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="Prov" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#Prov", function () { searchTerms = ["proverbs", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -416,11 +416,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseEcclesiastes() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 13; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="Eccl" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="Eccl" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#Eccl", function () { searchTerms = ["ecclesiastes", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -428,11 +428,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseSongofSolomon() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 9; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="SoS" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appappendAfterend('<a class="nav-link" href="#" id="SoS" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#SoS", function () { searchTerms = ["song", "of", "solomon", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -440,11 +440,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseIsaiah() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 67; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="Isa" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="Isa" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#Isa", function () { searchTerms = ["isaiah", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -452,11 +452,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseJeremiah() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 53; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="Jer" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="Jer" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#Jer", function () { searchTerms = ["jeremiah", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -464,11 +464,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseLamentations() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 6; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="Lam" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="Lam" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#Lam", function () { searchTerms = ["lamentations", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -476,11 +476,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseEzekiel() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 49; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="Eze" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="Eze" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#Eze", function () { searchTerms = ["ezekiel", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -488,11 +488,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseDaniel() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 13; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="Dan" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="Dan" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#Dan", function () { searchTerms = ["daniel", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -500,11 +500,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseHosea() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 15; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="Hos" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="Hos" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#Hos", function () { searchTerms = ["hosea", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -512,11 +512,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseJoel() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 4; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="Joe" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="Joe" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#Joe", function () { searchTerms = ["joel", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -524,11 +524,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseAmos() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 10; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="Amo" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="Amo" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#Amo", function () { searchTerms = ["amos", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -536,11 +536,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseObadiah() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 2; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="Oba" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="Oba" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#Oba", function () { searchTerms = ["obadiah", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -548,11 +548,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseJonah() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 5; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="Jona" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="Jona" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#Jona", function () { searchTerms = ["jonah", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -560,11 +560,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseMicah() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 8; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="Mic" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="Mic" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#Mic", function () { searchTerms = ["micah", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -572,11 +572,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseNahum() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 4; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="Nah" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="Nah" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#Nah", function () { searchTerms = ["nahum", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -584,11 +584,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseHabakkuk() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 4; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="Hab" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="Hab" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#Hab", function () { searchTerms = ["habakkuk", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -596,11 +596,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseZephaniah() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 4; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="Zeph" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="Zeph" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#Zeph", function () { searchTerms = ["zephaniah", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -608,11 +608,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseHaggai() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 3; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="Hag" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="Hag" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#Hag", function () { searchTerms = ["haggai", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -620,11 +620,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseZechariah() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 15; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="Zech" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="Zech" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#Zech", function () { searchTerms = ["zechariah", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -632,11 +632,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseMalachi() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 5; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="Mala" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="Mala" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#Mala", function () { searchTerms = ["malachi", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -644,11 +644,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseMatthew() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 29; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="Matt" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="Matt" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#Matt", function () { searchTerms = ["matthew", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -656,11 +656,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseMark() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 17; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="Mar" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="Mar" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#Mar", function () { searchTerms = ["mark", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -668,11 +668,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseLuke() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 25; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="Luk" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="Luk" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#Luk", function () { searchTerms = ["luke", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -680,11 +680,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseJohn() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 22; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="Joh" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="Joh" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#Joh", function () { searchTerms = ["john", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -692,11 +692,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseActs() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 29; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="Act" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="Act" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#Act", function () { searchTerms = ["acts", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -704,11 +704,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseRomans() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 17; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="Rom" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="Rom" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#Rom", function () { searchTerms = ["romans", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -716,11 +716,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseFirstCorinthians() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 17; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="FCor" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="FCor" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#FCor", function () { searchTerms = ["1", "corinthians", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -728,11 +728,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseSecondCorinthians() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 14; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="SCor" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="SCor" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#SCor", function () { searchTerms = ["2", "corinthians", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -740,11 +740,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseGalatians() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 7; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="Gal" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="Gal" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#Gal", function () { searchTerms = ["galatians", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -752,11 +752,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseEphesians() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 7; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="Eph" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="Eph" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#Eph", function () { searchTerms = ["ephesians", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -764,11 +764,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function chosePhilippians() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 5; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="Phil" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="Phil" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#Phil", function () { searchTerms = ["philippians", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -776,11 +776,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseColossians() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 5; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="Col" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="Col" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#Col", function () { searchTerms = ["colossians", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -788,11 +788,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseFirstThessalonians() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 6; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="FThes" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="FThes" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#FThes", function () { searchTerms = ["1", "thessalonians", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -800,11 +800,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseSecondThessalonians() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 4; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="SThes" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="SThes" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#SThes", function () { searchTerms = ["2", "thessalonians", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -812,11 +812,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseFirstTimothy() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-light bg-light justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-light bg-light justify-content-between rounded" id="nav4">');
         for (i = 1; i < 7; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="FTim" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="FTim" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#FTim", function () { searchTerms = ["1", "timothy", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -824,11 +824,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseSecondTimothy() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 5; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="STim" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="STim" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#STim", function () { searchTerms = ["2", "timothy", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -836,11 +836,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseTitus() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 4; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="Tit" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="Tit" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#Tit", function () { searchTerms = ["titus", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -848,11 +848,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function chosePhilemon() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 2; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="phile" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="phile" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#phile", function () { searchTerms = ["philemon", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -860,11 +860,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseHebrews() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 14; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="heb" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="heb" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#heb", function () { searchTerms = ["hebrews", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -872,11 +872,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseJames() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 6; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="jam" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="jam" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#jam", function () { searchTerms = ["james", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -884,11 +884,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseFirstPeter() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 6; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="FPet" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="FPet" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#FPet", function () { searchTerms = ["1", "peter", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -896,11 +896,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseSecondPeter() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 4; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="SPet" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="SPet" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#SPet", function () { searchTerms = ["2", "peter", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -908,11 +908,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseFirstJohn() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 6; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="FJohn" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="FJohn" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#FJohn", function () { searchTerms = ["1", "john", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -920,11 +920,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseSecondJohn() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 2; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="SJohn" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="SJohn" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#SJohn", function () { searchTerms = ["2", "john", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -932,11 +932,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseThirdJohn() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 2; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="TJohn" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="TJohn" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#TJohn", function () { searchTerms = ["3", "john", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -944,11 +944,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
     function choseJude() {
         event.preventDefault();
         $("#nav4").remove();
-        $("#nav3").show(400).append('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
+        $("#nav3").show(400).appendAfter('<nav class="container-fluid row navbar navbar-dark bg-dark justify-content-between rounded" id="nav4">');
         for (i = 1; i < 2; i++) {
-            $("#nav3").append('<a class="nav-link" href="#" id="Jud" chapNumber="' + i + '">' + i + '</a>');
+            $("#nav3").appendAfter('<a class="nav-link" href="#" id="Jud" chapNumber="' + i + '">' + i + '</a>');
         };
-        $("#nav3").append("</nav>");
+        $("#nav3").appendAfter("</nav>");
     };
 
     $(document).on("click", "#Jud", function () { searchTerms = ["jude", this.chapNumber]; handleArtworkFormSubmit(event); });
@@ -1059,6 +1059,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         }
         // Below function is if the input into search bar starts with 1, 2, or 3, as in '1 Samuel...'
         function searchBibleNumberStart() {
+            console.log("Search terms are: " + searchTerms);
             $.get("api/scriptures/" + searchTerms[0] + searchTerms[1] + "/" + searchTerms[2], function (data) {
                 $("#scriptureHere").append("<div>" + data.book + " " + data.chapter + " " + data.passage + "</div>");
             })
@@ -1086,6 +1087,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", this.
         };
 // this next function searches the Bible with a Biblebook Chapter inputted.
         function searchBibleArt() {
+            console.log("Search terms are: " + searchTerms);
             $.get("api/scriptures/" + searchTerms[0] + "/" + searchTerms[1], function (data) {
                 console.log(data);
                 $("#scriptureHere").append("<div>" + data.book + " " + data.chapter + " " + data.passage + "</div>");
