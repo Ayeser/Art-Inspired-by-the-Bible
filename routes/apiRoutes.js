@@ -131,7 +131,15 @@ app.put("/api/artVotes", function (req, res) {
 });
 
 //These next calls are to experiment with a side task and can be disregarded
-app.get("/api/departments", function (req, res) {
+app.get("/api/departmentslist", function (req, res) {
+  db.Department.findAll({
+  }
+  ).then(dbEmployees => {
+    res.json(dbEmployees);
+  })
+});
+
+app.get("/api/allemployees", function (req, res) {
   db.Employee.findAll({
   }
   ).then(dbEmployees => {
@@ -139,7 +147,7 @@ app.get("/api/departments", function (req, res) {
   })
 });
 
-app.get("/api/employees/departments/:dept", function (req, res) {
+app.get("/api/departments/:dept", function (req, res) {
   db.Employee.findAll({
     where: {
       department: req.params.dept,
