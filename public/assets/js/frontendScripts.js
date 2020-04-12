@@ -1004,7 +1004,7 @@ $(document).on("click", "#rev", function () { searchTerms = ["revelation", $(thi
         function searchBibleNumberStart() {
             console.log("Search terms are: " + searchTerms);
             $.get("api/scriptures/" + searchTerms[0] + "%20" + searchTerms[1] + "/" + searchTerms[2], function (data) {
-                $("#scriptureHere").append("<div>" + data.book + " " + data.chapter + " " + data.passage + "</div>");
+                $(".page-footer").before("<div>" + data.book + " " + data.chapter + " " + data.passage + "</div>");
             })
             $.get("api/artPieces/" + searchTerms[0] + "%20" + searchTerms[1] +"/" + searchTerms[2], function (data) {
                 const artToAdd = [];
@@ -1033,7 +1033,7 @@ $(document).on("click", "#rev", function () { searchTerms = ["revelation", $(thi
             console.log("Search terms are: " + searchTerms);
             $.get("api/scriptures/" + searchTerms[0] + "/" + searchTerms[1], function (data) {
                 console.log(data);
-                $("#scriptureHere").append("<div>" + data.book + " " + data.chapter + " " + data.passage + "</div>");
+                $(".page-footer").before("<div>" + data.book + " " + data.chapter + " " + data.passage + "</div>");
             })
             $.get("api/artPieces/" + searchTerms[0] + "/" + searchTerms[1], function (data) {
                 const artToAdd = [];
