@@ -1004,7 +1004,7 @@ $(document).on("click", "#rev", function () { searchTerms = ["revelation", $(thi
         function searchBibleNumberStart() {
             console.log("Search terms are: " + searchTerms);
             $.get("api/scriptures/" + searchTerms[0] + "%20" + searchTerms[1] + "/" + searchTerms[2], function (data) {
-                $(".page-footer").before("<div>" + data.book + " " + data.chapter + " " + data.passage + "</div>");
+                $("#scriptureHere").append("<div>" + data.book + " " + data.chapter + " " + data.passage + "</div>");
             })
             $.get("api/artPieces/" + searchTerms[0] + "%20" + searchTerms[1] +"/" + searchTerms[2], function (data) {
                 const artToAdd = [];
@@ -1013,7 +1013,7 @@ $(document).on("click", "#rev", function () { searchTerms = ["revelation", $(thi
                 };
                 if (artToAdd === []) {
                 } else {
-                    $("#searchTermTitle").append(searchTerms.stringify());
+                    $("#searchTermTitle").append(searchTerms[0] + " " + searchTerms[1] + " " + searchTerms[2]);
                     $("#resultsHere").append(artToAdd);
                 }
             });
@@ -1033,7 +1033,8 @@ $(document).on("click", "#rev", function () { searchTerms = ["revelation", $(thi
             console.log("Search terms are: " + searchTerms);
             $.get("api/scriptures/" + searchTerms[0] + "/" + searchTerms[1], function (data) {
                 console.log(data);
-                $(".page-footer").before("<div>" + data.book + " " + data.chapter + " " + data.passage + "</div>");
+                $("#scriptureHere").append("<div>" + data.book + " " + data.chapter + " " + data.passage + "</div>");
+                $("#searchTermTitle").append(searchTerms[0] + " " + searchTerms[1] + " ");
             })
             $.get("api/artPieces/" + searchTerms[0] + "/" + searchTerms[1], function (data) {
                 const artToAdd = [];
@@ -1060,8 +1061,7 @@ $(document).on("click", "#rev", function () { searchTerms = ["revelation", $(thi
     // This next function is for if a person inputs an artist into the search bar instead of a Bible book
         function searchArtistInstead() {
             $("#scriptureHere").empty();
-            $("#scriptureHere").hide();
-            $("#searchTermTitle").append(searchTerms);
+            $("#searchTermTitle").append("<br />" + searchTerms[0]);
             $.get("api/artistArtwork/" + searchTerms[0], function (data) {
                 const artToAdd = [];
                 for (let i = 0; i < data.length; i++) {
