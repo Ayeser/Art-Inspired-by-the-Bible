@@ -3,26 +3,26 @@ const express = require("express");
 const session = require("express-session");
 // Requiring passport as we've configured it
 const passport = require("./config/passport");
-const cors = require('cors');
+// const corsfix = require("cors");
 
 const PORT = process.env.PORT || 8080;
 
 const app = express();
 
-var whitelist= ['https://dreamy-rosalind-3d0ec8.netlify.com/'];
-var corsOptions = {
-  origin: function (origin, callback) {
-    if (whitelist.indexOf(origin) !== -1) {
-      callback(null, true)
-    } else {
-      callback(new Error('Not allowed by CORS'))
-    }
-  }
-};
+// var whitelist= ['https://dreamy-rosalind-3d0ec8.netlify.com/'];
+// var corsOptions = {
+//   origin: function (origin, callback) {
+//     if (whitelist.indexOf(origin) !== -1) {
+//       callback(null, true)
+//     } else {
+//       callback(new Error('Not allowed by CORS'))
+//     }
+//   }
+// };
 
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static("public"));
-app.use(cors(corsOptions));
+// app.use(corsfix(corsOptions));
 
 // Parse application body as JSON
 app.use(express.urlencoded({ extended: true }));
