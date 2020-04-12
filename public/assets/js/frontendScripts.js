@@ -899,7 +899,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", $(thi
         event.preventDefault();
         $("#afterSearchDiv").remove();
         $("#contributeForm").remove();
-        $("#footer").before('<div class="container-fluid bg-3 text-center" id="afterSearchDiv"><h3 id="searchTermTitle"></h3><div class="row"><div class="col-sm-3 bg-dark" id="scriptureHere"></div><div class="col-sm-9 bg-dark" id="resultsHere"></div></div></div>');
+        $(".page-footer").before('<div class="container-fluid bg-3 text-center" id="afterSearchDiv"><h3 id="searchTermTitle"></h3><div class="row"><div class="col-sm-3 bg-dark" id="scriptureHere"></div><div class="col-sm-9 bg-dark" id="resultsHere"></div></div></div>');
         $("#welcomeDiv").remove();
         $("#welcomeJumbotron").remove();
         document.cookie = "same-site-cookie=SameSite=Lax";
