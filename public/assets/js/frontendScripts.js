@@ -147,7 +147,7 @@ $(document).ready(function () {
         $("#nav3").remove();
         $("#nav4").remove();
         $("#nav2").show(400).after('<nav class="container-fluid row navbar navbar-expand-lg navbar-dark bg-dark justify-content-between rounded" id="nav3"><a class="nav-link" href="#" id="Hebrews">Hebrews</a><a class="nav-link" href="#" id="James">James</a><a class="nav-link" href="#" id="FirstPeter">1 Peter</a><a class="nav-link" href="#" id="SecondPeter">2 Peter</a><a class="nav-link" href="#" id="FirstJohn">1 John</a><a class="nav-link" href="#" id="SecondJohn">2 John</a><a class="nav-link" href="#" id="ThirdJohn">3 John</a><a class="nav-link" href="#" id="Jude">Jude</a></nav>');
-        $(document).on("click", "#Hebrews", choseHebrews);w
+        $(document).on("click", "#Hebrews", choseHebrews);
         $(document).on("click", "#James", choseJames);
         $(document).on("click", "#FirstPeter", choseFirstPeter);
         $(document).on("click", "#SecondPeter", choseSecondPeter);
@@ -166,7 +166,7 @@ $(document).ready(function () {
     };
 };
 
-$(document).on("click", ".rev", function () { searchTerms = ["revelation", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
+$(document).on("click", "#rev", function () { searchTerms = ["revelation", $(this).attr("chapNumber").toString()]; handleArtworkFormSubmit(event); });
 
     // $(document).on("click", this.id, function createChapBtns() {
     //     event.preventDefault();
@@ -1003,10 +1003,10 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", $(thi
         // Below function is if the input into search bar starts with 1, 2, or 3, as in '1 Samuel...'
         function searchBibleNumberStart() {
             console.log("Search terms are: " + searchTerms);
-            $.get("api/scriptures/" + searchTerms[0] + searchTerms[1] + "/" + searchTerms[2], function (data) {
+            $.get("api/scriptures/" + searchTerms[0] + "%20" + searchTerms[1] + "/" + searchTerms[2], function (data) {
                 $("#scriptureHere").append("<div>" + data.book + " " + data.chapter + " " + data.passage + "</div>");
             })
-            $.get("api/artPieces/" + searchTerms[0] + searchTerms[1] +"/" + searchTerms[2], function (data) {
+            $.get("api/artPieces/" + searchTerms[0] + "%20" + searchTerms[1] +"/" + searchTerms[2], function (data) {
                 const artToAdd = [];
                 for (let i = 0; i < data.length; i++) {
                     artToAdd.push(createNewPiece(data[i]));
@@ -1017,7 +1017,7 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", $(thi
                     $("#resultsHere").append(artToAdd);
                 }
             });
-            $.get("api/videos/" + searchTerms[0] + searchTerms[1] +"/" + searchTerms[2], function (data) {
+            $.get("api/videos/" + searchTerms[0] + "%20" + searchTerms[1] +"/" + searchTerms[2], function (data) {
                 const videosToAdd = [];
                 for (let i = 0; i < data.length; i++) {
                     videosToAdd.push(createNewVideo(data[i]));
