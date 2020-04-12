@@ -899,11 +899,11 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", $(thi
         event.preventDefault();
         $("#afterSearchDiv").remove();
         $("#contributeForm").remove();
-        $("#welcomeDiv").after('<div class="container-fluid bg-3 text-center" id="afterSearchDiv"><h3 id="searchTermTitle"></h3><div class="row"><div class="col-sm-3 bg-dark" id="scriptureHere"></div><div class="col-sm-9 bg-dark" id="resultsHere"></div></div></div>');
+        $("#footer").before('<div class="container-fluid bg-3 text-center" id="afterSearchDiv"><h3 id="searchTermTitle"></h3><div class="row"><div class="col-sm-3 bg-dark" id="scriptureHere"></div><div class="col-sm-9 bg-dark" id="resultsHere"></div></div></div>');
         $("#welcomeDiv").remove();
         $("#welcomeJumbotron").remove();
         document.cookie = "same-site-cookie=SameSite=Lax";
-        document.cookie = "cross-site-cookie=bar; SameSite=None; Secure";
+        document.cookie = "cross-site-cookie=youtube.com; SameSite=None; Secure";
 
         //if search term recognized as Bible book...
         if (searchTerms[0] == "genesis" || searchTerms[0] == "exodus" || searchTerms[0] == "leviticus" || searchTerms[0] == "numbers" || searchTerms[0] == "deuteronomy" || searchTerms[0] == "joshua" || searchTerms[0] == "judges" || searchTerms[0] == "ruth" || searchTerms[0] == "1" || searchTerms[0] == "2" || searchTerms[0] == "ezra" || searchTerms[0] == "nehemiah" || searchTerms[0] == "esther" || searchTerms[0] == "job" || searchTerms[0] == "psalms" || searchTerms[0] == "proverbs" || searchTerms[0] == "ecclesiastes" || searchTerms[0] == "song" || searchTerms[0] == "isaiah" || searchTerms[0] == "jeremiah" || searchTerms[0] == "lamentations" || searchTerms[0] == "ezekiel" || searchTerms[0] == "daniel" || searchTerms[0] == "hosea" || searchTerms[0] == "joel" || searchTerms[0] == "amos" || searchTerms[0] == "obadiah" || searchTerms[0] == "jonah" || searchTerms[0] == "micah" || searchTerms[0] == "nahum" || searchTerms[0] == "habakkuk" || searchTerms[0] == "zephaniah" || searchTerms[0] == "haggai" || searchTerms[0] == "zechariah" || searchTerms[0] == "malachi" || searchTerms[0] == "matthew" || searchTerms[0] == "mark" || searchTerms[0] == "luke" || searchTerms[0] == "john" || searchTerms[0] == "acts" || searchTerms[0] == "romans" || searchTerms[0] == "galatians" || searchTerms[0] == "ephesians" || searchTerms[0] == "philippians" || searchTerms[0] == "colossians" || searchTerms[0] == "titus" || searchTerms[0] == "philemon" || searchTerms[0] == "hebrews" || searchTerms[0] == "james" || searchTerms[0] == "jude" || searchTerms[0] == "revelation" || searchTerms[0] == "1" || searchTerms[0] == "2" || searchTerms[0] == "3") {searchBibleArt() }
@@ -1104,25 +1104,4 @@ $(document).on("click", ".rev", function () { searchTerms = ["revelation", $(thi
         handleArtworkFormSubmit(event);
     };
 
-    // $(document).on("click", ".likeButton", function () {
-    //     let ArtID = $(this).attr("id");
-    //     console.log("The ArtID is..." + ArtID);
-    //     let upVotes = $(this).text() + 1;
-    //     console.log(upVotes);
-    //     const likeButton = $(this);
-
-    //     $.ajax({
-    //         url: "/api/artVotes",
-    //     method: "PUT",
-    //     dataType: "JSON",
-    // data: `{
-    //     "id": ${ArtID},
-    //     "upvotes": ${upVotes}
-    // }`}).then(function (data, status) {
-    //         likeButton.html("You added your like!");
-    //         console.log("Data: " + JSON.stringify(data) + "\nStatus: " + status);
-    //     }).catch(function (err) {
-    //         console.log(err);
-    //     });
-    // });
 });
