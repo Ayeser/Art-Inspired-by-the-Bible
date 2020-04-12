@@ -41,12 +41,12 @@ $(document).ready(function () {
         $("#nav3").remove();
         $("#nav4").remove();
         $("#nav2").show(400).after('<nav class="container-fluid row navbar navbar-expand-lg navbar-dark bg-dark justify-content-between rounded" id="nav3"><a class="nav-link" href="#" id="Genesis" chapsInBook="51">Genesis</a><a class="nav-link" href="#" id="Exodus" chapsInBook="41">Exodus</a><a class="nav-link" href="#" id="Leviticus" chapsInBook="28">Leviticus</a><a class="nav-link" href="#" id="Numbers" chapsInBook="37">Numbers</a><a class="nav-link" href="#" id="Deuteronomy" chapsInBook="35">Deuteronomy</a></nav>');
-    };
     $(document).on("click", "#Genesis", choseGenesis);
     $(document).on("click", "#Exodus", choseExodus);
     $(document).on("click", "#Leviticus", choseLeviticus);
     $(document).on("click", "#Numbers", choseNumbers);
     $(document).on("click", "#Deuteronomy", choseDeuteronomy);
+};
     
     function choseHistoricalBooks() {
         event.preventDefault();
