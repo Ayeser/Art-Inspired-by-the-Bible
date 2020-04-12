@@ -129,5 +129,32 @@ app.put("/api/artVotes", function (req, res) {
   })
 });
 
+//These next calls are to experiment with a side task and can be disregarded
+app.get("/api/Employees/departments", function (req, res) {
+  db.Employees.findAll({
+    order: [
+      ['department', 'DESC']
+    ]
+  }
+  ).then(dbArtPieces => {
+    res.json(dbArtPieces);
+  })
+});
+
+app.get("/api/Employees/departments/:dept", function (req, res) {
+  db.Employees.findAll({
+    order: [
+      ['department', 'DESC']
+    ],
+    where: {
+      department: req.params.dept,
+    }
+  }
+  ).then(dbArtPieces => {
+    res.json(dbArtPieces);
+  })
+});
+
+
 })
 }
