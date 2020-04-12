@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 8080;
 const app = express();
 
 var whitelist= ['https://dreamy-rosalind-3d0ec8.netlify.com/'];
-vars corsOptions = {
+var corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1) {
       callback(null, true)
