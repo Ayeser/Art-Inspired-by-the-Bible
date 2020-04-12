@@ -118,6 +118,7 @@ app.post("/api/login/", function (req, res) {
     res.send("The password you inputted does not match our records");
   }
 });
+})
 
 app.put("/api/artVotes", function (req, res) {
  const condition = "id = " + req.body.id;
@@ -149,6 +150,4 @@ app.get("/api/employees/departments/:dept", function (req, res) {
   })
 });
 
-
-})
 }
