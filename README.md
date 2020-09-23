@@ -3,9 +3,9 @@ This is a full-stack website utilizing Node, Express, Sequelize, and more.
 
 The deployed site be found at https://glacial-falls-40496.herokuapp.com/
 
-This site contains Art Inspired By the Bible. The Bible has inspired more art than any other source material, so this site is for anyone who has in interested in artistic inspiration.
+UPDATE: The database has grown with newly added pieces of art. You are encouraged to contribute to the project! This database provider on heroku will soon be shifting so the database will be temporarily during October/November range while the data is transferred. Thanks!
 
-Update: I am slowly adding artwork to the database. My goal is to have at least one piece of art for each chapter of the Bible. As I whittle down the chapters still remaining, I will soon share that list so others can help me in the search. Thanks! 
+This site contains Art Inspired By the Bible. The Bible has inspired more art than any other source material, so this site is for anyone who has in interested in artistic inspiration.
 
 ![screenshot](https://github.com/Ayeser/GroupProject2/blob/master/BibleArtSnapshot.png?raw=true)
 
